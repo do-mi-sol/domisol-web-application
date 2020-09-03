@@ -7,6 +7,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <p>test입니다.</p>
+        <p>test입니다!</p>
 
         <p>안녕하세요 희연이예요</p>
 
