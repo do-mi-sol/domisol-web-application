@@ -1,4 +1,4 @@
-## Available Scripts
+## domisol
 
 you can run:
 
