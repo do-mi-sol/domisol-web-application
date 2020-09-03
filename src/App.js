@@ -14,7 +14,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          도미솔 프로젝트
+          도미솔 프로젝트 화이팅
         </a>
       </header>
     </div>
