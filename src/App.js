@@ -9,6 +9,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>에러에러</p>
         <p>에러에러2</p>
+        <p>에러에러3</p>
 
         <p>안녕하세요 희연이예요</p>
 
