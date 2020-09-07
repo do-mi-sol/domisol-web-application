@@ -9,4 +9,5 @@ export default class App extends Component {
       </div>
     );
   }
+  {/* 병합충돌 */}
 }
