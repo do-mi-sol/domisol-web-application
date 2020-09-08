@@ -1,4 +1,6 @@
 import React, {Component} from 'react'
+import ProfileIcon from './icon/Profile.png'
+import '../css/SignUp.css'
 
 export default class SignUp extends Component {
     state = {
@@ -34,20 +36,40 @@ export default class SignUp extends Component {
 
         return (
             <form className="">
-                <div>
-                    <input type="id" placeholder="ID" onChange={id} />
-                    <button>중복확인</button>
-                </div>
-
-                <div>
-                    <input
-                        type="text"
-                        className=""
-                        placeholder="USER NAME"
-                        onChange={name}
+                {/* ID */}
+                <div className="input-container">
+                    <img
+                        className="icon"
+                        src={ProfileIcon}
+                        alt="profile image"
                     />
-                    <button>중복확인</button>
+                    <div className="input-wrapper">
+                        <input
+                            type="id"
+                            placeholder="ID"
+                            onChange={id}
+                        />
+                    </div>
+                    <button className="check-button">중복확인</button>
                 </div>
+                <hr className="line" />
+                {/* name */}
+                <div className="input-container">
+                    <img
+                        className="icon"
+                        src={ProfileIcon}
+                        alt="profile image"
+                    />
+                    <div className="input-wrapper">
+                        <input
+                            type="text"
+                            placeholder="NAME"
+                            onChange={name}
+                        />
+                    </div>
+                    <button className="check-button">중복확인</button>
+                </div>
+                <hr className="line" />
 
                 <div>
                     <input
