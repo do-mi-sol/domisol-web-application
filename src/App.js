@@ -10,6 +10,7 @@ export default class App extends Component {
                 </div>
                 <div>한정</div>
                 <div>한정</div>
+                <div>혜림</div>
                 {/* SignUp 확인 */}
                 {/* <SignUp /> */}
             </div>
