@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Logo from "../../assets/images/Logo.jpg";
-import ProfileIcon from "./icon/Profile.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import "../css/Login.css";
 import Term from "./components/Term.js";
 
@@ -89,7 +90,7 @@ class Login extends Component {
 
           {/* 아이디 입력창 만들기 */}
           <div>
-            <img className="icon" src={ProfileIcon} alt="profile image" />
+            <FontAwesomeIcon className="icon" icon="smile" />
 
             {/* <span>ID</span> */}
             <input
@@ -103,7 +104,8 @@ class Login extends Component {
 
           {/* 패스워드 입력창 만들기 */}
           <div>
-            <img className="icon" src={ProfileIcon} alt="profile image" />
+            <FontAwesomeIcon className="icon" icon="smile" />
+
             {/* <span>PASSWORD</span> */}
             <input
               // placeholder="비밀번호를 입력해주세요."
