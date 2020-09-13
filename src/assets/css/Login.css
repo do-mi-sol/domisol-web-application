@@ -24,6 +24,10 @@ input {
   width: 225px;
   font-size: 2px;
 }
+
+.buttonContainer {
+  margin-top: 1000;
+}
 .button1 {
   /* 색 */
   background-color: white;

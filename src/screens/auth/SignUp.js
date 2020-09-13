@@ -40,6 +40,7 @@ export default class SignUp extends Component {
       [e.target.name]: e.target.value,
     });
   };
+
   agree = (e) => {
     if (this.state.checkterm === "false") {
       this.setState({ checkterm: e.target.value });
