@@ -7,6 +7,7 @@ import Header from "../src/components/header/Header";
 import Login from "./screens/auth/Login";
 import SignUp from "./screens/auth/SignUp";
 import Home from "./screens/main/Home";
+import Board from "./screens/main/Board";
 
 import "./FontAwesome";
 
@@ -19,6 +20,7 @@ ReactDOM.render(
       <Route exact path="/" component={Home} />
       <Route exact path="/login" component={Login} />
       <Route exact path="/signup" component={SignUp} />
+      <Route exact path="/board" component={Board} />
     </Switch>
   </Router>,
   document.getElementById("root")
