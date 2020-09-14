@@ -1,7 +1,7 @@
-import React, { Component } from "react"
-import { Carousel, Button, CardDeck, Card } from "react-bootstrap"
-import "bootstrap/dist/css/bootstrap.min.css"
-import "../css/Home.css"
+import React, { Component } from "react";
+import { Carousel, Button, CardDeck, Card } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "../css/Home.css";
 
 export default class Home extends Component {
   render() {
@@ -44,7 +44,9 @@ export default class Home extends Component {
             />
             <div className="woo">
               <h3>Third slide label</h3>
-              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+              <p>
+                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+              </p>
             </div>
           </Carousel.Item>
         </Carousel>
@@ -54,7 +56,7 @@ export default class Home extends Component {
         <Button variant="outline-warning">둘러보기</Button>
         {""}
 
-        <Button variant="warning">로그인하기-></Button>
+        <Button variant="warning">로그인하기</Button>
 
         <div>
           <br></br>
@@ -146,8 +148,9 @@ export default class Home extends Component {
               <Card.Body>
                 <Card.Title>Name</Card.Title>
                 <Card.Text>
-                  This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.
+                  This is a wider card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -159,7 +162,8 @@ export default class Home extends Component {
               <Card.Body>
                 <Card.Title>Name</Card.Title>
                 <Card.Text>
-                  This card has supporting text below as a natural lead-in to additional content.{" "}
+                  This card has supporting text below as a natural lead-in to
+                  additional content.{" "}
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -171,9 +175,9 @@ export default class Home extends Component {
               <Card.Body>
                 <Card.Title>Name</Card.Title>
                 <Card.Text>
-                  This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This card has even longer content than the first to show that equal
-                  height action.
+                  This is a wider card with supporting text below as a natural
+                  lead-in to additional content. This card has even longer
+                  content than the first to show that equal height action.
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -188,8 +192,9 @@ export default class Home extends Component {
               <Card.Body>
                 <Card.Title>Name</Card.Title>
                 <Card.Text>
-                  This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.
+                  This is a wider card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -201,7 +206,8 @@ export default class Home extends Component {
               <Card.Body>
                 <Card.Title>Name</Card.Title>
                 <Card.Text>
-                  This card has supporting text below as a natural lead-in to additional content.{" "}
+                  This card has supporting text below as a natural lead-in to
+                  additional content.{" "}
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -213,15 +219,15 @@ export default class Home extends Component {
               <Card.Body>
                 <Card.Title>Name</Card.Title>
                 <Card.Text>
-                  This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This card has even longer content than the first to show that equal
-                  height action.
+                  This is a wider card with supporting text below as a natural
+                  lead-in to additional content. This card has even longer
+                  content than the first to show that equal height action.
                 </Card.Text>
               </Card.Body>
             </Card>
           </CardDeck>
         </div>
       </div>
-    )
+    );
   }
 }
