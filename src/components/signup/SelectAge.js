@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
         marginTop: theme.spacing(2),
     },
 }))
-const DMSSelectAge = ({age, handleChange}) => {
+const SelectAge = ({age, handleChange}) => {
     const age_array = make_ageArr()
     const classes = useStyles()
     return (
@@ -60,4 +60,4 @@ const DMSSelectAge = ({age, handleChange}) => {
     )
 }
 
-export default DMSSelectAge
+export default SelectAge

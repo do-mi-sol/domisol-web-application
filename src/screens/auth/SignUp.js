@@ -1,6 +1,11 @@
 import React, {Component} from 'react'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
+import SelectAge from '../../components/signup/SelectAge'
+import InputWithBtn from '../../components/signup/InputWithBtn'
+import DMSInput from '../../components/customs/DMSInput'
+import DMSButton from '../../components/customs/DMSButton'
+
 import '../../assets/css/SignUp.css'
 import Term from '../../components/signup/Term'
 
@@ -16,101 +21,39 @@ export default class SignUp extends Component {
         checkterm: 'false',
     }
 
-    range = (start, end) => {
-        var arr = []
-        var length = end - start
-        for (var i = 0; i <= length; i++) {
-            arr[i] = start
-            start++
-        }
-        return arr
-    }
-    //age 만들기 위해 사용
-    make_ageArr = () => {
-        const listItems = this.range(10, 100).map((age) => (
-            <option value={age} key={age.toString()}>
-                {age}
-            </option>
-        ))
-        return listItems
-    }
-
     handleChange = (e) => {
         this.setState({
             [e.target.name]: e.target.value,
         })
-    }
-
-    agree = (e) => {
-        if (this.state.checkterm === 'false') {
-            this.setState({checkterm: e.target.value})
-        } else {
-            this.setState({checkterm: 'false'})
-        }
     }
     // SignUp button 클릭 함수
     clickSignUp = () => {
         console.log(this.state)
     }
     render() {
-        const {
-            id,
-            name,
-            password1,
-            password2,
-            email,
-            gender,
-            age,
-        } = this.state
+        const {id, name, password1, password2, email} = this.state
         return (
             <div className="container">
                 {/* ID */}
                 <div>
-                    <div className="input_container">
-                        <FontAwesomeIcon
-                            className="icon"
-                            icon="smile"
-                        />
-                        <div className="input_wrapper">
-                            <input
-                                className="inputBox"
-                                type="text"
-                                name="id"
-                                placeholder="ID"
-                                value={id}
-                                onChange={this.handleChange}
-                            />
-                        </div>
-                        <button className="button">중복확인</button>
-                    </div>
-                    <hr className="line" />
+                    <InputWithBtn
+                        value={id}
+                        name="id"
+                        type="id"
+                        label="ID"
+                        onChange={this.handleChange}
+                    />
                 </div>
 
                 {/* NAME */}
                 <div>
-                    <div className="input_container">
-                        <FontAwesomeIcon
-                            className="icon"
-                            icon="smile"
-                        />
-                        <FontAwesomeIcon
-                            className="icon"
-                            icon="sms"
-                        />
-
-                        <div className="input_wrapper">
-                            <input
-                                className="inputBox"
-                                type="text"
-                                name="name"
-                                placeholder="NAME"
-                                value={name}
-                                onChange={this.handleChange}
-                            />
-                        </div>
-                        <button className="button">중복확인</button>
-                    </div>
-                    <hr className="line" />
+                    <InputWithBtn
+                        value={name}
+                        name="name"
+                        type="text"
+                        label="NAME"
+                        onChange={this.handleChange}
+                    />
                 </div>
 
                 {/* PASSWORD */}
@@ -121,64 +64,38 @@ export default class SignUp extends Component {
                             8~16자로 입력해주세요.
                         </span>
                     </div>
-
-                    <div className="input_container">
-                        <FontAwesomeIcon
-                            className="icon"
-                            icon="smile"
+                    <div>
+                        <DMSInput
+                            value={password1}
+                            name="password1"
+                            type="password"
+                            label="PASSWORD"
+                            onChange={this.handleChange}
+                            variant="outlined"
                         />
-                        <div className="input_wrapper">
-                            <input
-                                className="inputBox"
-                                type="password"
-                                name="password1"
-                                placeholder="PASSWORD"
-                                value={password1}
-                                onChange={this.handleChange}
-                            />
-                        </div>
                     </div>
-                    <hr className="line" />
-                </div>
-                <div>
-                    <div className="input_container">
-                        <FontAwesomeIcon
-                            className="icon"
-                            icon="smile"
+                    <div>
+                        <DMSInput
+                            value={password2}
+                            name="password2"
+                            type="password"
+                            label="Confirm PASSWORD"
+                            onChange={this.handleChange}
+                            variant="outlined"
                         />
-                        <div className="input_wrapper">
-                            <input
-                                className="inputBox"
-                                type="password"
-                                name="password2"
-                                placeholder="CONFIRM PASSWORD"
-                                value={password2}
-                                onChange={this.handleChange}
-                            />
-                        </div>
                     </div>
-                    <hr className="line" />
                 </div>
 
                 {/* EMAIL */}
                 <div>
-                    <div className="input_container">
-                        <FontAwesomeIcon
-                            className="icon"
-                            icon="smile"
-                        />
-                        <div className="input_wrapper">
-                            <input
-                                className="inputBox"
-                                type="email"
-                                name="email"
-                                placeholder="EMAIL"
-                                value={email}
-                                onChange={this.handleChange}
-                            />
-                        </div>
-                    </div>
-                    <hr className="line" />
+                    <DMSInput
+                        value={email}
+                        name="email"
+                        type="email"
+                        label="EMAIL"
+                        onChange={this.handleChange}
+                        variant="outlined"
+                    />
                 </div>
 
                 <div className="select-container">
@@ -207,18 +124,11 @@ export default class SignUp extends Component {
                         </label>
                     </div>
 
-                    {/* age 선택 */}
-                    <div className="age-container">
-                        {/* <span className="age_title">연령</span> */}
-                        <select
-                            className="select_age"
-                            name="age"
-                            value={age}
-                            onChange={this.handleChange}
-                        >
-                            <option selected>연령</option>
-                            <this.make_ageArr />
-                        </select>
+                    <div>
+                        <SelectAge
+                            age={this.age}
+                            handleChange={this.handleChange}
+                        />
                     </div>
                 </div>
                 <div className="term-container">
@@ -235,12 +145,15 @@ export default class SignUp extends Component {
                         <span>약관에 동의 합니다.</span>
                     </label>
                 </div>
-                <button
-                    className="signUp-btn"
-                    onClick={this.clickSignUp}
-                >
-                    Sign Up
-                </button>
+                <DMSButton
+                    className="signup-button"
+                    children="회원가입"
+                    variant="contained"
+                    size="large"
+                    width={400}
+                    color="#ffd400"
+                    margin={20}
+                />
             </div>
         )
     }

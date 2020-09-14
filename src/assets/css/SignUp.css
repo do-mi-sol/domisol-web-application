@@ -1,3 +1,11 @@
+.password-text {
+    font-size: 5px;
+    text-decoration: underline;
+    /* margin-left: 30px; */
+    position: relative;
+    top: 5px;
+}
+
 .input_container {
     /* 크기 */
     width: 355px;
@@ -47,13 +55,6 @@ input {
 
     /* 색 */
     color: #ffd400;
-}
-.password-text {
-    font-size: 5px;
-    text-decoration: underline;
-    /* margin-left: 30px; */
-    position: relative;
-    top: -5px;
 }
 .container {
     height: 600px;
