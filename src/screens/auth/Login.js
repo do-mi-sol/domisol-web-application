@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Divider, Container } from "@material-ui/core";
 
 import DMSInput from "../../components/customs/DMSInput";
 import DMSButton from "../../components/customs/DMSButton";
@@ -20,7 +21,7 @@ export default class Login extends Component {
   render() {
     const { id, password } = this.state;
     return (
-      <div class=" array">
+      <div class=" array" style={{ marginTop: 60 }}>
         <div>
           <img
             className="icon2"
@@ -41,6 +42,7 @@ export default class Login extends Component {
         <div>
           <DMSInput
             value={password}
+            type="password"
             label="Password"
             onChange={this.handleChange}
             variant="outlined"
@@ -59,10 +61,17 @@ export default class Login extends Component {
           />
         </div>
 
-        {/* <Divider variant="middle" style={{ marginTop: 25 }} /> */}
+        <Container maxWidth="xs" style={{ marginTop: 30 }}>
+          <Divider classes="MuiDivider-middle" />
+        </Container>
 
         <div>
-          <DMSButton className="button1" children="회원가입" margin={20} />
+          <DMSButton
+            className="button1"
+            children="회원가입"
+            margin={20}
+            href="/signup"
+          />
           <DMSButton className="button1" children="아이디 찾기" />
           <DMSButton className="button1" children="비밀번호 찾기" />
         </div>

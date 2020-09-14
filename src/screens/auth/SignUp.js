@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import "../css/SignUp.css";
+import "../../assets/css/SignUp.css";
 import Term from "./components/Term.js";
 
 export default class SignUp extends Component {
@@ -79,6 +79,7 @@ export default class SignUp extends Component {
         <div>
           <div className="input_container">
             <FontAwesomeIcon className="icon" icon="smile" />
+            <FontAwesomeIcon className="icon" icon="sms" />
 
             <div className="input_wrapper">
               <input

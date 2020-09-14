@@ -11,13 +11,14 @@ const styles = makeStyles(() => ({
   },
 }));
 
-const DMSInput = ({ id, label, helper, variant }) => {
+const DMSInput = ({ id, label, helper, variant, type }) => {
   const classes = styles();
   return (
     <div>
       <FormControl fullWidth className={classes.container}>
         <TextField
           id={id}
+          type={type}
           label={label}
           helperText={helper}
           margin="dense"
