@@ -1,52 +1,35 @@
-import React, { Component } from "react"
-import { Navbar, Nav, Form, Button } from "react-bootstrap"
-import "bootstrap/dist/css/bootstrap.min.css"
-// import "../css/Nav.css";
-// import "bootstrap/dist/css/bootstrap.min.css";
+import { Container } from "@material-ui/core";
+import React, { Component } from "react";
+import { Navbar, Nav, Form, Button } from "react-bootstrap";
 
-// function Header() {
-//   return (
-//     <Navbar bg="light" variant="light">
-//       <Navbar.Brand href={Login}>XD</Navbar.Brand>
-//       <Nav className="mr-auto">
-//         <Nav.Link href={Login}>끝내고 싶다..썸</Nav.Link>
-//         <Nav.Link href={Login}>잘하고싶다..연애</Nav.Link>
-//         <Nav.Link href={Login}>etc..</Nav.Link>
-//       </Nav>
-
-//       {/* <Form inline>
-//         <Button variant="light">로그인</Button>
-//         {"    "}
-
-//         <Button variant="warning">회원가입</Button>
-//       </Form> */}
-//     </Navbar>
-//     <div>
-//       <Link to="/">Home</Link>
-//       <Link to="/login">login</Link>
-//     </div>
-//   );
-// }
-// export default Header;
+import DMSButton from "../customs/DMSButton";
 
 export default class Header extends Component {
   render() {
     return (
       <Navbar bg="light" variant="light">
-        <Navbar.Brand href="#home">XD</Navbar.Brand>
+        <Navbar.Brand href="/">
+          <img
+            src={require("../../assets/images/Logo2.png")}
+            alt="logo2"
+            width="40"
+          ></img>
+        </Navbar.Brand>
 
         <Nav className="mr-auto">
-          <Nav.Link href="/">끝내고 싶다..썸</Nav.Link>
-          <Nav.Link href="/login">잘하고싶다..연애</Nav.Link>
-          <Nav.Link href="/signup">etc..</Nav.Link>
+          <Nav.Link href="/">홈</Nav.Link>
+          <Nav.Link href="/board">게시판</Nav.Link>
+          <Nav.Link href="/signup">회원가입</Nav.Link>
         </Nav>
-        <Form inline>
-          <Button variant="light">로그인</Button>
-          {"    "}
+        <Form>
+          <Container>
+            <DMSButton children="로그인" href="/login" />
+          </Container>
 
-          <Button variant="warning">회원가입</Button>
+          {/* <Button variant="light">로그인</Button>
+          <Button variant="warning">회원가입</Button> */}
         </Form>
       </Navbar>
-    )
+    );
   }
 }
