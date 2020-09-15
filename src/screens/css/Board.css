@@ -1,10 +1,58 @@
+.container {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 100%;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.left-container {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+.board-name-container {
+    align-items: flex-start;
+    width: 50%;
+    margin-top: 5%;
+}
+.best-board {
+    width: 50%;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+.mainboard {
+    margin-top: 50px;
+    width: 70%;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+.pagination-container {
+    width: 80%;
+    padding-left: 300px;
+}
+.button-container {
+    width: 20%;
+}
+.right-container {
+    width: 20%;
+
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
 .board-name-button {
     border-radius: 17px;
     padding: 5px 15px;
 }
 .yellow-line {
     /* 크기 및 굵기 */
-    width: 355px;
+    width: 100%;
     border: solid #ffd400;
 
     /* 위치(마진) 조절 */
@@ -13,11 +61,28 @@
     /* 색 */
     color: #ffd400;
 }
-.line {
-    width: 355px;
-    margin-top: 4px;
+.main-board-line {
+    width: 800px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.best-board-line {
+    width: 350px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.today-board-line {
+    width: 230px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 .button {
     border-radius: 1px;
     padding: 5px 15px;
+    justify-content: flex-end;
+    align-content: flex-end;
+    align-items: flex-end;
+}
+.today-talk {
+    width: 100%;
 }
