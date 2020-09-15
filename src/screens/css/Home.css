@@ -17,6 +17,19 @@
 
   /* margin-left: 200px; */
 }
+
+/* 슬라이드 버튼 색상 바꾸기 */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #000;
+  border-color: blue;
+  color: black !important;
+  outline-color: black !important;
+  filter: none !important;
+
+  width: 40px;
+  height: 40px;
+}
 .carousel-item {
   height: 500px;
   /* text-align: center; */
