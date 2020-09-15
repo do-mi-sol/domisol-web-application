@@ -17,7 +17,7 @@ const range = (start, end) => {
 }
 const make_ageArr = () => {
     const listItems = range(10, 100).map((age) => (
-        <option value={{age}} key={age.toString()}>
+        <option value={age} key={age.toString()}>
             {age}
         </option>
     ))
@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
     formControl: {
         margin: theme.spacing(1),
         minWidth: 120,
-        margin: 0,
+        // margin: 0,
     },
     selectEmpty: {
         marginTop: theme.spacing(2),
