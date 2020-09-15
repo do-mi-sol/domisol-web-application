@@ -1,10 +1,12 @@
 import React, {Component} from 'react'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+// import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 import SelectAge from '../../components/signup/SelectAge'
 import InputWithBtn from '../../components/signup/InputWithBtn'
+import GenderRadio2 from '../../components/signup/GenderRadio2'
 import DMSInput from '../../components/customs/DMSInput'
 import DMSButton from '../../components/customs/DMSButton'
+import {Divider, Container, Grid} from '@material-ui/core'
 
 import '../../assets/css/SignUp.css'
 import Term from '../../components/signup/Term'
@@ -34,6 +36,19 @@ export default class SignUp extends Component {
         const {id, name, password1, password2, email} = this.state
         return (
             <div className="container">
+                <Container
+                    maxWidth="xs"
+                    style={{marginTop: 30, marginBottom: 20}}
+                >
+                    <img
+                        className="logo-icon"
+                        src={require('../../assets/images/Logo.jpg')}
+                        alt="logo"
+                    />
+                    <h3>회원가입</h3>
+
+                    <Divider classes="MuiDivider-middle" />
+                </Container>
                 {/* ID */}
                 <div>
                     <InputWithBtn
@@ -97,39 +112,29 @@ export default class SignUp extends Component {
                         variant="outlined"
                     />
                 </div>
-
-                <div className="select-container">
-                    {/* 남여 선택 radio */}
-                    <div className="gender-container">
-                        <input
-                            type="radio"
-                            name="gender"
-                            id="male"
-                            value="male"
-                            onChange={this.handleChange}
-                        />
-                        <label for="male" className="label1">
-                            <span className="gender-name">남성</span>
-                        </label>
-
-                        <input
-                            type="radio"
-                            name="gender"
-                            id="female"
-                            value="female"
-                            onChange={this.handleChange}
-                        />
-                        <label for="female" className="label2">
-                            <span className="gender-name">여성</span>
-                        </label>
-                    </div>
-
-                    <div>
-                        <SelectAge
-                            age={this.age}
-                            handleChange={this.handleChange}
-                        />
-                    </div>
+                <div>
+                    <Grid
+                        container
+                        spacing={3}
+                        direction="row"
+                        alignItems="center"
+                        justify="space-between"
+                        style={{
+                            marginTop: 1,
+                            marginBottom: 1,
+                            width: 400,
+                        }}
+                    >
+                        <Grid item>
+                            <GenderRadio2 />
+                        </Grid>
+                        <Grid item>
+                            <SelectAge
+                                age={this.age}
+                                handleChange={this.handleChange}
+                            />
+                        </Grid>
+                    </Grid>
                 </div>
                 <div className="term-container">
                     <div className="term-content">
