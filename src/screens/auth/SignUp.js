@@ -1,72 +1,28 @@
-import React, { Component } from "react";
+import React, {Component} from 'react'
 // import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
-<<<<<<< Updated upstream
-import SelectAge from "../../components/signup/SelectAge";
-import InputWithBtn from "../../components/signup/InputWithBtn";
-import GenderRadio2 from "../../components/signup/GenderRadio2";
-import DMSInput from "../../components/customs/DMSInput";
-import DMSButton from "../../components/customs/DMSButton";
-import { Divider, Container, Grid } from "@material-ui/core";
-=======
 import SelectAge from '../../components/signup/SelectAge'
 import InputWithBtn from '../../components/signup/InputWithBtn'
-import GenderRadio from '../../components/signup/GenderRadio'
+import GenderRadio2 from '../../components/signup/GenderRadio2'
 import DMSInput from '../../components/customs/DMSInput'
 import DMSButton from '../../components/customs/DMSButton'
 import {Divider, Container, Grid} from '@material-ui/core'
->>>>>>> Stashed changes
 
-import "../../assets/css/SignUp.css";
-import Term from "../../components/signup/Term";
+import '../../assets/css/SignUp.css'
+import Term from '../../components/signup/Term'
 
 export default class SignUp extends Component {
-  state = {
-    id: "",
-    name: "",
-    password1: "",
-    password2: "",
-    email: "",
-    gender: "",
-    age: "",
-    checkterm: "false",
-  };
+    state = {
+        id: '',
+        name: '',
+        password1: '',
+        password2: '',
+        email: '',
+        gender: '',
+        age: '',
+        checkterm: 'false',
+    }
 
-<<<<<<< Updated upstream
-  handleChange = (e) => {
-    this.setState({
-      [e.target.name]: e.target.value,
-    });
-  };
-  // SignUp button 클릭 함수
-  clickSignUp = () => {
-    console.log(this.state);
-  };
-  render() {
-    const { id, name, password1, password2, email } = this.state;
-    return (
-      <div className="container">
-        <Container maxWidth="xs" style={{ marginTop: 30, marginBottom: 20 }}>
-          <img
-            className="logo-icon"
-            src={require("../../assets/images/Logo.jpg")}
-            alt="logo"
-          />
-          <h3>회원가입</h3>
-
-          <Divider classes="MuiDivider-middle" />
-        </Container>
-        {/* ID */}
-        <div>
-          <InputWithBtn
-            value={id}
-            name="id"
-            type="id"
-            label="ID"
-            onChange={this.handleChange}
-          />
-        </div>
-=======
     handleChange = (e) => {
         this.setState({
             [e.target.name]: e.target.value,
@@ -104,106 +60,20 @@ export default class SignUp extends Component {
                         onChange={this.handleChange}
                     />
                 </div>
->>>>>>> Stashed changes
 
-        {/* NAME */}
+                {/* NAME */}
 
-        <div>
-          <DMSInput
-            value={name}
-            name="name"
-            type="text"
-            label="NAME"
-            onChange={this.handleChange}
-            variant="outlined"
-          />
-        </div>
+                <div>
+                    <DMSInput
+                        value={name}
+                        name="name"
+                        type="text"
+                        label="NAME"
+                        onChange={this.handleChange}
+                        variant="outlined"
+                    />
+                </div>
 
-<<<<<<< Updated upstream
-        {/* PASSWORD */}
-        <div>
-          <div>
-            <DMSInput
-              value={password1}
-              name="password1"
-              type="password"
-              label="PASSWORD"
-              onChange={this.handleChange}
-              variant="outlined"
-              helper="비밀번호는 문자, 숫자, 특수문자를 포함하여 8~16자로 입력해주세요."
-            />
-          </div>
-          <div>
-            <DMSInput
-              value={password2}
-              name="password2"
-              type="password"
-              label="Confirm PASSWORD"
-              onChange={this.handleChange}
-              variant="outlined"
-            />
-          </div>
-        </div>
-
-        {/* EMAIL */}
-        <div>
-          <DMSInput
-            value={email}
-            name="email"
-            type="email"
-            label="EMAIL"
-            onChange={this.handleChange}
-            variant="outlined"
-          />
-        </div>
-        <div>
-          <Grid
-            container
-            spacing={3}
-            direction="row"
-            alignItems="center"
-            justify="space-between"
-            style={{
-              marginTop: 1,
-              marginBottom: 1,
-              width: 400,
-            }}
-          >
-            <Grid item>
-              <GenderRadio2 />
-            </Grid>
-            <Grid item>
-              <SelectAge age={this.age} handleChange={this.handleChange} />
-            </Grid>
-          </Grid>
-        </div>
-        <div className="term-container">
-          <div className="term-content">
-            <Term />
-          </div>
-          <label className="agree-container">
-            <input
-              type="checkbox"
-              className="checkbox_agree"
-              value={true}
-              onChange={this.agree}
-            />
-            <span>약관에 동의 합니다.</span>
-          </label>
-        </div>
-        <DMSButton
-          className="signup-button"
-          children="회원가입"
-          variant="contained"
-          size="large"
-          width={400}
-          color="#ffd400"
-          margin={20}
-        />
-      </div>
-    );
-  }
-=======
                 {/* EMAIL */}
                 <div>
                     <DMSInput
@@ -275,5 +145,4 @@ export default class SignUp extends Component {
             </div>
         )
     }
->>>>>>> Stashed changes
 }
