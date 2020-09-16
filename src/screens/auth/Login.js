@@ -56,7 +56,6 @@ export default class Login extends Component {
             variant="contained"
             size="large"
             width={400}
-            color="#ffd400"
             margin={20}
           />
         </div>
@@ -67,13 +66,13 @@ export default class Login extends Component {
 
         <div>
           <DMSButton
-            className="button1"
             children="회원가입"
             margin={20}
             href="/signup"
+            color="null"
           />
-          <DMSButton className="button1" children="아이디 찾기" />
-          <DMSButton className="button1" children="비밀번호 찾기" />
+          <DMSButton children="아이디 찾기" color="null" />
+          <DMSButton children="비밀번호 찾기" color="null" />
         </div>
       </div>
     );
