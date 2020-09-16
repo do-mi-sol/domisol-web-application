@@ -1,11 +1,19 @@
-do-mi-sol : web application
-=======
+<h1 align="center">
+  do-mi-sol : web application
+</h1>
 
 <div align="center">
   <strong>👩‍❤️‍👨 도미솔, 도움이 미친듯이 필요한 솔로들 👩‍❤️‍👨 </strong>
+  <p>솔로와 커플들이 썸 혹은 연인과 주고 받은 메신저를 공유하여 피드백을 얻는 웹 커뮤니티.</p>
 </div>
 
-솔로와 커플들이 썸 혹은 연인과 주고 받은 메신저를 공유하여 피드백을 얻는 웹 커뮤니티.
+<div align="center">
+  <!-- NPM version -->
+  <img src="https://img.shields.io/npm/v/npm" alt="npm"/>
+  
+  <!-- NODE version -->
+  <img src="https://img.shields.io/node/v/passport" alt="node"/>
+</div>
 
 ### <br/>
 ###
