@@ -49,122 +49,124 @@ export default class SignUp extends Component {
                     <h3>회원가입</h3>
 
                     <Divider />
-                </Container>
-                {/* ID */}
-                <div>
-                    <InputWithBtn
-                        value={id}
-                        name="id"
-                        type="id"
-                        label="ID"
-                        onChange={this.handleChange}
-                    />
-                </div>
+                    <br />
 
-                {/* NAME */}
-
-                <div>
-                    <DMSInput
-                        value={name}
-                        name="name"
-                        type="text"
-                        label="NAME"
-                        onChange={this.handleChange}
-                        variant="outlined"
-                    />
-                </div>
-                {/* PASSWORD */}
-                <div>
+                    {/* ID */}
                     <div>
-                        <DMSInput
-                            value={password1}
-                            name="password1"
-                            type="password"
-                            label="PASSWORD"
+                        <InputWithBtn
+                            value={id}
+                            name="id"
+                            type="id"
+                            label="ID"
                             onChange={this.handleChange}
-                            variant="outlined"
-                            helper="비밀번호는 문자, 숫자, 특수문자를 포함하여 8~16자로 입력해주세요."
                         />
                     </div>
+
+                    {/* NAME */}
+
                     <div>
                         <DMSInput
-                            value={password2}
-                            name="password2"
-                            type="password"
-                            label="Confirm PASSWORD"
+                            value={name}
+                            name="name"
+                            type="text"
+                            label="NAME"
                             onChange={this.handleChange}
                             variant="outlined"
                         />
                     </div>
-                </div>
-                {/* EMAIL */}
-                <div>
-                    <DMSInput
-                        value={email}
-                        name="email"
-                        type="email"
-                        label="EMAIL"
-                        onChange={this.handleChange}
-                        variant="outlined"
-                    />
-                </div>
-                <div>
-                    <Grid
-                        container
-                        spacing={3}
-                        direction="row"
-                        alignItems="center"
-                        justify="space-between"
-                        style={{
-                            marginTop: 10,
-                            marginBottom: 10,
-                            width: 400,
-                        }}
-                    >
-                        <Grid item>
-                            <GenderRadio
+                    {/* PASSWORD */}
+                    <div>
+                        <div>
+                            <DMSInput
+                                value={password1}
+                                name="password1"
+                                type="password"
+                                label="PASSWORD"
                                 onChange={this.handleChange}
+                                variant="outlined"
+                                helper="비밀번호는 문자, 숫자, 특수문자를 포함하여 8~16자로 입력해주세요."
                             />
-                            {/* <GenderRadio2 /> */}
-                        </Grid>
-                        <Divider
-                            orientation="vertical"
-                            flexItem
-                            light
-                            style={{margin: 15}}
-                        />
-                        <Grid item>
-                            <SelectAge
-                                age={this.age}
-                                handleChange={this.handleChange}
+                        </div>
+                        <div>
+                            <DMSInput
+                                value={password2}
+                                name="password2"
+                                type="password"
+                                label="Confirm PASSWORD"
+                                onChange={this.handleChange}
+                                variant="outlined"
                             />
-                        </Grid>
-                    </Grid>
-                </div>
-                <div className="term-container">
-                    <div className="term-content">
-                        <Term />
+                        </div>
                     </div>
-                    <label className="agree-container">
-                        <input
-                            type="checkbox"
-                            className="checkbox_agree"
-                            value={true}
-                            onChange={this.agree}
+                    {/* EMAIL */}
+                    <div>
+                        <DMSInput
+                            value={email}
+                            name="email"
+                            type="email"
+                            label="EMAIL"
+                            onChange={this.handleChange}
+                            variant="outlined"
                         />
-                        <span>약관에 동의 합니다.</span>
-                    </label>
-                </div>
-                <DMSButton
-                    className="signup-button"
-                    children="회원가입"
-                    variant="contained"
-                    size="large"
-                    width={400}
-                    color="#ffd400"
-                    margin={20}
-                    onClick={this.clickSignUp}
-                />
+                    </div>
+                    <div>
+                        <Grid
+                            container
+                            spacing={3}
+                            direction="row"
+                            alignItems="center"
+                            justify="space-between"
+                            style={{
+                                marginTop: 10,
+                                marginBottom: 10,
+                                width: 400,
+                            }}
+                        >
+                            <Grid item>
+                                <GenderRadio
+                                    onChange={this.handleChange}
+                                />
+                                {/* <GenderRadio2 /> */}
+                            </Grid>
+                            <Divider
+                                orientation="vertical"
+                                flexItem
+                                light
+                                style={{margin: 15}}
+                            />
+                            <Grid item>
+                                <SelectAge
+                                    age={this.age}
+                                    handleChange={this.handleChange}
+                                />
+                            </Grid>
+                        </Grid>
+                    </div>
+                    <div className="term-container">
+                        <div className="term-content">
+                            <Term />
+                        </div>
+                        <label className="agree-container">
+                            <input
+                                type="checkbox"
+                                className="checkbox_agree"
+                                value={true}
+                                onChange={this.agree}
+                            />
+                            <span>약관에 동의 합니다.</span>
+                        </label>
+                    </div>
+                    <DMSButton
+                        className="signup-button"
+                        children="회원가입"
+                        variant="contained"
+                        size="large"
+                        width={400}
+                        color="#ffd400"
+                        margin={20}
+                        onClick={this.clickSignUp}
+                    />
+                </Container>
             </div>
         )
     }

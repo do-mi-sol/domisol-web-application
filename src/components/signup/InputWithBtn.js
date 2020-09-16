@@ -55,7 +55,7 @@ const InputWithBtn = ({
                         children="중복확인"
                         size="small"
                         style={{
-                            width: 90,
+                            width: 88,
                             height: 40,
                             backgroundColor: '#ffd400',
                             borderColor: 'white',
