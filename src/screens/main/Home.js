@@ -70,7 +70,7 @@
 import React, { Component } from "react";
 import { Carousel, Button, CardDeck, Card } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../css/Home.css";
+import "../../assets/css/Home.css";
 
 export default class Home extends Component {
   render() {
