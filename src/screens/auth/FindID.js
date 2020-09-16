@@ -26,7 +26,7 @@ export default class FindID extends Component {
                 {/* EMAIL */}
                 <div>
                     <DMSInput
-                        value={email}
+                        // value={email}
                         name="email"
                         type="email"
                         label="EMAIL"
