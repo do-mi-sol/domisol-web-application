@@ -29,6 +29,11 @@ export default class SignUp extends Component {
         })
         console.log(e.target.value)
     }
+    agreeterm = () => {
+        this.state.checkterm === 'false'
+            ? this.setState({checkterm: 'true'})
+            : this.setState({checkterm: 'false'})
+    }
     // SignUp button 클릭 함수
     clickSignUp = () => {
         console.log(this.state)
@@ -151,7 +156,7 @@ export default class SignUp extends Component {
                                 type="checkbox"
                                 className="checkbox_agree"
                                 value={true}
-                                onChange={this.agree}
+                                onChange={this.agreeterm}
                             />
                             <span>약관에 동의 합니다.</span>
                         </label>

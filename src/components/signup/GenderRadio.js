@@ -30,7 +30,6 @@ const GenderRadio = ({value, onChange}) => {
                     value="female"
                     control={
                         <Radio
-                            onChange={onChange}
                             size="small"
                             style={{
                                 color: '#ffd400',
