@@ -1,16 +1,24 @@
 do-mi-sol : web application
 =======
 
-<img src="/src/assets/images/Logo.jpg" width="700px" height="300px" alt="domisolLogo"></img>
+<div align="center">
+  <strong>👩‍❤️‍👨 도미솔, 도움이 미친듯이 필요한 솔로들 👩‍❤️‍👨 </strong>
+</div>
 
-👩‍❤️‍👨 **도미솔, 도움이 미친듯이 필요한 솔로들** 👩‍❤️‍👨
-
-솔로와 커플들이 썸 혹은 연인과 주고 받은 메신저를 공유하여 피드백을 얻는 커뮤니티.
+솔로와 커플들이 썸 혹은 연인과 주고 받은 메신저를 공유하여 피드백을 얻는 웹 커뮤니티.
 
 ### <br/>
 ###
 
-## 💡Getting Started
+## 💡 Features
+* JS기반 react 프레임워크 사용
+
+* 댓글과 좋아요를 통해 작성자에게 피드백
+
+### <br/>
+###
+
+## 💡 Getting Started
 
 ### Prerequisites
 
@@ -40,20 +48,38 @@ $ npm start
 ### <br/>
 ###
 
-## 💡Role
+## 💡 Role
 김희연|강민정|고은희|이혜림|최지혜     
 :-------:|:-------:|:-------:|:-------:|:-------:
-`front-end`, `back-end`|`front-end`|`front-end`|`front-end`|`front-end`
+`front-end`<br/>`back-end`|`front-end`<br/>|`front-end`<br/>|`front-end`<br/>|`front-end`<br/>`designer`
 project repackage<br/>|회원가입 페이지<br/>아이디&비밀번호 찾기 페이지|홈 페이지<br/>게시판글 페이지|로그인 페이지<br/> 내정보 페이지|UI디자인<br>게시판 페이지<br/>글쓰기 페이지|
 
 ### <br/>
 ###
 
-## 💡Project status
-### 🔥🔥 프로젝트 진행 중 🔥🔥  
+## 💡 Contributing
+[![](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/images/0)](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/links/0)[![](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/images/1)](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/links/1)[![](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/images/2)](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/links/2)[![](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/images/3)](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/links/3)[![](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/images/4)](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/links/4)[![](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/images/5)](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/links/5)[![](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/images/6)](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/links/6)[![](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/images/7)](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/links/7)
 
 ### <br/>
 ###
 
-## 💡Contributing
-[![](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/images/0)](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/links/0)[![](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/images/1)](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/links/1)[![](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/images/2)](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/links/2)[![](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/images/3)](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/links/3)[![](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/images/4)](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/links/4)[![](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/images/5)](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/links/5)[![](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/images/6)](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/links/6)[![](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/images/7)](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/links/7)
+## 💡 Link
+### do-mi-sol project
+
+`domisol web application` :  <https://github.com/do-mi-sol/domisol-web-application>
+
+`domisol server` : <https://github.com/do-mi-sol/domisol-server>
+
+### do-mi-sol developer
+
+`강민정` 👉🏻 <https://github.com/Minjeong-K>
+
+`고은희` 👉🏻 <https://github.com/eunhee-ko>
+
+`김희연` 👉🏻 <https://github.com/HeeYeonKim98>
+
+`설한정` 👉🏻 <https://github.com/HanJeongSeol>
+
+`이헤림` 👉🏻 <https://github.com/hye-rim-lee>
+
+`최지혜` 👉🏻 <https://github.com/jangnyer>
