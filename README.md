@@ -35,8 +35,12 @@ $ npm install
 ```
 $ npm start
 ```
-
+   
+   
 ## 💡Role
+
+## Project status
+### 🔥🔥 프로젝트 진행 중 🔥🔥  
+
+## 💡Contributing
 [![](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/images/0)](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/links/0)[![](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/images/1)](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/links/1)[![](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/images/2)](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/links/2)[![](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/images/3)](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/links/3)[![](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/images/4)](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/links/4)[![](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/images/5)](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/links/5)[![](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/images/6)](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/links/6)[![](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/images/7)](https://sourcerer.io/fame/HeeYeonKim98/do-mi-sol/domisol-web-application/links/7)
-
-
