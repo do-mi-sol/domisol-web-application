@@ -58,7 +58,6 @@ const InputWithBtn = ({
               backgroundColor: color,
               borderColor: "white",
               marginTop: 4,
-              // fontWeight: 'bold',
             }}
           />
         </Grid>
