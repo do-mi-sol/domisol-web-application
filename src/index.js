@@ -6,6 +6,7 @@ import {Router, Route, Switch} from 'react-router-dom'
 import Header from '../src/components/header/Header'
 import Login from './screens/auth/Login'
 import FindID from './screens/auth/FindID'
+import FindPW from './screens/auth/FindPW'
 import SignUp from './screens/auth/SignUp'
 import Home from './screens/main/Home'
 import Board from './screens/main/Board'
@@ -23,6 +24,7 @@ ReactDOM.render(
             <Route exact path="/signup" component={SignUp} />
             <Route exact path="/board" component={Board} />
             <Route exact path="/findID" component={FindID} />
+            <Route exact path="/findPW" component={FindPW} />
         </Switch>
     </Router>,
     document.getElementById('root')
