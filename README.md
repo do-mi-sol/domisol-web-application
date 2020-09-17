@@ -62,7 +62,7 @@ $ npm start
 ## 💡 Role
 김희연|강민정|고은희|이혜림|최지혜     
 :-------:|:-------:|:-------:|:-------:|:-------:
-`front-end`<br/>`back-end`|`front-end`<br/>|`front-end`<br/>|`front-end`<br/>|`front-end`<br/>`designer`
+`FE-developer`<br/>`BE-developer`|`FE-developer`<br/>|`FE-developer`<br/>|`FE-developer`<br/>|`FE-developer`<br/>`designer`
 project repackage<br/>|회원가입 페이지<br/>아이디&비밀번호 찾기 페이지|홈 페이지<br/>게시판글 페이지|로그인 페이지<br/> 내정보 페이지|UI디자인<br>게시판 페이지<br/>글쓰기 페이지|
 
 ### <br/>
