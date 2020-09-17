@@ -23,8 +23,8 @@ ReactDOM.render(
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={SignUp} />
             <Route exact path="/board" component={Board} />
-            <Route exact path="/findID" component={FindID} />
-            <Route exact path="/findPW" component={FindPW} />
+            <Route exact path="/findid" component={FindID} />
+            <Route exact path="/findpw" component={FindPW} />
         </Switch>
     </Router>,
     document.getElementById('root')
