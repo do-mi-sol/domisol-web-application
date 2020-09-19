@@ -26,12 +26,12 @@ const HeaderLink = () => {
     //       </a>
     //     </li>
     //     <li>
-    //       <a className="smoothscroll" href="/">
+    //       <a className="smoothscroll" href="/board">
     //         About
     //       </a>
     //     </li>
     //     <li>
-    //       <a className="smoothscroll" href="/">
+    //       <a className="smoothscroll" href="/signup">
     //         Resume
     //       </a>
     //     </li>
