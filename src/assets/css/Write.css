@@ -1,10 +1,34 @@
-
 .container {
     margin-top: 50px;
-    width: 80%;
-    margin-left: 10%;
-
+    display: flex;
     flex-wrap: wrap;
+
+    width: 100%;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.picture-container {
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+.input-container {
+    padding-left: 5%;
+
+    width: 60%;
+
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+.button-container {
+    padding-left: 70%;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 .yellow-line {
     /* 크기 및 굵기 */
@@ -27,39 +51,38 @@
 
 .title-label {
     margin-top: 30px;
-    font-size: xx-large;
+    font-size: large;
 }
 .talk-img {
     margin-top: 30px;
+    width: 100%;
 }
 .talk_preview {
     margin-top: 30px;
-    width: 80%;
+    width: 100%;
     height: 800px;
 }
 
 .title-input {
     margin-top: 20px;
-    width: 80%;
+    width: 100%;
     height: 40px;
     border-radius: 10px;
-    padding-left: 20px;
-    margin-left: 20px;
+
     border-color: yellow;
     outline-style: none;
 }
 .contents-input {
-    padding-left: 20px;
-
     margin-top: 30px;
     width: 100%;
-    height: 680px;
-    border-radius: 20px;
+    height: 600px;
+    border-radius: 10px;
     padding: 5px 5px;
     line-height: normal;
     border-color: yellow;
     outline-style: none;
 }
+
 .write-button-box {
     margin-left: 45%;
 

@@ -16,6 +16,12 @@
     flex-grow: 1;
     flex-shrink: 1;
 }
+.right-container {
+    width: 20%;
+
+    flex-grow: 1;
+    flex-shrink: 1;
+}
 .board-name-container {
     align-items: flex-start;
     width: 50%;
@@ -37,13 +43,7 @@
     padding-left: 300px;
 }
 .button-container {
-    width: 20%;
-}
-.right-container {
-    width: 20%;
-
-    flex-grow: 1;
-    flex-shrink: 1;
+    width: 100%;
 }
 
 .board-name-button {
