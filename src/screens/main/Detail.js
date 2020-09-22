@@ -4,13 +4,13 @@ import "bootstrap/dist/css/bootstrap.min.css"
 
 function Detail() {
   return (
-    <div>
+    <div class="container center">
       <link
         rel="stylesheet"
         href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
       ></link>
 
-      <div class="col-sm-10">
+      <div class="col-sm-12">
         <div class="container text-center">
           <div className="row">
             <div className="col-sm-4">
