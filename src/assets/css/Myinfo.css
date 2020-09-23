@@ -1,11 +1,13 @@
-/* 미완-ㄴ우선은 login에서 회원가입 버튼이랑 똑같이 '정보수정'버튼 만들예정 */
+.bar-container {
+    width: 100%;
+    background-color: #ffd400;
+}
 
-.input_wrapper {
+/* .input_wrapper {
   margin-left: 5%;
   margin-right: 5%;
 }
 input {
-  /* 크기 */
   border: none;
   width: 225px;
   font-size: 2px;
@@ -15,30 +17,22 @@ input {
   margin-top: 1000;
 }
 .button1 {
-  /* 색 */
   background-color: white;
   color: black;
 
-  /* 크기 및 테두리(border) */
   border: 2px solid #ffea80;
   border-radius: 14px;
   padding: 5px 15px;
 
-  /* 폰트 */
   font-size: 15px;
 
-  /* 간격 및 정렬 */
   margin-right: +50px;
 }
 
 .line {
-  /* 크기 및 굵기 */
   width: 400px;
   border: solid #ffd400;
 
-  /* 위치(마진) 조절 */
   margin-top: 30px;
-
-  /* 색 */
   color: black;
-}
+} */
