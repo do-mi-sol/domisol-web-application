@@ -16,6 +16,15 @@ const Styles = makeStyles((theme) => ({
         '&.Mui-focused fieldset': {
             borderColor: 'yellow',
         },
+        '& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
+            borderColor: 'gray',
+        },
+        '&:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
+            borderColor: 'gray',
+        },
+        '& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline': {
+            borderColor: '#ffd400',
+        },
     },
 }))
 
@@ -32,6 +41,7 @@ const DMSTextfield = ({label, rows, defaultValue, color = '#ffd400'}) => {
                     defaultValue={defaultValue}
                     color="#ffd400"
                     variant="outlined"
+                    InputProps={{classes: {input: classes.textfield}}}
                 />
             </div>
         </form>

@@ -11,15 +11,7 @@ const styles = makeStyles(() => ({
     },
 }))
 
-const DMSInput = ({
-    id,
-    label,
-    helper,
-    variant,
-    type,
-    onChange,
-    name,
-}) => {
+const DMSInput = ({id, label, helper, variant, type, onChange, name}) => {
     const classes = styles()
     return (
         <div>
