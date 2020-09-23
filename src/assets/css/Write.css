@@ -26,18 +26,20 @@
     flex-shrink: 1;
 }
 .button-container {
-    padding-left: 70%;
+    padding-left: 65%;
     flex-grow: 1;
     flex-shrink: 1;
 }
 .yellow-line {
     /* 크기 및 굵기 */
-    width: 100%;
+    width: 90%;
     border: solid #ffd400;
 
     /* 위치(마진) 조절 */
     margin-top: 4px;
-
+    margin-right: 50px;
+    /* padding-right: 50px;
+*/
     /* 색 */
     color: #ffd400;
 }

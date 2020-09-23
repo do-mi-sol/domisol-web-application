@@ -78,7 +78,7 @@ export default class Write extends Component {
                             </Label>*/}
                             <DMSTextfield
                                 className="title-input"
-                                label="contents"
+                                label="title"
                                 rows={1}
                                 defaultValue=" "
                                 multiline
