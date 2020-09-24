@@ -1,9 +1,8 @@
 import React, {Component} from 'react'
-import {Divider, Container} from '@material-ui/core'
+import {Container} from '@material-ui/core'
 
-import DMSInput from '../../components/customs/DMSInput'
-import DMSButton from '../../components/customs/DMSButton'
 import MyBar from '../../components/myinfo/MyBar'
+// import MyWritten from '../../components/myinfo/MyWritten'
 
 import '../../assets/css/Myinfo.css'
 
@@ -24,8 +23,14 @@ export default class Myinfo extends Component {
     }
     render() {
         return (
-            <Container>
+            <Container
+                maxWidth="xl"
+                disableGutters
+                style={{minHeight: '90vh'}}
+            >
                 <MyBar />
+                {/* <Button>나의 글</Button> */}
+                {/* <MyWritten /> */}
             </Container>
         )
     }

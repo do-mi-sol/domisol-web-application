@@ -17,21 +17,21 @@ const Copyright = () => {
 
 const SnsLink = () => {
     return (
-        <Typography variant="body2" color="textSecondary">
-            <div>
+        <div>
+            {' '}
+            <Typography variant="body2" color="textSecondary">
                 <FontAwesomeIcon
                     icon={['fab', 'facebook-f']}
                     style={{marginLeft: 2, marginRight: 18}}
                 />
-
                 <Link
                     color="inherit"
                     href="https://www.facebook.com/"
                 >
                     Facebook
-                </Link>
-            </div>{' '}
-            <div>
+                </Link>{' '}
+            </Typography>
+            <Typography variant="body2" color="textSecondary">
                 <FontAwesomeIcon
                     icon={['fab', 'twitter']}
                     style={{marginRight: 15}}
@@ -42,8 +42,8 @@ const SnsLink = () => {
                 >
                     Twitter
                 </Link>
-            </div>{' '}
-            <div>
+            </Typography>
+            <Typography variant="body2" color="textSecondary">
                 <FontAwesomeIcon
                     icon={['fab', 'instagram']}
                     style={{marginLeft: 1, marginRight: 17}}
@@ -54,8 +54,8 @@ const SnsLink = () => {
                 >
                     Instagram
                 </Link>
-            </div>{' '}
-        </Typography>
+            </Typography>
+        </div>
     )
 }
 
@@ -94,12 +94,14 @@ export default function StickyFooter() {
                         }}
                     >
                         <Typography variant="body2">
-                            <div>
-                                인천광역시 연수구 아카데미로 119
-                                17호관 321호 멋쟁이 사자처럼
-                            </div>
-                            <div>EMAIL Domisol@likelion.org</div>
-                            <div>TEL 032-1234-5678</div>
+                            인천광역시 연수구 아카데미로 119 17호관
+                            321호 멋쟁이 사자처럼
+                        </Typography>
+                        <Typography variant="body2">
+                            EMAIL Domisol@likelion.org
+                        </Typography>
+                        <Typography variant="body2">
+                            TEL 032-1234-5678
                         </Typography>
                         <Copyright />
                     </Grid>

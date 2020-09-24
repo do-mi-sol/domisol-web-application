@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import {Container, Divider} from '@material-ui/core'
 import DMSInput from '../../components/customs/DMSInput'
 import DMSButton from '../../components/customs/DMSButton'
-
 export default class FindID extends Component {
     state = {
         name: '',
@@ -20,7 +19,11 @@ export default class FindID extends Component {
         return (
             <Container
                 maxWidth="xs"
-                style={{marginTop: 30, marginBottom: 20}}
+                style={{
+                    marginTop: 30,
+                    marginBottom: 20,
+                    minHeight: '90vh',
+                }}
             >
                 <img
                     className="logo-icon"

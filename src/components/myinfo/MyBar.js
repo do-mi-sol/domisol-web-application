@@ -1,41 +1,152 @@
 import React from 'react'
-import {Grid, Divider} from '@material-ui/core'
+import {Grid, Divider, Avatar, Typography} from '@material-ui/core'
+import {makeStyles} from '@material-ui/core/styles'
 
-const MyBar = () => {
+const useStyles = makeStyles((theme) => ({
+    barContainer: {
+        backgroundColor: '#ffea80',
+        padding: theme.spacing(1, 0, 6),
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    large: {
+        width: theme.spacing(20),
+        height: theme.spacing(20),
+    },
+    innerGrid: {
+        height: theme.spacing(22),
+    },
+    bar: {
+        width: 800,
+        minWidth: 800,
+        backgroundColor: 'white',
+        margin: theme.spacing(2),
+    },
+}))
+
+const MyBar = ({Id, MyLevel, MyWritten, Like, MyReply}) => {
+    const classes = useStyles()
+
     return (
-        <div className="bar-container">
+        <div className={classes.barContainer}>
             <Grid
                 container
                 direction="row"
-                justify="space-between"
+                spacing={5}
+                justify="space-around"
                 alignItems="center"
-                style={{
-                    backgroundColor: 'white',
-                    width: '80%',
-                    maxWidth: '800px',
-                    margin: '0, auto',
-                }}
+                className={classes.bar}
             >
-                <Grid item>사진</Grid>
-                <Grid item>똑똑한 라이언</Grid>
+                <Grid item>
+                    <Avatar
+                        src="/broken-image.jpg"
+                        className={classes.large}
+                    />
+                </Grid>
+                <Grid item>
+                    <Typography variant="h6" color="textPrimary">
+                        똑똑한 라이언
+                    </Typography>
+                </Grid>
 
-                <Divider orientation="vertical" flexItem />
+                <Divider
+                    orientation="vertical"
+                    variant="middle"
+                    flexItem
+                />
 
                 <Grid item xs={5}>
                     <Grid
                         container
                         spacing={1}
-                        justify="space-between"
+                        justify="space-around"
                         alignItems="center"
                         direction="row"
+                        className={classes.innerGrid}
                     >
-                        <Grid alignItems="center" direction="row">
-                            <Grid item>나의 레벨</Grid>
-                            <Grid item>좋아요</Grid>
+                        <Grid item>
+                            <Grid
+                                container
+                                justify="center"
+                                alignItems="center"
+                                direction="column"
+                                style={{height: '100%'}}
+                            >
+                                <Grid item>
+                                    <Typography
+                                        variant="subtitle1"
+                                        align="center"
+                                        // key={line}
+                                    >
+                                        나의 레벨
+                                    </Typography>
+                                    <Typography
+                                        variant="h4"
+                                        color="textPrimary"
+                                        align="center"
+                                    >
+                                        0
+                                    </Typography>
+                                </Grid>
+                                <Grid item>
+                                    <Typography
+                                        variant="subtitle1"
+                                        align="center"
+                                        // key={line}
+                                    >
+                                        좋아요
+                                    </Typography>
+                                    <Typography
+                                        variant="h4"
+                                        color="textPrimary"
+                                        align="center"
+                                    >
+                                        0
+                                    </Typography>
+                                </Grid>
+                            </Grid>
                         </Grid>
-                        <Grid alignItems="center" direction="row">
-                            <Grid item>내가 쓴 글</Grid>
-                            <Grid item>나의 답변</Grid>
+                        <Grid item>
+                            <Grid
+                                container
+                                justify="space-between"
+                                alignItems="center"
+                                direction="column"
+                            >
+                                <Grid item>
+                                    <Typography
+                                        variant="subtitle1"
+                                        align="center"
+                                        // key={line}
+                                    >
+                                        내가 쓴 글
+                                    </Typography>
+                                    <Typography
+                                        variant="h4"
+                                        color="textPrimary"
+                                        align="center"
+                                    >
+                                        0
+                                    </Typography>
+                                </Grid>
+                                <Grid item>
+                                    <Typography
+                                        variant="subtitle1"
+                                        align="center"
+                                        // key={line}
+                                    >
+                                        나의 답변
+                                    </Typography>
+                                    <Typography
+                                        variant="h4"
+                                        color="textPrimary"
+                                        align="center"
+                                    >
+                                        0
+                                    </Typography>
+                                </Grid>
+                            </Grid>
                         </Grid>
                     </Grid>
                 </Grid>

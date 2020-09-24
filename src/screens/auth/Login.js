@@ -21,7 +21,10 @@ export default class Login extends Component {
     render() {
         const {id, password} = this.state
         return (
-            <div class=" array" style={{marginTop: 60}}>
+            <div
+                class=" array"
+                style={{marginTop: 60, minHeight: '90vh'}}
+            >
                 <div>
                     <img
                         className="icon2"

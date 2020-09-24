@@ -15,7 +15,6 @@ import Detail from './screens/main/Detail'
 import Write from './screens/main/Write'
 import Myinfo from './screens/auth/Myinfo'
 
-import './assets/css/index.css'
 import './FontAwesome'
 
 var hist = createBrowserHistory()
@@ -24,17 +23,15 @@ ReactDOM.render(
     <Router history={hist}>
         <Header />
         <Switch>
-            <div className="main">
-                <Route exact path="/" component={Home} />
-                <Route exact path="/login" component={Login} />
-                <Route exact path="/signup" component={SignUp} />
-                <Route exact path="/board" component={Board} />
-                <Route exact path="/findid" component={FindID} />
-                <Route exact path="/findpw" component={FindPW} />
-                <Route exact path="/detail" component={Detail} />
-                <Route exact path="/write" component={Write} />
-                <Route exact path="/myinfo" component={Myinfo} />
-            </div>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/signup" component={SignUp} />
+            <Route exact path="/board" component={Board} />
+            <Route exact path="/findid" component={FindID} />
+            <Route exact path="/findpw" component={FindPW} />
+            <Route exact path="/detail" component={Detail} />
+            <Route exact path="/write" component={Write} />
+            <Route exact path="/myinfo" component={Myinfo} />
         </Switch>
         <Footer />
     </Router>,
