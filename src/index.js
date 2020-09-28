@@ -14,6 +14,7 @@ import Board from './screens/main/Board'
 import Detail from './screens/main/Detail'
 import Write from './screens/main/Write'
 import Myinfo from './screens/auth/Myinfo'
+import Myinfo2 from './screens/auth/Myinfo2'
 
 import './FontAwesome'
 
@@ -32,6 +33,7 @@ ReactDOM.render(
             <Route exact path="/detail" component={Detail} />
             <Route exact path="/write" component={Write} />
             <Route exact path="/myinfo" component={Myinfo} />
+            <Route exact path="/myinfo2" component={Myinfo2} />
         </Switch>
         <Footer />
     </Router>,
