@@ -1,12 +1,9 @@
-body {
-    background-color: whitesmoke;
-}
 .background {
 }
 
 /*컨테이너*/
 .container {
-    padding-top: 5%;
+    /*padding-top: 5%;*/
     padding-bottom: 10%;
 
     border-color: black;
@@ -71,7 +68,7 @@ body {
     border-style: none;
 
     /* 위치(마진) 조절 */
-    margin-top: 6px;
+    margin-top: 10px;
     margin-bottom: 50px;
 
     /* padding-right: 50px;
