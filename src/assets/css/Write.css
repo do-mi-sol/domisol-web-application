@@ -1,4 +1,21 @@
+.background {
+}
+
+/*컨테이너*/
 .container {
+    /*padding-top: 5%;*/
+    padding-bottom: 10%;
+
+    border-color: black;
+
+    background-color: white;
+    height: 100%;
+}
+.community-guide {
+    width: 100%;
+    padding-left: 5%;
+}
+.input-containe {
     margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
@@ -8,7 +25,6 @@
     flex-direction: row;
     justify-content: flex-start;
 }
-
 .picture-container {
     width: 30%;
     display: flex;
@@ -19,29 +35,50 @@
 }
 .input-container {
     padding-left: 5%;
-
     width: 60%;
-
     flex-grow: 1;
     flex-shrink: 1;
 }
 .button-container {
-    padding-left: 70%;
+    padding-left: 45%;
+    flex-direction: row;
     flex-grow: 1;
     flex-shrink: 1;
 }
+
+/*노란선*/
 .yellow-line {
     /* 크기 및 굵기 */
-    width: 100%;
+    width: 99.5%;
     border: solid #ffd400;
 
     /* 위치(마진) 조절 */
     margin-top: 4px;
 
+    margin-left: 1%;
+    /* padding-right: 50px;
+*/
     /* 색 */
     color: #ffd400;
 }
+.line {
+    /* 크기 및 굵기 */
+    width: 99.5%;
+    height: 2px;
+    border-style: none;
 
+    /* 위치(마진) 조절 */
+    margin-top: 10px;
+    margin-bottom: 50px;
+
+    /* padding-right: 50px;
+*/
+    /* 색 */
+    background-color: whitesmoke;
+}
+/*얇은선*/
+
+/*왼쪽 사진*/
 .talk-input {
     margin-top: 20px;
     width: 100%;
@@ -49,10 +86,6 @@
     outline-style: none;
 }
 
-.title-label {
-    margin-top: 30px;
-    font-size: large;
-}
 .talk-img {
     margin-top: 30px;
     width: 100%;
@@ -63,14 +96,12 @@
     height: 800px;
 }
 
+/*오른쪽 글쓰기*/
+.board-name {
+    margin-left: 5%;
+}
 .title-input {
     margin-top: 20px;
-    width: 100%;
-    height: 40px;
-    border-radius: 10px;
-
-    border-color: yellow;
-    outline-style: none;
 }
 .contents-input {
     margin-top: 30px;
@@ -79,20 +110,17 @@
     border-radius: 10px;
     padding: 5px 5px;
     line-height: normal;
-    border-color: yellow;
+
     outline-style: none;
 }
-
-.write-button-box {
-    margin-left: 45%;
-
-    align-items: center;
-    justify-content: center;
-    color: yellow;
+.contents-input-quill {
+    margin-left: 2%;
 }
+
 .write-button {
-    margin-left: 50%;
+    width: 10%;
+    /*margin-left: 30%;
     padding-left: 10%;
     border-radius: 10px;
-    padding: 1px 50px;
+    padding: 1px 50px;*/
 }

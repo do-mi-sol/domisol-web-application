@@ -3,7 +3,9 @@ import '../../assets/css/Write.css'
 //import {Container, Grid} from '@material-ui/core'
 import DMSButton from '../../components/customs/DMSButton'
 import DMSTextfield from '../../components/customs/DMSTextfield'
-import {FormGroup, Label, Input} from 'reactstrap'
+import {CustomInput, FormGroup, Label} from 'reactstrap'
+import RichTextEditor from '../../components/customs/TextEditor'
+//import Paper from '@material-ui/core/Paper'
 //import {makeStyles} from '@material-ui/core/styles'
 //import TextField from '@material-ui/core/TextField'
 
@@ -53,13 +55,28 @@ export default class Write extends Component {
             talk_preview = <img className="talk_preview" src={this.state.previewURL} alt="" />
         }
         return (
-            <div>
+            <div className="background">
                 <form className="container" onSubmit={this.handleSudmit}>
+                    <hr className="line" />
+                    <h3 className="community-guide">공지 사항</h3>
+                    <br />
+                    <br />
+                    <div className="community-guide">
+                        * 커뮤니티 가이드를 지켜주세요. 욕설,비방 금지
+                    </div>
+                    <div className="community-guide">
+                        * 광고성 게시물은 자동으로 삭제될수있습니다.
+                    </div>
+                    <br />
+                    <br />
+
+                    <hr className="line" />
+
                     <div className="picture-container">
                         <Label for="talk_img">
                             <img className="talk-img" src={this.state.test} alt="" />
                         </Label>
-                        <Input
+                        <CustomInput
                             type="file"
                             id="talk_img"
                             accept="image/jpg,image/png,image/jpeg"
@@ -70,7 +87,7 @@ export default class Write extends Component {
                         {talk_preview}
                     </div>
                     <div className="input-container">
-                        <h6>잘하고싶다..연애</h6>
+                        <h6 className="board-name">잘하고싶다..연애</h6>
                         <hr className="yellow-line" />
                         <FormGroup>
                             {/*<Label className="title-label" for="exampleText">
@@ -78,7 +95,7 @@ export default class Write extends Component {
                             </Label>*/}
                             <DMSTextfield
                                 className="title-input"
-                                label="contents"
+                                label="title"
                                 rows={1}
                                 defaultValue=" "
                                 multiline
@@ -111,15 +128,28 @@ export default class Write extends Component {
                                     },
                                 }}
                             /> */}
+
+                            {/* <DMSTextfield
+                label="contents"
+                rows={20}
+                defaultValue=" "
+                multiline
+                className="contents-input"
+                // defaultValue="내용을 입력해주세요"
+                onChange={this.handleChange}
+              /> */}
+
+                            <RichTextEditor className="contents-input-quill" />
+
                             <DMSTextfield
-                                label="contents"
-                                rows={30}
-                                defaultValue=" "
+                                label="tags"
+                                rows={1}
+                                defaultValue="#도미솔"
                                 multiline
                                 className="contents-input"
                                 // defaultValue="내용을 입력해주세요"
                                 onChange={this.handleChange}
-                            ></DMSTextfield>
+                            />
                         </FormGroup>
                     </div>
                     <div className="button-container">
@@ -129,6 +159,21 @@ export default class Write extends Component {
                             onClick={this.clickWrite}
                         >
                             글쓰기
+                        </DMSButton>
+                        <DMSButton
+                            className="write-button"
+                            variant="contained"
+                            onClick={this.clickWrite}
+                        >
+                            다시 쓰기
+                        </DMSButton>
+                        <DMSButton
+                            className="list-button"
+                            variant="contained"
+                            onClick={this.clickWrite}
+                        >
+                            {' '}
+                            취소
                         </DMSButton>
                     </div>
                 </form>

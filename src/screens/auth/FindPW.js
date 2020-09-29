@@ -21,7 +21,11 @@ export default class FindPW extends Component {
         return (
             <Container
                 maxWidth="xs"
-                style={{marginTop: 30, marginBottom: 20}}
+                style={{
+                    marginTop: 30,
+                    marginBottom: 20,
+                    minHeight: '90vh',
+                }}
             >
                 <img
                     className="logo-icon"
