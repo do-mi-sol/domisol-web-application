@@ -28,7 +28,7 @@ export default class FindPW extends Component {
                 }}
             >
                 <img
-                    className="logo-icon"
+                    className="signUp-logoIcon"
                     src={require('../../assets/images/Logo.jpg')}
                     alt="logo"
                 />
@@ -73,9 +73,8 @@ export default class FindPW extends Component {
                 </div>
 
                 <div>
-                    <div className="buttonContainer">
+                    <div>
                         <DMSButton
-                            className="button1"
                             children="확인"
                             variant="contained"
                             size="large"

@@ -1,4 +1,4 @@
-.container {
+.profile-container {
     width: 75%;
     min-width: 150;
     /* padding: theme.spacing(1, 0, 0), */
@@ -7,23 +7,23 @@
     justify-content: 'center';
     align-items: 'center';
 }
-Form {
+.profile-form {
     width: 75%;
     min-width: 200px;
 }
-.password {
+.profile-repassword {
     margin-top: 10px;
 }
-.image-container {
+.profile-imageContainer {
     position: relative;
     height: 200px;
     min-width: 800px;
 }
-.image-label {
+.profile-imageLabel {
     position: relative;
     top: 30%;
 }
-.image-input {
+.profile-imageInput {
     position: relative;
     top: 35%;
 }
