@@ -1,265 +1,163 @@
-<<<<<<< HEAD
 .container {
-  padding-top: 300px;
+    padding-top: 300px;
 }
 .p1 {
-  font-size: 150%;
+    font-size: 150%;
 }
 .person {
-  border: 10px solid transparent;
-  margin-bottom: 25px;
-  width: 80%;
-  height: 80%;
-  opacity: 0.7;
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.7;
 }
 .person:hover {
-  border-color: #f1f1f1;
+    border-color: #f1f1f1;
 }
 .carousel-inner img {
-  /* -webkit-filter: grayscale(90%);
+    /* -webkit-filter: grayscale(90%);
   filter: grayscale(90%); make all photos black and white */
-  width: 100%; /* Set width to 100% */
-  margin: auto;
+    width: 100%; /* Set width to 100% */
+    margin: auto;
 }
 .carousel-caption h3 {
-  color: #fff !important;
+    color: #fff !important;
 }
 .ourvalues {
-  padding-top: 800px;
-  padding-bottom: 350px;
+    padding-top: 800px;
+    padding-bottom: 350px;
 }
 .container-fluid {
-  padding-top: 200px;
+    padding-top: 200px;
 }
 .logo {
-  font-size: 200px;
-  color: pink;
-  padding-left: 100px;
+    font-size: 200px;
+    color: pink;
+    padding-left: 100px;
 }
 
 .pic-right {
-  float: right;
-  width: 1000px;
-  height: 400px;
-  /* padding-bottom: 100px; */
+    float: right;
+    width: 1000px;
+    height: 400px;
+    /* padding-bottom: 100px; */
 }
 .pic-left {
-  float: left;
-  width: 1200px;
-  height: 500px;
-  padding-top: 50px;
+    float: left;
+    width: 1200px;
+    height: 500px;
+    padding-top: 50px;
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  margin: 10px;
-  text-align: center;
-  font-family: arial;
-  float: left;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: 10px;
+    text-align: center;
+    font-family: arial;
+    float: left;
 }
 
 .title {
-  color: grey;
-  font-size: 18px;
+    color: grey;
+    font-size: 18px;
 }
 
 .container button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
 }
 
 a {
-  text-decoration: none;
-  font-size: 22px;
-  color: black;
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
 }
 
 button:hover,
 a:hover {
-  opacity: 0.7;
+    opacity: 0.7;
 }
 
 .carddeck {
-  /* padding-right: 20px;
+    /* padding-right: 20px;
   padding-left: 20px; */
-  padding-top: 400px;
-  height: auto;
-  width: 100%;
-  max-width: 900px;
-  max-height: 700px;
-  text-align: center;
-  /* margin-left: 400px;
-  margin-right: 400px; */
-  display: block;
-  margin: 0px auto;
-}
-.container-fluid {
-  padding: 60px 50px;
-}
-.bg-grey {
-  background-color: #f6f6f6;
-}
-
-/* //service */
-.service .container {
-  position: relative;
-  width: 33%;
-  float: left;
-  text-align: center;
-}
-
-.services {
-  display: block;
-  width: 100%;
-  height: 500px;
-}
-
-.overlay {
-  position: absolute;
-  top: 35%;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 65%;
-  width: 100%;
-  opacity: 0;
-  transition: 0.5s ease;
-  background-color: pink;
-}
-
-.container:hover .overlay {
-  opacity: 1;
-}
-
-.text {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-=======
-.woo {
-    float: right;
-    color: #000;
-    /* text-shadow: none; */
-    /* margin-right: 20px;
-    margin-top: 20px; */
-    text-align: center;
-    padding-right: 300px;
-    padding-top: 100px;
-}
-
-.dog {
-    max-width: 700px;
-    max-height: 500px;
-    width: 100%;
-    height: auto;
-
-    /* margin-left: 200px; */
-}
-
-/* 슬라이드 버튼 색상 바꾸기 */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: #000;
-    border-color: blue;
-    color: black !important;
-    outline-color: black !important;
-    filter: none !important;
-
-    width: 40px;
-    height: 40px;
-}
-.carousel-item {
-    height: 500px;
-    /* text-align: center; */
-}
-
-.pic-right {
-    float: right;
-    width: 850px;
-    height: 400px;
-    padding-top: 30px;
-    margin-left: 15px;
-}
-.pic-left {
-    float: left;
-    width: 850px;
-    height: 400px;
-
-    margin-right: 15px;
-    padding-top: 30px;
-}
-
-.text-right {
-    text-align: right;
-
-    /* overflow: hidden; */
-    /* float: right; */
-    padding-right: 20px;
-    padding-top: 100px;
-    /* text-align: center; */
-    /* /* margin-right: 50px; */
-}
-.text-left {
-    text-align: left;
-
-    padding-left: 20px;
-    padding-top: 100px;
-}
-
-.carddeck {
     padding-top: 400px;
     height: auto;
     width: 100%;
     max-width: 900px;
+    max-height: 700px;
     text-align: center;
-
+    /* margin-left: 400px;
+  margin-right: 400px; */
     display: block;
     margin: 0px auto;
 }
-.front {
-    font-weight: bold;
-    font-size: 25px;
+.container-fluid {
+    padding: 60px 50px;
+}
+.bg-grey {
+    background-color: #f6f6f6;
 }
 
-.card {
-    background-color: yellow;
-}
-/* .eachcard {
-  padding: 20px;
-} */
-.Home button {
-    justify-content: center;
+/* //service */
+.service .container {
+    position: relative;
+    width: 33%;
+    float: left;
     text-align: center;
-    border-radius: 100px;
-    /* position: fixed; */
 }
-.Home {
+
+.services {
+    display: block;
+    width: 100%;
+    height: 500px;
+}
+
+.overlay {
+    position: absolute;
+    top: 35%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 65%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-color: pink;
+}
+
+.container:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     text-align: center;
->>>>>>> d82240c25c7dee9cf2e794db6248d09c4ea7bae9
 }
 
 .profile {
-  padding-top: 600px;
+    padding-top: 600px;
 }
 .service h2 {
-  font-size: 70px;
-  font-weight: bold;
+    font-size: 70px;
+    font-weight: bold;
 }
 .service h3 {
-  font-size: 40px;
+    font-size: 40px;
 }
