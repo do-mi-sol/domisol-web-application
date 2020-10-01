@@ -15,6 +15,7 @@ import {
   faArrowCircleRight,
   faArrowLeft,
   faArrowCircleLeft,
+  faAngleDown,
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add (
@@ -30,5 +31,6 @@ library.add (
   faArrowRight,
   faArrowCircleRight,
   faArrowLeft,
-  faArrowCircleLeft
+  faArrowCircleLeft,
+  faAngleDown
 );
