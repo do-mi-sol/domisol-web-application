@@ -45,6 +45,8 @@ const MyBar = ({
   button2Color,
   link1,
   link2,
+  clickMyWritten,
+  clickMyProfile,
 }) => {
   const classes = useStyles ();
 
@@ -161,6 +163,7 @@ const MyBar = ({
           margin={20}
           radiusButtom={0}
           radiusTop={15}
+          onClick={clickMyWritten}
         />
         <DMSButton
           children="나의 프로필"
@@ -171,6 +174,7 @@ const MyBar = ({
           margin={20}
           radiusButtom={0}
           radiusTop={15}
+          onClick={clickMyProfile}
         />
       </div>
     </div>
