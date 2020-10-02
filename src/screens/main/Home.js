@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { Carousel, Button, CardDeck, Card } from "react-bootstrap"
+import { Carousel } from "react-bootstrap"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "../../assets/css/Home.css"
 
@@ -7,7 +7,7 @@ export default class Home extends Component {
   render() {
     return (
       <div>
-        <meta charset="utf-8" />
+        {/* <meta charset="utf-8" /> */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link
           rel="stylesheet"
@@ -31,15 +31,15 @@ export default class Home extends Component {
             />
 
             <Carousel.Caption>
-              <h1 class="font-weight-bold">First slide label</h1>
+              <h1 className="font-weight-bold">First slide label</h1>
               <h3>Nulla vitae elit libero, a pharetra augue mollis interdum.</h3>
               <br></br>
-              <button type="button" class="btn btn-default btn-lg">
+              <button type="button" className="btn btn-default btn-lg">
                 둘러보기
               </button>
               {"                        "}
 
-              <button type="button" class="btn btn-warning btn-lg">
+              <button type="button" className="btn btn-warning btn-lg">
                 로그인하기
               </button>
             </Carousel.Caption>
@@ -54,7 +54,7 @@ export default class Home extends Component {
             />
 
             <Carousel.Caption>
-              <h1 class="font-weight-bold">Second slide label</h1>
+              <h1 className="font-weight-bold">Second slide label</h1>
               <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
             </Carousel.Caption>
           </Carousel.Item>
@@ -68,7 +68,7 @@ export default class Home extends Component {
             />
 
             <Carousel.Caption>
-              <h1 class="font-weight-bold">Third slide label</h1>
+              <h1 className="font-weight-bold">Third slide label</h1>
               <h3>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</h3>
             </Carousel.Caption>
           </Carousel.Item>
@@ -92,15 +92,15 @@ export default class Home extends Component {
           <br></br>
           <br></br>
           <br></br> <br></br> <br></br> <br></br> <br></br>
-          <div class="text-align center" align="middle">
-            <h1 class="font-weight-bold">About Domisol..</h1>
+          <div className="text-align center" align="middle">
+            <h1 className="font-weight-bold">About Domisol..</h1>
             <br></br>
             <br></br>
 
-            <p1>
+            <p>
               도움에 미친 솔로들,<br></br>
               그리고 연인들을 위해 탄생했습니다.
-            </p1>
+            </p>
           </div>
           <img
             className="pic-left"
@@ -116,13 +116,13 @@ export default class Home extends Component {
 
         <br></br>
         <div className="ourvalues">
-          <div class="container-fluid ">
-            <div class="row">
-              <div class="col-sm-4">
-                <span class="glyphicon glyphicon-heart logo"></span>
+          <div className="container-fluid ">
+            <div className="row">
+              <div className="col-sm-4">
+                <span className="glyphicon glyphicon-heart logo"></span>
               </div>
-              <div class="col-sm-8">
-                <h2 class="font-weight-bold">Our Values</h2>
+              <div className="col-sm-8">
+                <h2 className="font-weight-bold">Our Values</h2>
                 <br></br>
                 <br></br>
                 <h4>
@@ -144,40 +144,40 @@ export default class Home extends Component {
           </div>
         </div>
         <div className="aboutus bg-grey">
-          <div class="w3-container" padding="128px 16px" id="about">
-            <h3 class="w3-center font-weight-bold">ABOUT THE COMPANY</h3>
+          <div className="w3-container" padding="128px 16px" id="about">
+            <h3 className="w3-center font-weight-bold">ABOUT THE COMPANY</h3>
             <br></br>
-            <p class="w3-center w3-large">Key features of our company</p>
+            <p className="w3-center w3-large">Key features of our company</p>
             <br></br>
             <br></br>
-            <div class="w3-row-padding w3-center" margin-top="64px">
-              <div class="w3-quarter">
-                <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
-                <p class="w3-large">Responsive</p>
+            <div className="w3-row-padding w3-center" margin-top="64px">
+              <div className="w3-quarter">
+                <i className="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
+                <p className="w3-large">Responsive</p>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                   incididunt ut labore et dolore.
                 </p>
               </div>
-              <div class="w3-quarter">
-                <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
-                <p class="w3-large">Passion</p>
+              <div className="w3-quarter">
+                <i className="fa fa-heart w3-margin-bottom w3-jumbo"></i>
+                <p className="w3-large">Passion</p>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                   incididunt ut labore et dolore.
                 </p>
               </div>
-              <div class="w3-quarter">
-                <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
-                <p class="w3-large">Design</p>
+              <div className="w3-quarter">
+                <i className="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
+                <p className="w3-large">Design</p>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                   incididunt ut labore et dolore.
                 </p>
               </div>
-              <div class="w3-quarter">
-                <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
-                <p class="w3-large">Support</p>
+              <div className="w3-quarter">
+                <i className="fa fa-cog w3-margin-bottom w3-jumbo"></i>
+                <p className="w3-large">Support</p>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                   incididunt ut labore et dolore.
@@ -223,83 +223,83 @@ export default class Home extends Component {
           </div>
         </div> */}
 
-        <div class="profile">
-          <h1 class="font-weight-bold">
+        <div className="profile">
+          <h1 className="font-weight-bold">
             <br></br>
             do-mi-sol developer
           </h1>
-          <div class="container center">
+          <div className="container center">
             <br></br>
 
-            <div class="card">
+            <div className="card">
               <img
                 src="https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5353%2F2019%2F05%2F27%2F0000538860_001_20190527125648704.jpg&type=sc960_832"
                 alt="John"
                 width="100%"
               />
               <h1>John Doe</h1>
-              <p class="title">CEO & Founder, Example</p>
+              <p className="title">CEO & Founder, Example</p>
               <p>Harvard University</p>
               <div margin="24px 0">
                 <a href="#">
-                  <i class="fa fa-commenting-o"></i>
+                  <i className="fa fa-commenting-o"></i>
                 </a>
                 <a href="#">
-                  <i class="fa fa-envelope"></i>
+                  <i className="fa fa-envelope"></i>
                 </a>
 
                 <a href="#">
-                  <i class="fa fa-facebook"></i>
+                  <i className="fa fa-facebook"></i>
                 </a>
               </div>
               <p>
                 <button>Contact</button>
               </p>
             </div>
-            <div class="card">
+            <div className="card">
               <img
                 src="https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5353%2F2019%2F05%2F27%2F0000538860_001_20190527125648704.jpg&type=sc960_832"
                 alt="John"
                 width="100%"
               />
               <h1>John Doe</h1>
-              <p class="title">CEO & Founder, Example</p>
+              <p className="title">CEO & Founder, Example</p>
               <p>Harvard University</p>
               <div margin="24px 0">
                 <a href="#">
-                  <i class="fa fa-commenting-o"></i>
+                  <i className="fa fa-commenting-o"></i>
                 </a>
                 <a href="#">
-                  <i class="fa fa-envelope"></i>
+                  <i className="fa fa-envelope"></i>
                 </a>
 
                 <a href="#">
-                  <i class="fa fa-facebook"></i>
+                  <i className="fa fa-facebook"></i>
                 </a>
               </div>
               <p>
                 <button>Contact</button>
               </p>
             </div>
-            <div class="card">
+            <div className="card">
               <img
                 src="https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5353%2F2019%2F05%2F27%2F0000538860_001_20190527125648704.jpg&type=sc960_832"
                 alt="John"
                 width="100%"
               />
               <h1>John Doe</h1>
-              <p class="title">CEO & Founder, Example</p>
+              <p className="title">CEO & Founder, Example</p>
               <p>Harvard University</p>
               <div margin="24px 0">
                 <a href="#">
-                  <i class="fa fa-commenting-o"></i>
+                  <i className="fa fa-commenting-o"></i>
                 </a>
                 <a href="#">
-                  <i class="fa fa-envelope"></i>
+                  <i className="fa fa-envelope"></i>
                 </a>
 
                 <a href="#">
-                  <i class="fa fa-facebook"></i>
+                  <i className="fa fa-facebook"></i>
                 </a>
               </div>
               <p>
@@ -307,75 +307,75 @@ export default class Home extends Component {
               </p>
             </div>
             <br></br>
-            <div class="card">
+            <div className="card">
               <img
                 src="https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5353%2F2019%2F05%2F27%2F0000538860_001_20190527125648704.jpg&type=sc960_832"
                 alt="John"
                 width="100%"
               />
               <h1>John Doe</h1>
-              <p class="title">CEO & Founder, Example</p>
+              <p className="title">CEO & Founder, Example</p>
               <p>Harvard University</p>
               <div margin="24px 0">
                 <a href="#">
-                  <i class="fa fa-commenting-o"></i>
+                  <i className="fa fa-commenting-o"></i>
                 </a>
                 <a href="#">
-                  <i class="fa fa-envelope"></i>
+                  <i className="fa fa-envelope"></i>
                 </a>
 
                 <a href="#">
-                  <i class="fa fa-facebook"></i>
+                  <i className="fa fa-facebook"></i>
                 </a>
               </div>
               <p>
                 <button>Contact</button>
               </p>
             </div>
-            <div class="card">
+            <div className="card">
               <img
                 src="https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5353%2F2019%2F05%2F27%2F0000538860_001_20190527125648704.jpg&type=sc960_832"
                 alt="John"
                 width="100%"
               />
               <h1>John Doe</h1>
-              <p class="title">CEO & Founder, Example</p>
+              <p className="title">CEO & Founder, Example</p>
               <p>Harvard University</p>
               <div margin="24px 0">
                 <a href="#">
-                  <i class="fa fa-commenting-o"></i>
+                  <i className="fa fa-commenting-o"></i>
                 </a>
                 <a href="#">
-                  <i class="fa fa-envelope"></i>
+                  <i className="fa fa-envelope"></i>
                 </a>
 
                 <a href="#">
-                  <i class="fa fa-facebook"></i>
+                  <i className="fa fa-facebook"></i>
                 </a>
               </div>
               <p>
                 <button>Contact</button>
               </p>
             </div>
-            <div class="card">
+            <div className="card">
               <img
                 src="https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5353%2F2019%2F05%2F27%2F0000538860_001_20190527125648704.jpg&type=sc960_832"
                 alt="John"
                 width="100%"
               />
               <h1>John Doe</h1>
-              <p class="title">CEO & Founder, Example</p>
+              <p className="title">CEO & Founder, Example</p>
               <p>Harvard University</p>
               <div margin="24px 0">
                 <a href="#">
-                  <i class="fa fa-commenting-o"></i>
+                  <i className="fa fa-commenting-o"></i>
                 </a>
                 <a href="#">
-                  <i class="fa fa-envelope"></i>
+                  <i className="fa fa-envelope"></i>
                 </a>
 
                 <a href="#">
-                  <i class="fa fa-facebook"></i>
+                  <i className="fa fa-facebook"></i>
                 </a>
               </div>
               <p>
