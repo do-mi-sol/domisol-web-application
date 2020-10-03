@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import ReactQuill from 'react-quill'
 import 'react-quill/dist/quill.snow.css'
 import 'react-quill/dist/quill.bubble.css'
+import '../../assets/css/TextEditor.css' 
 
 class RichTextEditor extends Component {
     constructor(props) {
@@ -49,6 +50,7 @@ class RichTextEditor extends Component {
         return (
             <div>
                 <ReactQuill
+                className="textEditor-react-quill"
                     theme="snow"
                     modules={this.modules}
                     formats={this.formats}

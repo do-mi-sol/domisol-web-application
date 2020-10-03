@@ -55,46 +55,46 @@ export default class Write extends Component {
             talk_preview = <img className="talk_preview" src={this.state.previewURL} alt="" />
         }
         return (
-            <div className="background">
+            <div className="write-background">
                 <form className="container" onSubmit={this.handleSudmit}>
-                    <hr className="line" />
-                    <h3 className="community-guide">공지 사항</h3>
+                    <hr className="write-line" />
+                    <h3 className="write-community-guide">공지 사항</h3>
                     <br />
                     <br />
-                    <div className="community-guide">
+                    <div className="write-community-guide">
                         * 커뮤니티 가이드를 지켜주세요. 욕설,비방 금지
                     </div>
-                    <div className="community-guide">
+                    <div className="write-community-guide">
                         * 광고성 게시물은 자동으로 삭제될수있습니다.
                     </div>
                     <br />
                     <br />
 
-                    <hr className="line" />
+                    <hr className="write-line" />
 
-                    <div className="picture-container">
+                    <div className="write-picture-container">
                         <Label for="talk_img">
-                            <img className="talk-img" src={this.state.test} alt="" />
+                            <img className="write-talk-img" src={this.state.test} alt="" />
                         </Label>
                         <CustomInput
                             type="file"
                             id="talk_img"
                             accept="image/jpg,image/png,image/jpeg"
                             name="talk_img"
-                            className="talk-input"
+                            className="write-talk-input"
                             onChange={this.handleFileOnChange}
                         />{' '}
                         {talk_preview}
                     </div>
-                    <div className="input-container">
-                        <h6 className="board-name">잘하고싶다..연애</h6>
-                        <hr className="yellow-line" />
+                    <div className="write-input-container">
+                        <h6 className="write-board-name">잘하고싶다..연애</h6>
+                        <hr className="write-yellow-line" />
                         <FormGroup>
                             {/*<Label className="title-label" for="exampleText">
                                 제목:{' '}
                             </Label>*/}
                             <DMSTextfield
-                                className="title-input"
+                                className="write-title-input"
                                 label="title"
                                 rows={1}
                                 defaultValue=" "
@@ -139,36 +139,36 @@ export default class Write extends Component {
                 onChange={this.handleChange}
               /> */}
 
-                            <RichTextEditor className="contents-input-quill" />
+                            <RichTextEditor className="write-contents-input-quill" />
 
                             <DMSTextfield
                                 label="tags"
                                 rows={1}
                                 defaultValue="#도미솔"
                                 multiline
-                                className="contents-input"
+                                className="write-contents-input"
                                 // defaultValue="내용을 입력해주세요"
                                 onChange={this.handleChange}
                             />
                         </FormGroup>
                     </div>
-                    <div className="button-container">
+                    <div className="write-button-container">
                         <DMSButton
-                            className="write-button"
+                            className="write-write-button"
                             variant="contained"
                             onClick={this.clickWrite}
                         >
                             글쓰기
                         </DMSButton>
                         <DMSButton
-                            className="write-button"
+                            className="write-write-button"
                             variant="contained"
                             onClick={this.clickWrite}
                         >
                             다시 쓰기
                         </DMSButton>
                         <DMSButton
-                            className="list-button"
+                            className="write-list-button"
                             variant="contained"
                             onClick={this.clickWrite}
                         >

@@ -8,7 +8,7 @@
     flex-direction: row;
     justify-content: flex-start;
 }
-.left-container {
+.board-left-container {
     width: 80%;
     display: flex;
     flex-wrap: wrap;
@@ -16,7 +16,7 @@
     flex-grow: 1;
     flex-shrink: 1;
 }
-.right-container {
+.board-right-container {
     width: 20%;
 
     flex-grow: 1;
@@ -27,22 +27,22 @@
     width: 50%;
     margin-top: 5%;
 }
-.best-board {
+.board-best-board {
     width: 50%;
     flex-grow: 1;
     flex-shrink: 1;
 }
-.mainboard {
+.board-mainboard {
     margin-top: 50px;
     width: 70%;
     flex-grow: 1;
     flex-shrink: 1;
 }
-.pagination-container {
+.board-pagination-container {
     width: 80%;
     padding-left: 300px;
 }
-.button-container {
+.board-button-container {
     width: 100%;
 }
 
@@ -50,7 +50,7 @@
     border-radius: 17px;
     padding: 5px 15px;
 }
-.yellow-line {
+.board-yellow-line {
     /* 크기 및 굵기 */
     width: 100%;
     border: solid #ffd400;
@@ -61,28 +61,28 @@
     /* 색 */
     color: #ffd400;
 }
-.main-board-line {
+.board-main-board-line {
     width: 800px;
     margin-top: 30px;
     margin-bottom: 30px;
 }
-.best-board-line {
+.board-best-board-line {
     width: 350px;
     margin-top: 15px;
     margin-bottom: 15px;
 }
-.today-board-line {
+.board-today-board-line {
     width: 230px;
     margin-top: 15px;
     margin-bottom: 15px;
 }
-.button {
+.board-button {
     border-radius: 1px;
     padding: 5px 15px;
     justify-content: flex-end;
     align-content: flex-end;
     align-items: flex-end;
 }
-.today-talk {
+.board-today-talk {
     width: 100%;
 }

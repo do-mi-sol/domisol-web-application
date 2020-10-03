@@ -185,7 +185,7 @@ export default class Board extends React.Component {
 
         return (
             <div className="container">
-                <div className="left-container">
+                <div className="board-left-container">
                     <div className="board-name-container">
                         <div>게시판 글 개수:{count}</div>
 
@@ -193,7 +193,7 @@ export default class Board extends React.Component {
                             잘하고싶다..연애 게시판
                         </Button>
                     </div>
-                    <div className="best-board">
+                    <div className="board-best-board">
                         <div>실시간 베스트</div>
                         <table borders="1">
                             <tbody>
@@ -201,7 +201,7 @@ export default class Board extends React.Component {
                                     {bestboards.map((row) => (
                                         <tr>
                                             <BestBoard title={row.title} />
-                                            <hr className="best-board-line" />
+                                            <hr className="board-best-board-line" />
                                         </tr>
                                     ))}
                                 </td>
@@ -209,7 +209,7 @@ export default class Board extends React.Component {
                         </table>
                     </div>
 
-                    <div className="mainboard">
+                    <div className="board-mainboard">
                         {/*메인게시판*/}
                         <table borders="1">
                             <tbody>
@@ -224,14 +224,14 @@ export default class Board extends React.Component {
                                             hits={row.hits}
                                             comments={row.comments}
                                         />
-                                        <hr className="main-board-line" />
+                                        <hr className="board-main-board-line" />
                                     </div>
                                 ))}
                             </tbody>
                         </table>
                         <br />
                     </div>
-                    <div className="pagination-container">
+                    <div className="board-pagination-container">
                         {/*페이징*/}
                         <Pagination
                             pageSize={pageSize}
@@ -240,15 +240,15 @@ export default class Board extends React.Component {
                             onPageChange={this.handlePageChange}
                         />
                     </div>
-                    <div className="button-container">
-                        <Button className="button" variant="warning">
+                    <div className="board-button-container">
+                        <Button className="board-button" variant="warning">
                             글쓰기
                         </Button>
                     </div>
                 </div>
-                <div className="right-container">
+                <div className="board-right-container">
                     <div>오늘의 글 </div>
-                    <hr className="yellow-line"></hr>
+                    <hr className="board-yellow-line"></hr>
                     <table borders="1">
                         <tbody>
                             <td>
@@ -263,10 +263,10 @@ export default class Board extends React.Component {
                     </table>
                     <br />
                     <div>오늘의 톡</div>
-                    <hr className="yellow-line"></hr>
+                    <hr className="board-yellow-line"></hr>
                     {/**이미지로보여주기,스크롤내려서 보여주기**/}
                     <img
-                        className="today-talk"
+                        className="board-today-talk"
                         alt=""
                         src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F9940773359839DFA0D"
                     />
@@ -274,7 +274,7 @@ export default class Board extends React.Component {
                     <br />
                     {/*오늘의 댓글 게시판 */}
                     <div>오늘의 댓글</div>
-                    <hr className="yellow-line"></hr>
+                    <hr className="board-yellow-line"></hr>
 
                     <table borders="1">
                         <tbody>

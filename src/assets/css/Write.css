@@ -1,4 +1,6 @@
-.background {
+.contents-input-quill{
+    width:100%;
+    height:400px;
 }
 
 /*컨테이너*/
@@ -11,11 +13,11 @@
     background-color: white;
     height: 100%;
 }
-.community-guide {
+.write-community-guide {
     width: 100%;
     padding-left: 5%;
 }
-.input-containe {
+.write-input-container {
     margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
@@ -25,7 +27,7 @@
     flex-direction: row;
     justify-content: flex-start;
 }
-.picture-container {
+.write-picture-container {
     width: 30%;
     display: flex;
     flex-wrap: wrap;
@@ -33,13 +35,13 @@
     flex-grow: 1;
     flex-shrink: 1;
 }
-.input-container {
+.write-input-container {
     padding-left: 5%;
     width: 60%;
     flex-grow: 1;
     flex-shrink: 1;
 }
-.button-container {
+.write-button-container {
     padding-left: 45%;
     flex-direction: row;
     flex-grow: 1;
@@ -47,7 +49,7 @@
 }
 
 /*노란선*/
-.yellow-line {
+.write-yellow-line {
     /* 크기 및 굵기 */
     width: 99.5%;
     border: solid #ffd400;
@@ -61,7 +63,7 @@
     /* 색 */
     color: #ffd400;
 }
-.line {
+.write-line {
     /* 크기 및 굵기 */
     width: 99.5%;
     height: 2px;
@@ -79,31 +81,31 @@
 /*얇은선*/
 
 /*왼쪽 사진*/
-.talk-input {
+.write-talk-input {
     margin-top: 20px;
     width: 100%;
     height: 30px;
     outline-style: none;
 }
 
-.talk-img {
+.write-talk-img {
     margin-top: 30px;
     width: 100%;
 }
-.talk_preview {
+.write-talk_preview {
     margin-top: 30px;
     width: 100%;
     height: 800px;
 }
 
 /*오른쪽 글쓰기*/
-.board-name {
+.write-board-name {
     margin-left: 5%;
 }
-.title-input {
+.write-title-input {
     margin-top: 20px;
 }
-.contents-input {
+.write-contents-input {
     margin-top: 30px;
     width: 100%;
     height: 600px;
@@ -113,12 +115,12 @@
 
     outline-style: none;
 }
-.contents-input-quill {
+.write-contents-input-quill {
     margin-left: 2%;
 }
 
-.write-button {
-    width: 10%;
+.write-write-button {
+    width: 10px;
     /*margin-left: 30%;
     padding-left: 10%;
     border-radius: 10px;
