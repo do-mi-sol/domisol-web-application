@@ -23,7 +23,7 @@
 .carousel-caption h3 {
   color: #fff !important;
 }
-.ourvalues {
+.home-ourvalues {
   padding-top: 800px;
   /* padding-bottom: 350px; */
 }
@@ -36,20 +36,20 @@
   padding-left: 100px;
 }
 
-.pic-right {
+.home-img {
   float: right;
   width: 1000px;
   height: 400px;
   /* padding-bottom: 100px; */
 }
-.pic-left {
+.home-img2 {
   float: left;
   width: 1200px;
   height: 500px;
   padding-top: 50px;
 }
 
-.card {
+.home-card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 300px;
 
@@ -64,7 +64,7 @@
   font-size: 18px;
 }
 
-.container button {
+.home-profile button {
   border: none;
   outline: 0;
   display: inline-block;
@@ -105,12 +105,12 @@ a:hover {
 .container-fluid {
   padding: 60px 50px;
 }
-.bg-grey {
+/* .bg-grey {
   background-color: #f6f6f6;
-}
+} */
 
 /* //service */
-.service .container {
+/* .service .container {
   position: relative;
   width: 33%;
   float: left;
@@ -151,26 +151,27 @@ a:hover {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
-}
+} */
 
-.profile {
+.home-profile {
   padding-top: 400px;
 }
-.profile h1 {
+.home-profile h1 {
   text-align: center;
 }
-.service h2 {
+/* .service h2 {
   font-size: 70px;
   font-weight: bold;
 }
 .service h3 {
   font-size: 40px;
-}
+} */
 
 /* 수정수정1001 */
 
-.aboutus {
+.home-aboutthecompany {
   padding-top: 100px;
   padding-bottom: 100px;
   margin-top: 64px;
+  background-color: #f6f6f6;
 }

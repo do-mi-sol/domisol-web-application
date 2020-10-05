@@ -85,7 +85,7 @@ export default class Home extends Component {
         <br></br>
         <div>
           <img
-            className="pic-right"
+            className="home-img"
             src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxOTEyMDlfMTg3%2FMDAxNTc1ODk0NjMxNjIx.lZh5YxHUvp3gY6RzsTMM-UyUbpMBK6xzb7as_Nv_iYwg.5yFzYIosQAhp2S_Uz36IMj60p_paZwQHdsC2ZHH0t8Ag.JPEG.tobemaven%2F%25BA%25F1%25C6%25F7%25BC%25B1%25B6%25F3%25C0%25CC%25C1%25EE.JPG&type=sc960_832"
             alt="loveyou"
           />
@@ -103,7 +103,7 @@ export default class Home extends Component {
             </p>
           </div>
           <img
-            className="pic-left"
+            className="home-img2"
             src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20110108_7%2Fwooroo88_1294461731368Btxio_JPEG%2F17773_S08_092951.jpg&type=sc960_832"
             alt="lovewe"
           />
@@ -115,7 +115,7 @@ export default class Home extends Component {
         <br></br>
 
         <br></br>
-        <div className="ourvalues">
+        <div className="home-ourvalues">
           <div className="container-fluid ">
             <div className="row">
               <div className="col-sm-4">
@@ -143,7 +143,7 @@ export default class Home extends Component {
             </div>
           </div>
         </div>
-        <div className="aboutus bg-grey">
+        <div className="home-aboutthecompany ">
           <div className="w3-container" padding="128px 16px" id="about">
             <h3 className="w3-center font-weight-bold">ABOUT THE COMPANY</h3>
             <br></br>
@@ -223,7 +223,7 @@ export default class Home extends Component {
           </div>
         </div> */}
 
-        <div className="profile">
+        <div className="home-profile">
           <h1 className="font-weight-bold">
             <br></br>
             do-mi-sol developer
@@ -231,7 +231,7 @@ export default class Home extends Component {
           <div className="container center">
             <br></br>
 
-            <div className="card">
+            <div className="home-card">
               <img
                 src="https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5353%2F2019%2F05%2F27%2F0000538860_001_20190527125648704.jpg&type=sc960_832"
                 alt="John"
@@ -256,7 +256,7 @@ export default class Home extends Component {
                 <button>Contact</button>
               </p>
             </div>
-            <div className="card">
+            <div className="home-card">
               <img
                 src="https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5353%2F2019%2F05%2F27%2F0000538860_001_20190527125648704.jpg&type=sc960_832"
                 alt="John"
@@ -281,7 +281,7 @@ export default class Home extends Component {
                 <button>Contact</button>
               </p>
             </div>
-            <div className="card">
+            <div className="home-card">
               <img
                 src="https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5353%2F2019%2F05%2F27%2F0000538860_001_20190527125648704.jpg&type=sc960_832"
                 alt="John"
@@ -307,7 +307,7 @@ export default class Home extends Component {
               </p>
             </div>
             <br></br>
-            <div className="card">
+            <div className="home-card">
               <img
                 src="https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5353%2F2019%2F05%2F27%2F0000538860_001_20190527125648704.jpg&type=sc960_832"
                 alt="John"
@@ -332,7 +332,7 @@ export default class Home extends Component {
                 <button>Contact</button>
               </p>
             </div>
-            <div className="card">
+            <div className="home-card">
               <img
                 src="https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5353%2F2019%2F05%2F27%2F0000538860_001_20190527125648704.jpg&type=sc960_832"
                 alt="John"
@@ -357,7 +357,7 @@ export default class Home extends Component {
                 <button>Contact</button>
               </p>
             </div>
-            <div className="card">
+            <div className="home-card">
               <img
                 src="https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5353%2F2019%2F05%2F27%2F0000538860_001_20190527125648704.jpg&type=sc960_832"
                 alt="John"

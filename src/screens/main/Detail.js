@@ -14,7 +14,7 @@ function Detail() {
         <div class="container text-center">
           <div className="row">
             <div className="col-sm-4">
-              <section className="boardtext">
+              <section className="detail-boardtext">
                 <h4>
                   <small>잘하고싶다...연애</small>
                 </h4>
