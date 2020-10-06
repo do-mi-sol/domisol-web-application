@@ -1,10 +1,5 @@
-import {library} from '@fortawesome/fontawesome-svg-core';
-import {
-  fab,
-  faFacebookF,
-  faInstagram,
-  faTwitter,
-} from '@fortawesome/free-brands-svg-icons';
+import { library } from "@fortawesome/fontawesome-svg-core"
+import { fab, faFacebookF, faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons"
 import {
   faSmile,
   faAd,
@@ -16,9 +11,10 @@ import {
   faArrowLeft,
   faArrowCircleLeft,
   faAngleDown,
-} from '@fortawesome/free-solid-svg-icons';
+} from "@fortawesome/free-solid-svg-icons"
+import { faCommentDots } from "@fortawesome/free-regular-svg-icons"
 
-library.add (
+library.add(
   fab,
   faSmile,
   faAd,
@@ -32,5 +28,6 @@ library.add (
   faArrowCircleRight,
   faArrowLeft,
   faArrowCircleLeft,
-  faAngleDown
-);
+  faAngleDown,
+  faCommentDots
+)

@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import { Carousel } from "react-bootstrap"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "../../assets/css/Home.css"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 export default class Home extends Component {
   render() {
@@ -240,18 +241,13 @@ export default class Home extends Component {
               <h1>John Doe</h1>
               <p className="title">CEO & Founder, Example</p>
               <p>Harvard University</p>
-              <div margin="24px 0">
-                <a href="#">
-                  <i className="fa fa-commenting-o"></i>
-                </a>
-                <a href="#">
-                  <i className="fa fa-envelope"></i>
-                </a>
-
-                <a href="#">
-                  <i className="fa fa-facebook"></i>
-                </a>
-              </div>
+              <FontAwesomeIcon
+                icon={["far", "comment-dots"]}
+                size="2x"
+                style={{ marginRight: 10 }}
+              />
+              <FontAwesomeIcon icon={["fab", "instagram"]} size="2x" style={{ marginRight: 10 }} />
+              <FontAwesomeIcon icon={["fab", "facebook-f"]} size="2x" />
               <p>
                 <button>Contact</button>
               </p>
@@ -265,18 +261,15 @@ export default class Home extends Component {
               <h1>John Doe</h1>
               <p className="title">CEO & Founder, Example</p>
               <p>Harvard University</p>
-              <div margin="24px 0">
-                <a href="#">
-                  <i className="fa fa-commenting-o"></i>
-                </a>
-                <a href="#">
-                  <i className="fa fa-envelope"></i>
-                </a>
 
-                <a href="#">
-                  <i className="fa fa-facebook"></i>
-                </a>
-              </div>
+              <FontAwesomeIcon
+                icon={["far", "comment-dots"]}
+                size="2x"
+                style={{ marginRight: 10 }}
+              />
+              <FontAwesomeIcon icon={["fab", "instagram"]} size="2x" style={{ marginRight: 10 }} />
+              <FontAwesomeIcon icon={["fab", "facebook-f"]} size="2x" />
+
               <p>
                 <button>Contact</button>
               </p>
@@ -287,21 +280,18 @@ export default class Home extends Component {
                 alt="John"
                 width="100%"
               />
-              <h1>John Doe</h1>
+              <h1>룰루</h1>
               <p className="title">CEO & Founder, Example</p>
               <p>Harvard University</p>
-              <div margin="24px 0">
-                <a href="#">
-                  <i className="fa fa-commenting-o"></i>
-                </a>
-                <a href="#">
-                  <i className="fa fa-envelope"></i>
-                </a>
 
-                <a href="#">
-                  <i className="fa fa-facebook"></i>
-                </a>
-              </div>
+              <FontAwesomeIcon
+                icon={["far", "comment-dots"]}
+                size="2x"
+                style={{ marginRight: 10 }}
+              />
+              <FontAwesomeIcon icon={["fab", "instagram"]} size="2x" style={{ marginRight: 10 }} />
+              <FontAwesomeIcon icon={["fab", "facebook-f"]} size="2x" />
+
               <p>
                 <button>Contact</button>
               </p>
@@ -316,18 +306,13 @@ export default class Home extends Component {
               <h1>John Doe</h1>
               <p className="title">CEO & Founder, Example</p>
               <p>Harvard University</p>
-              <div margin="24px 0">
-                <a href="#">
-                  <i className="fa fa-commenting-o"></i>
-                </a>
-                <a href="#">
-                  <i className="fa fa-envelope"></i>
-                </a>
-
-                <a href="#">
-                  <i className="fa fa-facebook"></i>
-                </a>
-              </div>
+              <FontAwesomeIcon
+                icon={["far", "comment-dots"]}
+                size="2x"
+                style={{ marginRight: 10 }}
+              />
+              <FontAwesomeIcon icon={["fab", "instagram"]} size="2x" style={{ marginRight: 10 }} />
+              <FontAwesomeIcon icon={["fab", "facebook-f"]} size="2x" />
               <p>
                 <button>Contact</button>
               </p>
@@ -341,18 +326,13 @@ export default class Home extends Component {
               <h1>John Doe</h1>
               <p className="title">CEO & Founder, Example</p>
               <p>Harvard University</p>
-              <div margin="24px 0">
-                <a href="#">
-                  <i className="fa fa-commenting-o"></i>
-                </a>
-                <a href="#">
-                  <i className="fa fa-envelope"></i>
-                </a>
-
-                <a href="#">
-                  <i className="fa fa-facebook"></i>
-                </a>
-              </div>
+              <FontAwesomeIcon
+                icon={["far", "comment-dots"]}
+                size="2x"
+                style={{ marginRight: 10 }}
+              />
+              <FontAwesomeIcon icon={["fab", "instagram"]} size="2x" style={{ marginRight: 10 }} />
+              <FontAwesomeIcon icon={["fab", "facebook-f"]} size="2x" />
               <p>
                 <button>Contact</button>
               </p>
@@ -366,18 +346,13 @@ export default class Home extends Component {
               <h1>John Doe</h1>
               <p className="title">CEO & Founder, Example</p>
               <p>Harvard University</p>
-              <div margin="24px 0">
-                <a href="#">
-                  <i className="fa fa-commenting-o"></i>
-                </a>
-                <a href="#">
-                  <i className="fa fa-envelope"></i>
-                </a>
-
-                <a href="#">
-                  <i className="fa fa-facebook"></i>
-                </a>
-              </div>
+              <FontAwesomeIcon
+                icon={["far", "comment-dots"]}
+                size="2x"
+                style={{ marginRight: 10 }}
+              />
+              <FontAwesomeIcon icon={["fab", "instagram"]} size="2x" style={{ marginRight: 10 }} />
+              <FontAwesomeIcon icon={["fab", "facebook-f"]} size="2x" />
               <p>
                 <button>Contact</button>
               </p>
