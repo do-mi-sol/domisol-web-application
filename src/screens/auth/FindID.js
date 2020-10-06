@@ -20,7 +20,7 @@ export default class FindID extends Component {
             <Container
                 maxWidth="xs"
                 style={{
-                    marginTop: 30,
+                    marginTop: 50,
                     marginBottom: 20,
                     minHeight: '90vh',
                 }}
