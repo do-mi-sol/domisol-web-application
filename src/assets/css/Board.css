@@ -17,6 +17,7 @@
     flex-shrink: 1;
 }
 .board-right-container {
+    background-color: white;
     width: 20%;
 
     flex-grow: 1;
