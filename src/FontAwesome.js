@@ -18,6 +18,7 @@ import {
     faAngleDown,
     faMale,
     faFemale,
+    faPen,
 } from '@fortawesome/free-solid-svg-icons'
 import {faCommentDots} from '@fortawesome/free-regular-svg-icons'
 
@@ -38,5 +39,6 @@ library.add(
     faAngleDown,
     faCommentDots,
     faMale,
-    faFemale
+    faFemale,
+    faPen
 )

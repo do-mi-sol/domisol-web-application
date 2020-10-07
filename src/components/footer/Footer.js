@@ -5,7 +5,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 const Copyright = () => {
     return (
-        <Typography variant="body2" color="textSecondary">
+        <Typography variant="body1" color="textSecondary">
             {'Copyright © '}
             Domisol Website
             {'  '}
@@ -19,7 +19,7 @@ const SnsLink = () => {
     return (
         <div>
             {' '}
-            <Typography variant="body2" color="textSecondary">
+            <Typography variant="body1" color="textSecondary">
                 <FontAwesomeIcon
                     icon={['fab', 'facebook-f']}
                     style={{marginLeft: 2, marginRight: 18}}
@@ -31,7 +31,7 @@ const SnsLink = () => {
                     Facebook
                 </Link>{' '}
             </Typography>
-            <Typography variant="body2" color="textSecondary">
+            <Typography variant="body1" color="textSecondary">
                 <FontAwesomeIcon
                     icon={['fab', 'twitter']}
                     style={{marginRight: 15}}
@@ -43,7 +43,7 @@ const SnsLink = () => {
                     Twitter
                 </Link>
             </Typography>
-            <Typography variant="body2" color="textSecondary">
+            <Typography variant="body1" color="textSecondary">
                 <FontAwesomeIcon
                     icon={['fab', 'instagram']}
                     style={{marginLeft: 1, marginRight: 17}}

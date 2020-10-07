@@ -40,6 +40,7 @@ export default class SignUp extends Component {
     }
     agreeterm = (event) => {
         this.setState({[event.target.name]: event.target.checked})
+        console.log(event.target.checked)
     }
 
     // SignUp button 클릭 함수

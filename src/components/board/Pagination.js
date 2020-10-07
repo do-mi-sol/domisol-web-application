@@ -1,10 +1,17 @@
 import React from 'react'
 import _ from 'lodash'
+import '../../assets/css/Board.css'
 
-const Pagination = ({pageSize, itemsCount, currentPage, onPageChange}) => {
+const Pagination = ({
+    pageSize,
+    itemsCount,
+    currentPage,
+    onPageChange,
+}) => {
     const pageCount = Math.ceil(itemsCount / pageSize) //몇페이지 필요한지 계산
 
-    const pages = _.range(1, pageCount) // 마지막 페이지에 보여줄 컨텐츠를 위해 +1, https://lodash.com/docs/#range 참고
+    if (pageCount === 1) return null
+    const pages = _.range(1, pageCount + 1)
 
     return (
         <nav>
@@ -12,10 +19,17 @@ const Pagination = ({pageSize, itemsCount, currentPage, onPageChange}) => {
                 {pages.map((page) => (
                     <li
                         key={page}
-                        className={page === currentPage ? 'page-item active' : 'page-item'} // Bootstrap을 이용하여 현재 페이지를 시각적으로 표시
+                        className={
+                            page === currentPage
+                                ? 'page-item active'
+                                : 'page-item'
+                        }
                         style={{cursor: 'pointer'}}
                     >
-                        <div className="page-link" onClick={() => onPageChange(page)}>
+                        <div
+                            className="page-link"
+                            onClick={() => onPageChange(page)}
+                        >
                             {page}
                         </div>{' '}
                         {/* 페이지 번호 클릭 이벤트 처리기 지정 */}

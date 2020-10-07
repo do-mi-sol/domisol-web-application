@@ -1,37 +1,54 @@
-.container {
+.board-container {
     margin-top: 50px;
-    display: flex;
+    margin-left: 3%;
     flex-wrap: wrap;
 
     width: 100%;
+    min-width: 1000px;
+}
+.board-divide-container {
+    width: 100%;
+    display: flex;
+
+    min-width: 1200px;
     align-items: flex-start;
     flex-direction: row;
     justify-content: flex-start;
 }
-.board-left-container {
+.board-center-container {
+    width: 100%;
+    padding-bottom: 10%;
+    /* background-color: black; */
+    margin-bottom: 10px;
+}
+.board-right-container {
     width: 80%;
+    min-width: 900px;
+    min-height: 300px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     flex-grow: 1;
     flex-shrink: 1;
 }
-.board-right-container {
+.board-left-container {
     background-color: white;
     width: 20%;
+    min-width: 220px;
+    /* max-width: 300px; */
 
     flex-grow: 1;
     flex-shrink: 1;
 }
 .board-name-container {
     align-items: flex-start;
-    width: 50%;
     margin-top: 5%;
 }
 .board-best-board {
-    width: 50%;
+    width: 40%;
     flex-grow: 1;
     flex-shrink: 1;
+    padding-right: 10%;
 }
 .board-mainboard {
     margin-top: 50px;
@@ -41,12 +58,22 @@
 }
 .board-pagination-container {
     width: 80%;
-    padding-left: 300px;
-}
-.board-button-container {
-    width: 100%;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
 }
 
+.board-button-container {
+    height: 45px;
+    width: 880px;
+    min-width: 880px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+.board-explanation {
+    margin-top: 10px;
+}
 .board-name-button {
     border-radius: 17px;
     padding: 5px 15px;
@@ -86,4 +113,84 @@
 }
 .board-today-talk {
     width: 100%;
+}
+
+.pill {
+    height: 1px;
+    border-radius: 2px;
+    color: gray;
+    border: 2px solid currentColor;
+    width: 80%;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.board-left-container > .pill {
+    width: 80%;
+}
+
+.vertical-lines {
+    height: 10px;
+    color: gray;
+    background-image: linear-gradient(
+        90deg,
+        currentColor,
+        currentColor 33.33%,
+        transparent 33.33%,
+        transparent 100%
+    );
+    background-size: 3px 100%;
+    width: 80%;
+    margin: 0;
+}
+.board-right-container > .vertical-lines {
+    min-width: 800px;
+}
+.board-left-container > .vertical-lines {
+    min-width: 200px;
+}
+
+.dots {
+    color: orange;
+    height: 8px;
+    border-width: 0 0 8px;
+    border-style: solid;
+    border-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2 1" width="8" height="4"><circle fill="gray" cx="1" cy="0.5" r="0.5"/></svg>')
+        0 0 100% repeat;
+    width: 100%;
+}
+
+hr.style5 {
+    background-color: #fff;
+    border-top: 2px dashed #8c8b8b;
+    width: 80%;
+    margin: 0;
+}
+
+hr.style13 {
+    height: 10px;
+    width: 70%;
+    border: 0;
+    box-shadow: 0 10px 10px -10px #8c8b8b inset;
+    margin: 0;
+}
+.style15 {
+    width: 75%;
+    border: 1px solid black;
+    background-color: black;
+    text-align: right;
+    margin: 0;
+    margin-bottom: 15px;
+}
+.style15:after {
+    content: url(../images/Logo2.png);
+    transform: scale(0.06);
+    /* background-size: 20px 30px; */
+    display: inline-block;
+    position: relative;
+    top: -24px;
+    padding: 0 10px;
+    color: #8c8b8b;
+    width: 10px;
+    height: 20px;
 }
