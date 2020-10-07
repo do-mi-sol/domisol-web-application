@@ -2,12 +2,12 @@ import React, {Component} from 'react';
 import '../../assets/css/Write.css';
 //import {Container, Grid} from '@material-ui/core'
 import DMSButton from '../../components/customs/DMSButton';
-//import DMSTextfield from '../../components/customs/DMSTextfield';
+import DMSTextfield from '../../components/customs/DMSTextfield';
 import {CustomInput, FormGroup, Label} from 'reactstrap';
 import RichTextEditor from '../../components/customs/TextEditor';
 //import Paper from '@material-ui/core/Paper'
 //import {makeStyles} from '@material-ui/core/styles'
-//import TextField from '@material-ui/core/TextField';
+import TextField from '@material-ui/core/TextField';
 import LineInput from '../../components/customs/LineInput';
 
 export default class Write extends Component {
