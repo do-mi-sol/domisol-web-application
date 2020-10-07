@@ -21,6 +21,8 @@ const Comment = ({ name, text, date, img }) => {
           <span className="glyphicon glyphicon-heart"></span> Heart
         </button>
         <br></br>
+        <br></br>
+        <br></br>
       </div>
     </div>
   )

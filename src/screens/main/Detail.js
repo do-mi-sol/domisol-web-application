@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import { Form } from "react-bootstrap"
 import "bootstrap/dist/css/bootstrap.min.css"
 import Comment from "../../components/customs/Comment"
+import Recomment from "../../components/customs/Recomment"
 
 // import { render } from "@testing-library/react"
 
@@ -9,15 +10,35 @@ export default class Detail extends Component {
   // const { date, text, name } = this.state
 
   state = {
-    date: "20352626",
-    text: "ahtlahtlakdgignbdkbndkndlkgndkg",
-    name: "kitty",
-    img:
-      "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F032%2F2011%2F10%2F05%2F3.jpg&type=sc960_832",
+    comment: [
+      {
+        date: "20201004",
+        text: "ahtlahtlakdgignbdkbndkndlkgndkg",
+        name: "kitty",
+        img:
+          "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F032%2F2011%2F10%2F05%2F3.jpg&type=sc960_832",
+      },
+      {
+        date: "20201003",
+        text: "ahtlahtlakdgignbdkbndkndlkgndkg",
+        name: "anja",
+        img:
+          "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F032%2F2011%2F10%2F05%2F3.jpg&type=sc960_832",
+      },
+    ],
+    recomment: [
+      {
+        date: "20201010",
+        text: "wow perfect",
+        name: "hihi",
+        img:
+          "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F032%2F2011%2F10%2F05%2F3.jpg&type=sc960_832",
+      },
+    ],
   }
 
   render() {
-    const { date, text, name, img } = this.state
+    const { comment, recomment } = this.state
     return (
       <div className="container center">
         <link
@@ -78,21 +99,16 @@ export default class Detail extends Component {
             </button>
           </Form>
           <br></br>
+          <div>
+            {comment.map((like) => (
+              <Comment name={like.name} date={like.date} text={like.text} img={like.img}></Comment>
+            ))}
+          </div>
 
-          <Comment name={name} date={date} text={text} img={img} />
-          <hr size="20" color="yellow" height="10px" background-color="yellow" />
-
-          <Comment name={name} date={date} text={text} img={img} />
           <br></br>
-
-          <Comment name={name} date={date} text={text} img={img} />
-          <br></br>
-
-          {/* <p>
-            <span className="badge">1</span> Comment:
-          </p>
-
-          <Detail2 name={name} date={date} text={text} img={img} /> */}
+          {recomment.map((like) => (
+            <Recomment name={like.name} date={like.date} text={like.text} img={like.img} />
+          ))}
         </div>
       </div>
     )
