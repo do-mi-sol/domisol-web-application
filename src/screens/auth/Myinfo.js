@@ -50,6 +50,7 @@ export default class Myinfo extends Component {
             myReply,
             name,
             email,
+            nickname,
             gender,
             age,
         } = this.state.data
@@ -93,6 +94,7 @@ export default class Myinfo extends Component {
                         <MyProfile
                             id={id}
                             name={name}
+                            nickname={nickname}
                             email={email}
                             gender={gender}
                             profile={profile}

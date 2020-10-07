@@ -9,6 +9,9 @@ import {
 } from 'reactstrap'
 import {Avatar} from '@material-ui/core'
 import '../../assets/css/MyProfile.css'
+import { Button } from "@material-ui/core"
+import DMSButton from '../../components/customs/DMSButton'
+import { faAlignCenter } from '@fortawesome/free-solid-svg-icons'
 
 const MyProfile = (props) => {
     return (
@@ -42,6 +45,23 @@ const MyProfile = (props) => {
                     />
                 </Col>
             </FormGroup>
+
+            <FormGroup row>
+                <Label for="Nickname" sm={2}>
+                    NICKNAME
+                </Label>
+                <Col sm={10}>
+                    <Input
+                        disabled
+                        type="nickname"
+                        name="nickname"
+                        id="nicknmae"
+                        value={props.nickname}
+                    />
+                </Col>
+            </FormGroup>
+
+
             <FormGroup row>
                 <Label for="Email" sm={2}>
                     EMAIL
@@ -56,7 +76,7 @@ const MyProfile = (props) => {
                     />
                 </Col>
             </FormGroup>
-
+            
             <FormGroup row>
                 <Label for="Password" sm={2}>
                     PASSWORD
@@ -147,6 +167,21 @@ const MyProfile = (props) => {
                     </div>
                 </Col>
             </FormGroup>
+
+            {/* 밑에 회원정보수정 버튼 추가로 만들기 */}
+            {/* <Button variant="contained" color="primary" >
+                회원정보 수정
+            </Button> */}
+            <div className="infomodify-buttonContainer">
+                <DMSButton
+                    className="button1"
+                    children="회원정보 수정"
+                    variant="contained"
+                    size="large"
+                    // 중앙정렬?
+                    radiusBottom={5}
+                />
+            </div>
         </Form>
     )
 }
