@@ -22,12 +22,12 @@ export default class Login extends Component {
         const {id, password} = this.state
         return (
             <div
-                class=" array"
+                className="login-array"
                 style={{marginTop: 60, minHeight: '90vh'}}
             >
                 <div>
                     <img
-                        className="icon2"
+                        className="login-icon"
                         src={require('../../assets/images/Logo.jpg')}
                         alt="logo"
                     />
@@ -52,7 +52,7 @@ export default class Login extends Component {
                     />
                 </div>
 
-                <div className="buttonContainer">
+                <div className="login-buttonContainer">
                     <DMSButton
                         className="button1"
                         children="로그인"
@@ -64,7 +64,7 @@ export default class Login extends Component {
                 </div>
 
                 <Container maxWidth="xs" style={{marginTop: 30}}>
-                    <Divider classes="MuiDivider-middle" />
+                    <Divider />
                 </Container>
 
                 <div>

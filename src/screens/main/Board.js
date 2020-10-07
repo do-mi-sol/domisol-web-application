@@ -14,6 +14,7 @@ import {
     TableHead,
     TableRow,
 } from '@material-ui/core'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {makeStyles} from '@material-ui/core/styles'
 //import _ from 'lodash'
 import '../../assets/css/Board.css'
@@ -192,6 +193,7 @@ export default class Board extends React.Component {
                 minWidth: 650,
             },
         })
+
         const {
             replyboards,
             todayboards,
@@ -269,7 +271,7 @@ export default class Board extends React.Component {
                     </div> */}
 
                     <TableContainer
-                        style={{margin: 10, minWidth: 850}}
+                        style={{marginRight: 30, minWidth: 830}}
                     >
                         <Table
                             className={classes.table}
@@ -280,12 +282,15 @@ export default class Board extends React.Component {
                                     <TableCell align="left">
                                         글 번호
                                     </TableCell>
-                                    <TableCell align="right">
-                                        성별
+
+                                    <TableCell align="center">
+                                        제목
                                     </TableCell>
-                                    <TableCell>제목</TableCell>
                                     <TableCell align="right">
                                         글쓴이
+                                    </TableCell>
+                                    <TableCell align="right">
+                                        성별
                                     </TableCell>
                                     <TableCell align="right">
                                         시간
@@ -304,9 +309,7 @@ export default class Board extends React.Component {
                                         <TableCell align="left">
                                             {row.number}
                                         </TableCell>
-                                        <TableCell align="right">
-                                            {row.gender}
-                                        </TableCell>
+
                                         <TableCell
                                             component="th"
                                             scope="row"
@@ -319,6 +322,24 @@ export default class Board extends React.Component {
                                         </TableCell>
                                         <TableCell align="right">
                                             {row.id}
+                                        </TableCell>
+                                        <TableCell align="right">
+                                            {row.gender === 'man' ? (
+                                                <FontAwesomeIcon
+                                                    icon={'male'}
+                                                    style={{
+                                                        color:
+                                                            'skyblue',
+                                                    }}
+                                                />
+                                            ) : (
+                                                <FontAwesomeIcon
+                                                    icon={'female'}
+                                                    style={{
+                                                        color: 'pink',
+                                                    }}
+                                                />
+                                            )}
                                         </TableCell>
                                         <TableCell align="right">
                                             {row.time}
