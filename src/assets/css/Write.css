@@ -1,6 +1,6 @@
-.contents-input-quill{
-    width:100%;
-    height:400px;
+.contents-input-quill {
+    width: 100%;
+    height: 400px;
 }
 
 /*컨테이너*/
@@ -8,6 +8,7 @@
     /*padding-top: 5%;*/
     padding-bottom: 10%;
 
+    margin-top: 0%;
     border-color: black;
 
     background-color: white;
@@ -18,7 +19,7 @@
     padding-left: 5%;
 }
 .write-input-container {
-    margin-top: 50px;
+    margin-top: 0px;
     display: flex;
     flex-wrap: wrap;
 
@@ -42,7 +43,10 @@
     flex-shrink: 1;
 }
 .write-button-container {
-    padding-left: 45%;
+    margin-top: 0%;
+    padding-left: 32%;
+    display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     flex-grow: 1;
     flex-shrink: 1;
@@ -51,19 +55,34 @@
 /*노란선*/
 .write-yellow-line {
     /* 크기 및 굵기 */
-    width: 99.5%;
+    width: 87%;
     border: solid #ffd400;
 
     /* 위치(마진) 조절 */
     margin-top: 4px;
 
-    margin-left: 1%;
+    margin-left: 6%;
     /* padding-right: 50px;
 */
     /* 색 */
     color: #ffd400;
 }
-.write-line {
+.write-line1 {
+    /* 크기 및 굵기 */
+    width: 99.5%;
+    height: 2px;
+    border-style: none;
+
+    /* 위치(마진) 조절 */
+
+    margin-bottom: 50px;
+
+    /* padding-right: 50px;
+*/
+    /* 색 */
+    background-color: whitesmoke;
+}
+.write-line2 {
     /* 크기 및 굵기 */
     width: 99.5%;
     height: 2px;
@@ -103,26 +122,39 @@
     margin-left: 5%;
 }
 .write-title-input {
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 5%;
+    width: 100%;
+
+    border-radius: 10px;
+    padding: 5px 5px;
+    line-height: normal;
+    outline-style: none;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 .write-contents-input {
-    margin-top: 30px;
+    margin-left: 6.5%;
+
     width: 100%;
     height: 600px;
     border-radius: 10px;
     padding: 5px 5px;
     line-height: normal;
-
     outline-style: none;
-}
-.write-contents-input-quill {
-    margin-left: 2%;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
 .write-write-button {
-    width: 10px;
+    width: 20px;
+    margin-left: 100%;
     /*margin-left: 30%;
     padding-left: 10%;
     border-radius: 10px;
     padding: 1px 50px;*/
+}
+.write-button {
+    margin-left: 5%;
 }
