@@ -9,9 +9,7 @@ import {
 } from 'reactstrap'
 import {Avatar} from '@material-ui/core'
 import '../../assets/css/MyProfile.css'
-import { Button } from "@material-ui/core"
 import DMSButton from '../../components/customs/DMSButton'
-import { faAlignCenter } from '@fortawesome/free-solid-svg-icons'
 
 const MyProfile = (props) => {
     return (
@@ -61,7 +59,6 @@ const MyProfile = (props) => {
                 </Col>
             </FormGroup>
 
-
             <FormGroup row>
                 <Label for="Email" sm={2}>
                     EMAIL
@@ -76,7 +73,7 @@ const MyProfile = (props) => {
                     />
                 </Col>
             </FormGroup>
-            
+
             <FormGroup row>
                 <Label for="Password" sm={2}>
                     PASSWORD

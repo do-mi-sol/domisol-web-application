@@ -207,7 +207,7 @@ export default class MainBoard extends Component {
                                         {row.id}
                                     </TableCell>
                                     <TableCell align="right">
-                                        {row.gender === 'man' ? (
+                                        {row.gender === 'male' ? (
                                             <FontAwesomeIcon
                                                 icon={'male'}
                                                 style={{

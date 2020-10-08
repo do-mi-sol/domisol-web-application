@@ -6,6 +6,7 @@ import {Typography} from '@material-ui/core'
 
 import '../../assets/css/Board.css'
 import MainBoard from '../../components/board/MainBoard'
+import BestBoard from '../../components/board/BestBoard'
 //import axios from 'axios' //서버에요청, 정보 긁어옴
 
 export default class Board extends React.Component {
@@ -75,12 +76,9 @@ export default class Board extends React.Component {
     render() {
         return (
             <div className="board-container">
-                <div className="board-center-container">
-                    아ㅓ나어ㅏㅓ아ㅓ아ㅓㅏㅓ
-                </div>
+                <div className="board-center-container"></div>
                 <div className="board-divide-container">
                     <div className="board-left-container">
-                        {/* <hr className="pill" /> */}
                         <hr className="style15" />
                         <Typography
                             variant="h5"
@@ -93,7 +91,7 @@ export default class Board extends React.Component {
                         </Typography>
                     </div>{' '}
                     <div className="board-right-container">
-                        {/* <hr className="pill" /> */}
+                        {/* <hr className="style15" /> */}
                         <div className="board-button-container">
                             <Button
                                 className="board-button"
@@ -111,6 +109,46 @@ export default class Board extends React.Component {
                             </Button>
                         </div>
                         <MainBoard />
+                    </div>
+                </div>
+                <div className="board-divide-container">
+                    <div className="board-left-container">
+                        {/* <hr className="pill" /> */}
+                        <hr className="style15" />
+                        <Typography
+                            variant="h5"
+                            style={{
+                                marginTop: '10px',
+                                fontWeight: 'bold',
+                            }}
+                        >
+                            베스트 게시판
+                        </Typography>
+                    </div>{' '}
+                    <div className="board-right-container">
+                        {/* <hr className="pill" /> */}
+                        <div className="board-button-container"></div>
+                        <BestBoard />
+                    </div>
+                </div>
+                <div className="board-divide-container">
+                    <div className="board-left-container">
+                        {/* <hr className="pill" /> */}
+                        <hr className="style15" />
+                        <Typography
+                            variant="h5"
+                            style={{
+                                marginTop: '10px',
+                                fontWeight: 'bold',
+                            }}
+                        >
+                            공지사항
+                        </Typography>
+                    </div>{' '}
+                    <div className="board-right-container">
+                        {/* <hr className="pill" /> */}
+                        <div className="board-button-container"></div>
+                        <BestBoard />
                     </div>
                 </div>
 
