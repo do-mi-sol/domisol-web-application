@@ -53,7 +53,12 @@ export default class SignUp extends Component {
             <div className="signUp-container">
                 <Container
                     maxWidth="xs"
-                    style={{marginTop: 30, marginBottom: 20}}
+                    style={{
+                        marginTop: 30,
+                        marginBottom: 20,
+                        paddingTop: '10vh',
+                        minHeight: '90vh',
+                    }}
                 >
                     <img
                         className="signUp-logoIcon"

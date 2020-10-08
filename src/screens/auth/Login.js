@@ -23,7 +23,11 @@ export default class Login extends Component {
         return (
             <div
                 className="login-array"
-                style={{marginTop: 60, minHeight: '90vh'}}
+                style={{
+                    marginTop: 60,
+                    paddingTop: '10vh',
+                    minHeight: '90vh',
+                }}
             >
                 <div>
                     <img

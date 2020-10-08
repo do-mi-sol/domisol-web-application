@@ -22,6 +22,7 @@ export default class FindID extends Component {
                 style={{
                     marginTop: 50,
                     marginBottom: 20,
+                    paddingTop: '10vh',
                     minHeight: '90vh',
                 }}
             >
