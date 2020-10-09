@@ -1,4 +1,5 @@
 import React from "react"
+import Counter from "./Counter"
 
 const Comment = ({ name, text, date, img }) => {
   return (
@@ -17,9 +18,7 @@ const Comment = ({ name, text, date, img }) => {
           <small>{date}</small>
         </h4>
         <p>{text}</p>
-        <button type="button" className="btn btn-danger btn-sm">
-          <span className="glyphicon glyphicon-heart"></span> Heart
-        </button>
+        <Counter></Counter>
         <br></br>
         <br></br>
         <br></br>
