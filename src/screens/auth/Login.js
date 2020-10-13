@@ -1,21 +1,34 @@
 import React, {Component} from 'react'
 import {Divider, Container} from '@material-ui/core'
+import axios from "axios"
 
 import DMSInput from '../../components/customs/DMSInput'
 import DMSButton from '../../components/customs/DMSButton'
+import URL from "../../NET/index"
 
 import '../../assets/css/Login.css'
 
 export default class Login extends Component {
     state = {
-        id: '',
-        password: '',
+        id: "",
+        password: "",
     }
 
     handleChange = (e) => {
         this.setState({
             [e.target.name]: e.target.value,
         })
+        console.log(e.target.name+e.target.value);
+    }
+
+    clickLogin=async()=>{
+        const {id, password} = this.state
+        await axios.post(URL.login,{
+            user_id:id,
+            password,
+        })
+        .then((res) => res.data)
+        .then((body) => console.log(body));
     }
 
     render() {
@@ -36,6 +49,7 @@ export default class Login extends Component {
                 <div>
                     <DMSInput
                         value={id}
+                        name="id"
                         label="ID"
                         onChange={this.handleChange}
                         variant="outlined"
@@ -45,6 +59,7 @@ export default class Login extends Component {
                 <div>
                     <DMSInput
                         value={password}
+                        name="password"
                         type="password"
                         label="Password"
                         onChange={this.handleChange}
@@ -58,6 +73,7 @@ export default class Login extends Component {
                         children="로그인"
                         variant="contained"
                         size="large"
+                        onClick={this.clickLogin}
                         width={400}
                         margin={20}
                     />
