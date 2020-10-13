@@ -146,7 +146,7 @@ export default class BestBoard extends Component {
         return (
             <div>
                 <TableContainer
-                    style={{marginRight: 30, minWidth: 830}}
+                    style={{marginRight: 30, minWidth: 800}}
                 >
                     <Table
                         className={classes.table}
@@ -177,8 +177,8 @@ export default class BestBoard extends Component {
                                         component="th"
                                         scope="row"
                                         style={{
-                                            minWidth: 80,
-                                            width: '50%',
+                                            minWidth: 70,
+                                            width: '80%',
                                         }}
                                     >
                                         {row.title}

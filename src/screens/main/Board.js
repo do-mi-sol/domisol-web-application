@@ -1,16 +1,18 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
-import {Button} from 'react-bootstrap'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {Typography} from '@material-ui/core'
 
 import '../../assets/css/Board.css'
 import MainBoard from '../../components/board/MainBoard'
 import BestBoard from '../../components/board/BestBoard'
+import DMSButton from '../../components/customs/DMSButton'
+import Search from '../../components/customs/Search'
 //import axios from 'axios' //서버에요청, 정보 긁어옴
 
 export default class Board extends React.Component {
     state = {
+        search:"",
         /*******************************데이터 받아오면 없어짐****************************************/
         bestboards: [
             {key: '10001', id: '10001', title: '베스트) 글제목1'},
@@ -68,6 +70,13 @@ export default class Board extends React.Component {
         /*******************************데이터 받아오면 없어짐****************************************/
     }
 
+
+    handleChange = (e) => {
+        this.setState({
+            [e.target.name]: e.target.value,
+        })
+        console.log(e.target.value)
+    }
     handlePageChange = (page) => {
         this.setState({currentPage: page})
     }
@@ -93,20 +102,15 @@ export default class Board extends React.Component {
                     <div className="board-right-container">
                         {/* <hr className="style15" /> */}
                         <div className="board-button-container">
-                            <Button
-                                className="board-button"
-                                variant="outlined"
-                                style={{backgroundColor: '#ffea80'}}
-                            >
-                                글쓰기
-                                <FontAwesomeIcon
+                            <Search onChange ={this.handleChange} value={this.state.search}/>
+                            <DMSButton color="#ffea80" href="/write" size="large">글쓰기<FontAwesomeIcon
                                     icon={'pen'}
                                     style={{
                                         color: 'gray',
                                         marginLeft: '7px',
                                     }}
-                                />
-                            </Button>
+                                /></DMSButton>
+                            
                         </div>
                         <MainBoard />
                     </div>

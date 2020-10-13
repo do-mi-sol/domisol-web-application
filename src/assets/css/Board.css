@@ -71,7 +71,7 @@
     min-width: 880px;
     margin-bottom: 10px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 .board-explanation {
     margin-top: 10px;
@@ -106,13 +106,7 @@
     margin-top: 15px;
     margin-bottom: 15px;
 }
-.board-button {
-    border-radius: 1px;
-    padding: 5px 15px;
-    justify-content: flex-end;
-    align-content: flex-end;
-    align-items: flex-end;
-}
+
 .board-today-talk {
     width: 100%;
 }
