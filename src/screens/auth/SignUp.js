@@ -1,24 +1,27 @@
 import React, {Component} from 'react'
+import {
+  Divider,
+  Container,
+  Grid,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+  Checkbox,
+  FormControlLabel,
+} from '@material-ui/core'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import axios from "axios"
 
+import Term from '../../components/signup/Term'
 import SelectAge from '../../components/signup/SelectAge'
 import InputWithBtn from '../../components/signup/InputWithBtn'
 import GenderRadio from '../../components/signup/GenderRadio'
 import DMSInput from '../../components/customs/DMSInput'
 import DMSButton from '../../components/customs/DMSButton'
-import {
-    Divider,
-    Container,
-    Grid,
-    Accordion,
-    AccordionSummary,
-    AccordionDetails,
-    Checkbox,
-    FormControlLabel,
-} from '@material-ui/core'
+
+import URL from "../../NET"
 
 import '../../assets/css/SignUp.css'
-import Term from '../../components/signup/Term'
 
 export default class SignUp extends Component {
     state = {
@@ -43,10 +46,21 @@ export default class SignUp extends Component {
         console.log(event.target.checked)
     }
 
-    // SignUp button 클릭 함수
-    clickSignUp = () => {
-        console.log(this.state)
-    }
+    signUp = async () => {
+      const { id, name, password1, email, gender, age } = this.state;
+      await axios
+        .post(URL.signup, {
+          user_id: id,
+          email,
+          password: password1,
+          name,
+          gender,
+          age,
+        })
+        .then((res) => res.data)
+        .then((body) => console.log(body));
+    };
+
     render() {
         const {id, name, password1, password2, email} = this.state
         return (
@@ -201,7 +215,7 @@ export default class SignUp extends Component {
                         size="large"
                         width={400}
                         margin={20}
-                        onClick={this.clickSignUp}
+                        onClick={this.signUp}
                     />
                 </Container>
             </div>
