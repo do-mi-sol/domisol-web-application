@@ -1,7 +1,8 @@
 import React from "react"
 import Counter from "./Counter"
+import moment from "moment"
 
-const Comment = ({ name, text, date, img }) => {
+const Comment = ({ name, text, img }) => {
   return (
     <div className="row">
       <img
@@ -12,11 +13,14 @@ const Comment = ({ name, text, date, img }) => {
         width="65"
         alt="Avatar"
       />
+
       <div className="col-sm-10">
         <h4>
           {name}
-          <small>{date}</small>
+          {"    "}
+          <small>{moment().format("llll")}</small>
         </h4>
+
         <p>{text}</p>
         <Counter></Counter>
         <br></br>
