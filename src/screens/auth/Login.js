@@ -28,7 +28,14 @@ export default class Login extends Component {
             password,
         })
         .then((res) => res.data)
-        .then((body) => console.log(body));
+        .then((body)=>{
+            const token = body.data.token
+            console.log(body);
+            if(body.success){
+                localStorage.setItem("token",token)
+                this.props.history.back()
+            }
+        })
     }
 
     render() {
