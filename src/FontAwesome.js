@@ -20,6 +20,7 @@ import {
     faFemale,
     faPen,
     faSearch,
+    faBlog,
 } from '@fortawesome/free-solid-svg-icons'
 import {faCommentDots} from '@fortawesome/free-regular-svg-icons'
 
@@ -42,5 +43,6 @@ library.add(
     faMale,
     faFemale,
     faPen,
-    faSearch
+    faSearch,
+    faBlog
 )

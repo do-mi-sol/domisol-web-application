@@ -3,7 +3,7 @@ import { Carousel } from "react-bootstrap"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "../../assets/css/Home.css"
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import {Grid,Paper,Container} from '@material-ui/core'
+import {Grid,Container} from '@material-ui/core'
 import DeveloperCard from '../../components/home/DeveloperCard'
 import ButtonBase from '../../components/home/ButtonBase'
 
@@ -12,7 +12,7 @@ export default class Home extends Component {
   render() {
     return (
       <div className="home-container">
-        <Container style={{padding:0}}>
+        <Container maxWidth='xl' style={{padding:0}}>
         {/* <meta charset="utf-8" /> */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link
@@ -28,15 +28,12 @@ export default class Home extends Component {
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <div className='home-slideContainer'>
       <Carousel>
-          <Carousel.Item>
+          <Carousel.Item className='home-carouselItem'>
             <img
-              className="d-block w-100"
+            className="home-sliderImage"
               src="http://i.huffpost.com/gen/1446258/images/o-ABOUT-TIME-facebook.jpg"
               alt="First slide"
-              width="1200"
-              height="800"
             />
-
             <Carousel.Caption>
               <h1 className="font-weight-bold">First slide label</h1>
               <h3>Nulla vitae elit libero, a pharetra augue mollis interdum.</h3>
@@ -51,35 +48,31 @@ export default class Home extends Component {
               </button>
             </Carousel.Caption>
           </Carousel.Item>
-          <Carousel.Item>
+          <Carousel.Item className='home-carouselItem'>
             <img
-              className="d-block w-100"
-              src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20131121_247%2Fschoolss_1385015690400MYVmV_JPEG%2Fabouttime_15.jpg&type=sc960_832"
-              alt="Third slide"
-              width="1200"
-              height="800"
+              className="home-sliderImage"
+              src="https://images.unsplash.com/photo-1491582990992-68ec88e070a3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80"
+              alt="Second slide"
             />
-
             <Carousel.Caption>
               <h1 className="font-weight-bold">Second slide label</h1>
               <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
             </Carousel.Caption>
           </Carousel.Item>
-          <Carousel.Item>
+          <Carousel.Item className='home-carouselItem'>
             <img
-              className="d-block w-100"
-              src="https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F032%2F2011%2F10%2F05%2F3.jpg&type=sc960_832"
+              className="home-sliderImage"
+              src="https://images.unsplash.com/photo-1473082538761-d4c7cd3f5e91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1212&q=80"
               alt="Third slide"
-              width="1200"
-              height="800"
             />
-
             <Carousel.Caption>
               <h1 className="font-weight-bold">Third slide label</h1>
               <h3>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</h3>
             </Carousel.Caption>
+
           </Carousel.Item>
         </Carousel>
+        {/* </Container> */}
         </div>
 
         <div className='home-aboutPageContainer'>
@@ -96,8 +89,8 @@ export default class Home extends Component {
           
         </Grid>
         <Grid item xs={12} sm={6}>
-
             <img
+            className="home-aboutDoMiSolImage"
             src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxOTEyMDlfMTg3%2FMDAxNTc1ODk0NjMxNjIx.lZh5YxHUvp3gY6RzsTMM-UyUbpMBK6xzb7as_Nv_iYwg.5yFzYIosQAhp2S_Uz36IMj60p_paZwQHdsC2ZHH0t8Ag.JPEG.tobemaven%2F%25BA%25F1%25C6%25F7%25BC%25B1%25B6%25F3%25C0%25CC%25C1%25EE.JPG&type=sc960_832"
             alt="loveyou"
             width="100%"
@@ -108,6 +101,7 @@ export default class Home extends Component {
           <Grid container spacing={3}>
             <Grid item xs={12} sm={6}>
             <img
+            className="home-aboutDoMiSolImage"
             src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20110108_7%2Fwooroo88_1294461731368Btxio_JPEG%2F17773_S08_092951.jpg&type=sc960_832"
             alt="lovewe"
             width="100%"
@@ -127,7 +121,7 @@ export default class Home extends Component {
           </Grid>
         </div>
         
-        <div className="home-ourvalues">
+        {/* <div className="home-ourvalues">
   <Paper elevation={3}>
     <div className="container-fluid ">
             <div className="row">
@@ -157,11 +151,11 @@ export default class Home extends Component {
           </div>
   </Paper>
           
-        </div>
+        </div> */}
 
-        
         <div className="home-aboutthecompany ">
-          <div className="w3-container" padding="128px 16px" id="about">
+          <Container maxWidth="md">
+            <div className="w3-container" padding="128px 16px" id="about">
             <h3 className="w3-center font-weight-bold">ABOUT THE COMPANY</h3>
             <br></br>
             <p className="w3-center w3-large">Key features of our company</p>
@@ -203,8 +197,8 @@ export default class Home extends Component {
             </div>
           </div>
           
-          {/* developer profile card */}
-        <div className="home-profile">
+          {/* Developer Card */}
+          <div className="home-profile">
           <h3 className="font-weight-bold">
             <br></br>
             do-mi-sol developer
@@ -233,8 +227,10 @@ export default class Home extends Component {
               name="강민정" role='frontend' major='수학과'/>
           </div>
         </div>
+          </Container>
         </div>
-        <ButtonBase/></Container>
+        <ButtonBase/>
+        </Container>
 </div>
     )
   }

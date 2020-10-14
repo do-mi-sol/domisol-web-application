@@ -1,25 +1,21 @@
-/* .container {
-  height: 500px;
-} */
-/* .p1 {
-  font-size: 150%;
-} */
-
 .home-aboutPageContainer,
 .home-slideContainer {
-    /* width: 100vw; */
-    min-width: 1000px;
-    min-height: 800px;
+    /* min-height: 800px; */
     max-height: 900px;
 
     margin-bottom: 10px;
 }
 .home-slideContainer {
-    height: 90vh;
     width: 100%;
-    background-color: black;
+    min-width: 500px;
+    /* background-color: black; */
 }
+
 .home-aboutPageContainer {
+    min-height: 800px;
+    margin-top: 10%;
+    margin-bottom: 10%;
+
     height: 150vh;
     background-color: white;
     display: flex;
@@ -31,8 +27,9 @@
     height: 90vh;
     width: 100%;
     background-color: black;
-    /* padding-top: 800px; */
-    /* padding-bottom: 350px; */
+}
+.home-aboutDoMiSolImage {
+    max-height: 400px;
 }
 .home-aboutText1,
 .home-aboutText2 {
@@ -62,15 +59,15 @@
     border-color: #f1f1f1;
 }
 .carousel-inner img {
-    /* -webkit-filter: grayscale(90%);
-  filter: grayscale(90%); make all photos black and white */
     width: 100%; /* Set width to 100% */
     margin: auto;
 }
 .carousel-caption h3 {
     color: #fff !important;
 }
-
+.home-carouselItem {
+    height: 90%;
+}
 .container-fluid {
     padding-top: 200px;
 }
@@ -84,7 +81,6 @@
     float: right;
     width: 1000px;
     height: 400px;
-    /* padding-bottom: 100px; */
 }
 .home-img2 {
     float: left;
@@ -109,8 +105,6 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     min-width: 250px;
     padding-bottom: 20px;
-    /* max-width: 300px; */
-
     margin: 25px;
     text-align: center;
     font-family: arial;
@@ -123,8 +117,6 @@
 }
 .card-button-wrapper {
     margin-top: 5px;
-    /* display: inline-flex; */
-    width: 45%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -149,28 +141,18 @@
     font-size: 18px;
 }
 
-/* a {
-  text-decoration: none;
-  font-size: 22px;
-  color: black;
-} */
-
 button:hover,
 a:hover {
     opacity: 0.7;
 }
 
 .carddeck {
-    /* padding-right: 20px;
-  padding-left: 20px; */
     padding-top: 400px;
     height: auto;
     width: 100%;
     max-width: 900px;
     max-height: 700px;
     text-align: center;
-    /* margin-left: 400px;
-  margin-right: 400px; */
     display: block;
     margin: 0px auto;
 }
@@ -179,24 +161,14 @@ a:hover {
 }
 
 .home-profile {
-    padding-top: 200px;
+    padding-top: 50px;
 }
 .home-profile h3 {
     text-align: center;
 }
-/* .service h2 {
-  font-size: 70px;
-  font-weight: bold;
-}
-.service h3 {
-  font-size: 40px;
-} */
-
-/* 수정수정1001 */
 
 .home-aboutthecompany {
     padding-top: 100px;
     padding-bottom: 100px;
-    margin-top: 64px;
-    background-color: #f6f6f6;
+    background-color: #f2f2f5;
 }

@@ -14,7 +14,8 @@ const images = [
     width: '30%',
   },
   {
-    url: require('../../assets/images/pic3.jpg'),
+    // url: require('../../assets/images/pic3.jpg'),
+    url:'https://images.unsplash.com/photo-1516589091380-5d8e87df6999?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80',
     title: '가입하러가기',
     width: '30%',
   },

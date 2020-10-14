@@ -3,19 +3,19 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import "../../assets/css/Home.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {Avatar} from '@material-ui/core'
-// import DMSButton from '../customs/DMSButton'
+import DMSButton from '../customs/DMSButton'
 
 const comment = 
   <FontAwesomeIcon
-  icon={["far", "comment-dots"]}
-  size='2x'
+  icon={["far", "comment-dots"]} size='2x'
 />
 const instagram = 
   <FontAwesomeIcon icon={["fab", "instagram"]} size='2x'/>
 
-const facebook = <FontAwesomeIcon icon={["fab", "facebook-f"]} size='2x'/>
+const blog = <FontAwesomeIcon icon={"blog"} size='2x'/>
 
-const DeveloperCard = ({src, name,role,major}) =>{
+const DeveloperCard = ({src, name,role,major,
+  contactLink="https://www.instagram.com/",instagramLink="https://www.instagram.com/",blogLink="https://www.instagram.com/"}) =>{
   
     return(
         <div className="home-card">
@@ -29,14 +29,14 @@ const DeveloperCard = ({src, name,role,major}) =>{
               <p className="title">{role}</p>
             <p>인천대학교 {major}</p>
             <div className='card-button-wrapper'>
-              {/* <DMSButton variant='text' children={comment} color='black' />
-              <DMSButton children={instagram} color='black'/>
-              <DMSButton children={facebook} color='black'/> */}
-              {comment}
-              {instagram}
-              {facebook}
+              <DMSButton children={comment} color='white' href={contactLink}/>
+              <DMSButton children={instagram} color='white' href={instagramLink}/>
+              <DMSButton children={blog} color='white' href={blogLink}/>
+              
             </div>
-            
+            {/* {comment}
+              {instagram}
+              {facebook} */}
               
             </div>
     )

@@ -26,7 +26,7 @@ export default class Notice extends Component {
                 views: 1000,
             },
             {
-                number: '1001',
+                number: '1002',
                 id: '관리자',
                 title: '공지사항',
                 box:'네티켓을 지켜주세요',
@@ -34,7 +34,7 @@ export default class Notice extends Component {
                 views: 1000,
             },
             {
-                number: '1001',
+                number: '1003',
                 id: '관리자',
                 title: '공지사항',
                 box:'네티켓을 지켜주세요',
@@ -42,7 +42,7 @@ export default class Notice extends Component {
                 views: 100,
             },
             {
-                number: '1001',
+                number: '1004',
                 id: '관리자',
                 title: '공지사항',
                 box:'네티켓을 지켜주세요',
@@ -50,7 +50,7 @@ export default class Notice extends Component {
                 views: 100,
             },
             {
-                number: '1001',
+                number: '1005',
                 id: '관리자',
                 title: '공지사항',
                 box:'네티켓을 지켜주세요',
@@ -58,7 +58,7 @@ export default class Notice extends Component {
                 views: 100,
             },
             {
-                number: '1001',
+                number: '1006',
                 id: '관리자',
                 title: '공지사항',
                 box:'네티켓을 지켜주세요',

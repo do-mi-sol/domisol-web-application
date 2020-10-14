@@ -89,17 +89,6 @@ export default class MainBoard extends Component {
                 views: 1000,
             },
             {
-                number: '106',
-                id: '김희연',
-                gender: 'female',
-                title: '팀장님 짱',
-                time: '05:10',
-                box:'희연아 언제와아아',
-                fileName:'파일 이름입니다',
-                heart: 5,
-                views: 1000,
-            },
-            {
                 number: '107',
                 id: '김희연',
                 gender: 'female',

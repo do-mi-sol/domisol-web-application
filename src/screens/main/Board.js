@@ -88,7 +88,7 @@ export default class Board extends React.Component {
             <div className="board-container">
                 <div className="board-center-container"></div>
                 <div className="board-divide-container">
-                    <div className="board-left-container">
+                        <div className="board-left-container">
                         <hr className="style15" />
                         <Typography
                             variant="h5"
@@ -102,7 +102,8 @@ export default class Board extends React.Component {
                     </div>{' '}
                     <div className="board-right-container">
                         {/* <hr className="style15" /> */}
-                        <div className="board-button-container">
+                            
+                                <div className="board-button-container">
                             <Search onChange ={this.handleChange} value={this.state.search}/>
                             <DMSButton color="#ffea80" href="/write" size="large">글쓰기<FontAwesomeIcon
                                     icon={'pen'}
@@ -111,10 +112,11 @@ export default class Board extends React.Component {
                                         marginLeft: '7px',
                                     }}
                                 /></DMSButton>
-                            
                         </div>
                         <MainBoard />
+                        
                     </div>
+                    
                 </div>
                 <div className="board-divide-container">
                     <div className="board-left-container">
