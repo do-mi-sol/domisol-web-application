@@ -32,7 +32,7 @@ const Pagination = ({
                         >
                             {page}
                         </div>{' '}
-                        {/* 페이지 번호 클릭 이벤트 처리기 지정 */}
+                        
                     </li>
                 ))}
             </ul>

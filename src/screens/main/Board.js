@@ -1,7 +1,7 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {Typography} from '@material-ui/core'
+import {Typography,Paper} from '@material-ui/core'
 
 import '../../assets/css/Board.css'
 import MainBoard from '../../components/board/MainBoard'
@@ -82,13 +82,16 @@ export default class Board extends React.Component {
         this.setState({currentPage: page})
     }
 
-    //--------------render-------------------//
+
     render() {
         return (
             <div className="board-container">
                 <div className="board-center-container"></div>
+                <Paper elevation={3} style={{width:'80%', minWidth:'1300px',padding:40, borderRadius:30, marginBottom:50}}>
                 <div className="board-divide-container">
+                    
                         <div className="board-left-container">
+                           
                         <hr className="style15" />
                         <Typography
                             variant="h5"
@@ -101,9 +104,7 @@ export default class Board extends React.Component {
                         </Typography>
                     </div>{' '}
                     <div className="board-right-container">
-                        {/* <hr className="style15" /> */}
-                            
-                                <div className="board-button-container">
+                                  <div className="board-button-container">
                             <Search onChange ={this.handleChange} value={this.state.search}/>
                             <DMSButton color="#ffea80" href="/write" size="large">글쓰기<FontAwesomeIcon
                                     icon={'pen'}
@@ -114,13 +115,17 @@ export default class Board extends React.Component {
                                 /></DMSButton>
                         </div>
                         <MainBoard />
+                             
                         
                     </div>
-                    
-                </div>
+                    </div>
+                        </Paper>  
+                
+                        <Paper elevation={3} style={{width:'80%', minWidth:'1300px', padding:40,
+                             borderRadius:30, marginBottom:50}}>
                 <div className="board-divide-container">
                     <div className="board-left-container">
-                        {/* <hr className="pill" /> */}
+                       
                         <hr className="style15" />
                         <Typography
                             variant="h5"
@@ -133,14 +138,17 @@ export default class Board extends React.Component {
                         </Typography>
                     </div>{' '}
                     <div className="board-right-container">
-                        {/* <hr className="pill" /> */}
-                        <div className="board-button-container"></div>
+                        
+                        {/* <div className="board-button-container"></div> */}
                         <BestBoard />
                     </div>
                 </div>
+                </Paper>
+                <Paper elevation={3} style={{width:'80%', minWidth:'1300px', padding:40, 
+                 borderRadius:30, marginBottom:50}}>
                 <div className="board-divide-container">
                     <div className="board-left-container">
-                        {/* <hr className="pill" /> */}
+                      
                         <hr className="style15" />
                         <Typography
                             variant="h5"
@@ -153,11 +161,11 @@ export default class Board extends React.Component {
                         </Typography>
                     </div>{' '}
                     <div className="board-right-container">
-                        {/* <hr className="pill" /> */}
-                        <div className="board-button-container"></div>
+                        {/* <div className="board-button-container"></div> */}
                         <Notice/>
                     </div>
-                </div>
+                </div></Paper>
+                
 
                 {/* 일단 밑에 . . .
                 <div>

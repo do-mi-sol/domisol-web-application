@@ -1,15 +1,20 @@
 .board-container {
-    margin-top: 50px;
-    margin-left: 3%;
-    flex-wrap: wrap;
+    padding-top: 50px;
+    padding-left: 3%;
 
+    flex-wrap: wrap;
+    background-color: #f2f2f2;
     width: 100%;
     /* min-width: 1000px; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .board-divide-container {
-    width: 100%;
+    /* width: 100%; */
+    /* width: 60%; */
     display: flex;
-
     /* min-width: 1200px; */
     align-items: flex-start;
     flex-direction: row;
@@ -24,7 +29,7 @@
     margin-bottom: 10px;
 }
 .board-right-container {
-    width: 80%;
+    width: 75%;
     /* min-width: 900px; */
     min-height: 300px;
     display: flex;
@@ -34,11 +39,12 @@
     flex-shrink: 1;
 }
 .board-left-container {
-    background-color: white;
-    width: 20%;
+    /* background-color: #f2f2f2; */
+    width: 25%;
     min-width: 220px;
     /* max-width: 300px; */
 
+    padding-top: 20px;
     flex-grow: 1;
     flex-shrink: 1;
 }
