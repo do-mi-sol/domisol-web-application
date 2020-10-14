@@ -2,18 +2,20 @@ import React, {Component} from 'react'
 import '../../assets/css/Write.css'
 import {Card} from '@material-ui/core'
 import DMSButton from '../../components/customs/DMSButton'
-//import DMSTextfield from '../../components/customs/DMSTextfield';
 import {CustomInput, FormGroup, Label} from 'reactstrap'
 import RichTextEditor from '../../components/write/TextEditor'
-import DatePicker from '../../components/write/DatePicker'
-import DMSInput from '../../components/customs/DMSInput'
 import TitleInput from '../../components/write/TitleInput'
+import moment from "moment"
 
 export default class Write extends Component {
     state = {
+        title:'',
+        id:'',
+        dateTime:'',
         test: 'https://cdn.clien.net/web/api/file/F01/3802215/92348cd7fe8441e8956.JPG',
         file: '',
         previewURL: '',
+   
     }
     //글쓰기 버튼 클릭함수
     clickWrite = () => {
@@ -25,6 +27,7 @@ export default class Write extends Component {
         this.setState({
             [e.target.name]: e.target.value,
         })
+        console.log(e.target.value)
     }
 
     //사진저장후 프리뷰함수
@@ -49,6 +52,7 @@ export default class Write extends Component {
     }
 
     render() {
+        const {title,id,dateTime} = this.state
        //이미지 프리뷰
         let talk_preview = null
         if (this.state.file !== '') {
@@ -78,12 +82,13 @@ export default class Write extends Component {
                             {/*오른쪽 인풋창*/}
                             <div className="write-input-container">
                             <small className="write-boardtext">잘하고싶다...연애</small>    
-                            
+                        
                                {/* <hr className="write-line2" />*/}
                                 <FormGroup>
                                     <div className="write-title-input">
                                     {/*제목 input*/}
                                     <TitleInput className="write-title-input"
+                                    value={title}
                                         onChange={this.handleChange}                                 
                                                         type="title"
                                                         label="TITLE"                                                      
@@ -91,18 +96,24 @@ export default class Write extends Component {
                             </div>
                                     {/*id input*/}
                                     <div className="write-id-date-container">
-                                    <DMSInput
-                                      //  value={id}
-                                        name="id"
-                                        type="id"
-                                        label="ID"
-                                        onChange={this.handleChange}
-                                        variant="outlined"/>
+                                    <div className="write-id-input">
+                                    {/*<div className="write-id-container">*/}
+                                    <TitleInput className="write-id-input"
+                                    value={id}
+                                        onChange={this.handleChange}                                 
+                                                        type="id"
+                                                        label="ID"                                                      
+                                                        variant="outlined"/>
+                            </div>
                             
-
-                                
+                                      
+                                <div className="write-date-container">
                                     {/*날짜 선택*/}
-                                <DatePicker/>
+                                    <p
+                                      value={dateTime}
+                                      onChange={this.handleChange} 
+                                    >{moment().format("llll")}</p>
+                               </div>
                                 </div>
                                 <div className="write-contents-input">
                                 {/*글 input*/}

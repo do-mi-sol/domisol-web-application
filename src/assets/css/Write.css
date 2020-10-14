@@ -25,11 +25,27 @@
     padding-top: 1%;
     padding-left: 5%;
     width: 60%;
+
+    flex-wrap: wrap;
+    flex-direction: column;
     flex-grow: 1;
     flex-shrink: 1;
 }
 .write-picture-container {
     width: 30%;
+
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.write-date-container {
+    padding-left: 8%;
+    padding-top: 4%;
+
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+
     flex-grow: 1;
     flex-shrink: 1;
 }
@@ -122,9 +138,22 @@
     margin-bottom: 10%;
 }
 .write-title-input {
+    padding-left: 1%;
     margin-bottom: 20px;
     /*margin-left: 5%;*/
-    width: 100%;
+    width: 98%;
+
+    border-radius: 10px;
+    /*padding: 5px 5px;*/
+    line-height: normal;
+    outline-style: none;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+.write-id-input {
+    margin-bottom: 20px;
+    /*margin-left: 5%;*/
+    width: 50%;
 
     border-radius: 10px;
     /*padding: 5px 5px;*/

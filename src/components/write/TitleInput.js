@@ -1,10 +1,11 @@
 import React from 'react'
 import {TextField, FormControl, Grid} from '@material-ui/core'
 import {makeStyles} from '@material-ui/core/styles'
+import '../../assets/css/textfield.css'
 
 const styles = makeStyles(() => ({
     container: {
-        width: 650,
+      
         marginLeft:7,
         marginTop:10
     },
@@ -27,18 +28,14 @@ const TitleInput = ({
     const classes = styles()
     return (
         <div>
-            <Grid
-                container
-                spacing={1}
-                direction="row"
-                alignItems="center"
-            >
+
                 <Grid item>
                     <FormControl
                         fullWidth
                         className={classes.container}
                     >
                         <TextField
+                            className="textfield"
                             id={id}
                             type={type}
                             name={name}
@@ -55,7 +52,7 @@ const TitleInput = ({
                 </Grid>
 
      
-            </Grid>
+            
         </div>
     )
 }
