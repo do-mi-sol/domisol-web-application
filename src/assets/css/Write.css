@@ -5,45 +5,46 @@
 
 /*컨테이너*/
 .container {
-    /*padding-top: 5%;*/
-    padding-bottom: 10%;
-
-    margin-top: 0%;
-    border-color: black;
-
-    background-color: white;
-    height: 100%;
+    margin-top: 5%;
 }
-.write-community-guide {
-    width: 100%;
-    padding-left: 5%;
-}
-.write-input-container {
-    margin-top: 0px;
-    display: flex;
-    flex-wrap: wrap;
 
-    width: 100%;
-    align-items: flex-start;
-    flex-direction: row;
-    justify-content: flex-start;
-}
-.write-picture-container {
-    width: 30%;
+.write-container {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     flex-grow: 1;
     flex-shrink: 1;
 }
+.write-card {
+    margin-top: 1%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
 .write-input-container {
+    padding-top: 1%;
     padding-left: 5%;
     width: 60%;
     flex-grow: 1;
     flex-shrink: 1;
 }
+.write-picture-container {
+    width: 30%;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.write-id-date-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding-left: 1%;
+}
 .write-button-container {
     margin-top: 0%;
+    margin-bottom: 5%;
     padding-left: 32%;
     display: flex;
     flex-wrap: wrap;
@@ -75,8 +76,6 @@
 
     /* 위치(마진) 조절 */
 
-    margin-bottom: 50px;
-
     /* padding-right: 50px;
 */
     /* 색 */
@@ -84,13 +83,13 @@
 }
 .write-line2 {
     /* 크기 및 굵기 */
-    width: 99.5%;
+    width: 97%;
     height: 2px;
     border-style: none;
 
     /* 위치(마진) 조절 */
     margin-top: 10px;
-    margin-bottom: 50px;
+    margin-left: 1;
 
     /* padding-right: 50px;
 */
@@ -118,25 +117,25 @@
 }
 
 /*오른쪽 글쓰기*/
-.write-board-name {
-    margin-left: 5%;
+.write-boardtext {
+    padding-left: 40%;
+    margin-bottom: 10%;
 }
 .write-title-input {
-    margin-top: 10px;
     margin-bottom: 20px;
-    margin-left: 5%;
+    /*margin-left: 5%;*/
     width: 100%;
 
     border-radius: 10px;
-    padding: 5px 5px;
+    /*padding: 5px 5px;*/
     line-height: normal;
     outline-style: none;
     flex-grow: 1;
     flex-shrink: 1;
 }
 .write-contents-input {
-    margin-left: 6.5%;
-
+    /*margin-left: 6.5%;
+*/
     width: 100%;
     height: 600px;
     border-radius: 10px;
