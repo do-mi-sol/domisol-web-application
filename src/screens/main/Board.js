@@ -6,6 +6,7 @@ import {Typography} from '@material-ui/core'
 import '../../assets/css/Board.css'
 import MainBoard from '../../components/board/MainBoard'
 import BestBoard from '../../components/board/BestBoard'
+import Notice from '../../components/board/Notice'
 import DMSButton from '../../components/customs/DMSButton'
 import Search from '../../components/customs/Search'
 //import axios from 'axios' //서버에요청, 정보 긁어옴
@@ -152,7 +153,7 @@ export default class Board extends React.Component {
                     <div className="board-right-container">
                         {/* <hr className="pill" /> */}
                         <div className="board-button-container"></div>
-                        <BestBoard />
+                        <Notice/>
                     </div>
                 </div>
 
