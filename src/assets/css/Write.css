@@ -6,6 +6,8 @@
 /*컨테이너*/
 .container {
     margin-top: 5%;
+    justify-content: center;
+    align-items: center;
 }
 
 .write-container {
@@ -14,11 +16,8 @@
     flex-direction: row;
     flex-grow: 1;
     flex-shrink: 1;
-}
-.write-card {
-    margin-top: 1%;
-    margin-left: 15%;
-    margin-right: 15%;
+    justify-content: center;
+    align-items: center;
 }
 
 .write-input-container {
@@ -134,8 +133,10 @@
 
 /*오른쪽 글쓰기*/
 .write-boardtext {
-    padding-left: 40%;
-    margin-bottom: 10%;
+    font-weight: bold;
+    font-size: xx-large;
+    justify-content: center;
+    align-items: center;
 }
 .write-title-input {
     padding-left: 1%;
@@ -185,4 +186,11 @@
 }
 .write-button {
     margin-left: 5%;
+}
+
+.write-background {
+    background-color: #f2f2f2;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }

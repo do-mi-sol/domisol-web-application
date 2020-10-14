@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import '../../assets/css/Write.css'
-import {Card} from '@material-ui/core'
+import {Paper} from '@material-ui/core'
 import DMSButton from '../../components/customs/DMSButton'
 import {CustomInput, FormGroup, Label} from 'reactstrap'
 import RichTextEditor from '../../components/write/TextEditor'
@@ -60,7 +60,9 @@ export default class Write extends Component {
         }
         return (
             <div className="write-background">
-                <Card className="write-card">
+                <div className="write-boardtext">잘 하고 싶다 .. 연애</div>
+                <div style={{justifyContent:"center", alignItems:"center"}}>
+                <Paper elevation={3} style={{width:'80%', padding:40, borderRadius:30, marginBottom:50}}>
                     <form className="container" onSubmit={this.handleSudmit}>
                         {/*게시판 이름*/}                                               
                         <div className="write-container">
@@ -81,7 +83,7 @@ export default class Write extends Component {
                             </div>
                             {/*오른쪽 인풋창*/}
                             <div className="write-input-container">
-                            <small className="write-boardtext">잘하고싶다...연애</small>    
+                            {/* <div className="write-boardtext">잘하고싶다...연애</div>     */}
                         
                                {/* <hr className="write-line2" />*/}
                                 <FormGroup>
@@ -154,7 +156,8 @@ export default class Write extends Component {
                         </div>
                         <br></br>
                     </div>
-                </Card>
+                </Paper>
+                </div>
             </div>
         )
     }

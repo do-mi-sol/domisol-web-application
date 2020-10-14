@@ -1,5 +1,7 @@
 import React, { Component } from "react"
 import { Form } from "react-bootstrap"
+import {Paper} from '@material-ui/core'
+
 import "bootstrap/dist/css/bootstrap.min.css"
 import Comment from "../../components/customs/Comment"
 import Counter from "../../components/customs/Counter"
@@ -36,7 +38,8 @@ export default class Detail extends Component {
           href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
         ></link>
         <div className="container center">
-          <div className="text-center border 3px solid black">
+        <Paper elevation={3} style={{width:'80%', padding:40, borderRadius:30, marginBottom:50}}>
+
             <br></br>
             <br></br>
             <div className="center">
@@ -86,7 +89,7 @@ export default class Detail extends Component {
               <br></br>
               <br></br>
             </div>
-          </div>
+          </Paper>
           <br></br> <br></br>
           <h4>Leave a comment:</h4>
           <Form role="form">
