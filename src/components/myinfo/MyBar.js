@@ -5,7 +5,6 @@ import DMSButton from "../../components/customs/DMSButton";
 
 const useStyles = makeStyles((theme) => ({
     barContainer: {
-        backgroundColor: "#ffea80",
         width: "100%",
         padding: theme.spacing(1, 0, 0),
         display: "flex",
@@ -21,10 +20,13 @@ const useStyles = makeStyles((theme) => ({
         height: theme.spacing(22),
     },
     bar: {
-        width: "70%",
+        width: "80%",
         minWidth: 800,
-        backgroundColor: "white",
+        backgroundColor: "#ffe566",
         margin: theme.spacing(2),
+        borderRadius: 20,
+        boxShadow: "12px 12px 12px #e6e6e6",
+        marginBottom: 50,
     },
     buttonContainer: {
         display: "flex",
@@ -34,20 +36,7 @@ const useStyles = makeStyles((theme) => ({
         right: "25%",
     },
 }));
-const MyBar = ({
-    profile,
-    id,
-    myLevel,
-    myWritten,
-    like,
-    myReply,
-    button1Color,
-    button2Color,
-    link1,
-    link2,
-    clickMyWritten,
-    clickMyProfile,
-}) => {
+const MyBar = ({ profile, name, myLevel, myWritten, like, myReply }) => {
     const classes = useStyles();
 
     return (
@@ -62,13 +51,17 @@ const MyBar = ({
             >
                 {/* 이미지 */}
                 <Grid item>
-                    <Avatar src={profile} className={classes.large} />
+                    <Avatar
+                        src={profile}
+                        className={classes.large}
+                        style={{ width: 130, height: 130 }}
+                    />
                 </Grid>
 
                 {/* 아이디 */}
                 <Grid item>
-                    <Typography variant="h6" color="textPrimary">
-                        {id}
+                    <Typography variant="h4" color="textPrimary">
+                        {name} 님
                     </Typography>
                 </Grid>
 
