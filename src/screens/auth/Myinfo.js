@@ -66,6 +66,7 @@ export default class Myinfo extends Component {
                 style={{
                     minHeight: '90vh',
                     margin: 0,
+                    paddingBottom:'20vh'
                 }}
             >
                 <MyBar

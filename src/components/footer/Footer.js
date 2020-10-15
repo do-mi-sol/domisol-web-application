@@ -75,9 +75,6 @@ export default function StickyFooter() {
 
     return (
         <div>
-            <br />
-            <br />
-            <br />
             <footer className={classes.footer}>
                 <Grid
                     maxwidth="sm"

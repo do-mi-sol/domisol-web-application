@@ -71,6 +71,7 @@ export default class SignUp extends Component {
                         marginTop: 30,
                         marginBottom: 20,
                         paddingTop: '10vh',
+                        paddingBottom: '20vh',
                         minHeight: '90vh',
                     }}
                 >
