@@ -1,58 +1,59 @@
-import React, {Component} from 'react'
-import {Divider, Container} from '@material-ui/core'
-import axios from "axios"
+import React, { Component } from "react";
+import { Divider, Container } from "@material-ui/core";
+import axios from "axios";
 
-import DMSInput from '../../components/customs/DMSInput'
-import DMSButton from '../../components/customs/DMSButton'
+import DMSInput from "../../components/customs/DMSInput";
+import DMSButton from "../../components/customs/DMSButton";
 
-import URL from "../../NET"
+import URL from "../../NET";
 
-import '../../assets/css/Login.css'
+import "../../assets/css/Login.css";
 
 export default class Login extends Component {
     state = {
-        id: '',
-        password: '',
-    }
+        id: "",
+        password: "",
+    };
 
     handleChange = (e) => {
         this.setState({
             [e.target.name]: e.target.value,
-        })
-    }
+        });
+    };
 
-    signIn=async()=>{
-        const {id, password} = this.state
-        await axios.post(URL.login,{
-            user_id:id,
-            password,
-        })
-        .then((res) => res.data)
-        .then((body)=>{
-            const token = body.data.token
-            console.log(body);
-            if(body.success){
-                localStorage.setItem("token",token)
-                this.props.history.back()
-            }
-        })
-    }
+    signIn = async () => {
+        const { id, password } = this.state;
+        await axios
+            .post(URL.login, {
+                user_id: id,
+                password,
+            })
+            .then((res) => res.data)
+            .then((body) => {
+                const token = body.data.token;
+                console.log(body);
+                if (body.success) {
+                    localStorage.setItem("token", token);
+                    window.location.replace("/");
+                }
+            });
+    };
 
     render() {
-        const {id, password} = this.state
+        const { id, password } = this.state;
         return (
             <div
                 className="login-array"
                 style={{
                     marginTop: 60,
-                    paddingTop: '10vh',
-                    minHeight: '90vh',
+                    paddingTop: "10vh",
+                    minHeight: "90vh",
                 }}
             >
                 <div>
                     <img
                         className="login-icon"
-                        src={require('../../assets/images/Logo.jpg')}
+                        src={require("../../assets/images/Logo.jpg")}
                         alt="logo"
                     />
                 </div>
@@ -90,29 +91,16 @@ export default class Login extends Component {
                     />
                 </div>
 
-                <Container maxWidth="xs" style={{marginTop: 30}}>
+                <Container maxWidth="xs" style={{ marginTop: 30 }}>
                     <Divider />
                 </Container>
 
                 <div>
-                    <DMSButton
-                        children="회원가입"
-                        margin={20}
-                        href="/signup"
-                        color="null"
-                    />
-                    <DMSButton
-                        children="아이디 찾기"
-                        color="null"
-                        href="/findid"
-                    />
-                    <DMSButton
-                        children="비밀번호 찾기"
-                        color="null"
-                        href="/findpw"
-                    />
+                    <DMSButton children="회원가입" margin={20} href="/signup" color="null" />
+                    <DMSButton children="아이디 찾기" color="null" href="/findid" />
+                    <DMSButton children="비밀번호 찾기" color="null" href="/findpw" />
                 </div>
             </div>
-        )
+        );
     }
 }

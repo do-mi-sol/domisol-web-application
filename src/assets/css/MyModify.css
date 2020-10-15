@@ -1,0 +1,37 @@
+.modify-container {
+    width: 75%;
+    min-width: 150;
+    /* padding: theme.spacing(1, 0, 0), */
+    display: "flex";
+    flex-direction: "column";
+    justify-content: "center";
+    align-items: "center";
+    display: flex;
+}
+.modify-form {
+    width: 100%;
+    min-width: 150;
+    justify-content: "center";
+    align-items: "center";
+    position: relative;
+}
+.modify-repassword {
+    margin-top: 10px;
+}
+.modify-imageContainer {
+    position: relative;
+    height: 200px;
+    min-width: 800px;
+}
+.modify-imageLabel {
+    position: relative;
+    top: 30%;
+}
+.modify-imageInput {
+    position: relative;
+    top: 35%;
+}
+
+.modify-margin {
+    margin-bottom: 15px;
+}
