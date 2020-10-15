@@ -1,81 +1,179 @@
-import React from "react";
+import React, { Component } from "react";
 import { Form, FormGroup, Label, Input, FormText, Col } from "reactstrap";
 import { Paper } from "@material-ui/core";
-import "../../assets/css/MyModify.css";
+import axios from "axios";
+
+import DMSInput from "../../components/customs/DMSInput";
 import DMSButton from "../../components/customs/DMSButton";
+import URL from "../../NET";
 
-const MyModify = (props) => {
-    return (
-        <div>
-            <h3 style={{ color: "gray", textShadow: "1px 1px 1px gray", marginBottom: 20 }}>
-                아이디 수정
-            </h3>
-            <Form className="modify-form">
-                <Paper
-                    elevation={3}
-                    style={{
-                        width: "100%",
-                        minWidth: "1000px",
-                        padding: 50,
-                        borderRadius: 30,
-                        marginBottom: 50,
-                    }}
-                >
-                    <FormGroup row>
-                        <Label for="Id" sm={2} className="modify-margin">
-                            변경 아이디
-                        </Label>
-                        <Col sm={10}>
-                            <Input disabled type="id" name="id" id="Id" value={props.id} />
-                        </Col>
-                    </FormGroup>
+import "../../assets/css/MyModify.css";
 
-                    <FormGroup row style={{ marginBottom: 15 }}>
-                        <Label for="Name" sm={2} className="modify-margin">
-                            비밀번호
-                        </Label>
-                        <Col sm={10}>
-                            <Input disabled type="name" name="name" id="Name" value={props.name} />
-                        </Col>
-                    </FormGroup>
-                    <DMSButton children="확인" />
-                </Paper>
+export default class MyModify extends Component {
+    state = {
+        newId: "",
+        newPassword: "",
+        password1: "",
+        password2: "",
+    };
 
+    handleChange = (e) => {
+        this.setState({
+            [e.target.name]: e.target.value,
+        });
+        console.log(e.target.value);
+    };
+
+    idModify = async () => {
+        const token = await localStorage.getItem("token");
+        const bearer = `Bearer ${token}`;
+        const { newId, password } = this.state;
+
+        await axios
+            .put(
+                URL.idmodify,
+                {
+                    newId,
+                    password,
+                },
+                {
+                    headers: {
+                        Authorization: bearer,
+                    },
+                }
+            )
+            .then((res) => res.data)
+            .then((body) => console.log(body));
+    };
+
+    passwordModify = async () => {
+        const token = await localStorage.getItem("token");
+        const bearer = `Bearer ${token}`;
+        const { newPassword, password } = this.state;
+
+        await axios
+            .put(
+                URL.passwordmodify,
+                {
+                    newPassword,
+                    password,
+                },
+                {
+                    headers: {
+                        Authorization: bearer,
+                    },
+                }
+            )
+            .then((res) => res.data)
+            .then((body) => console.log(body));
+    };
+
+    render() {
+        const { newId, newPassword, password1, password2 } = this.state;
+        return (
+            <div>
                 <h3 style={{ color: "gray", textShadow: "1px 1px 1px gray", marginBottom: 20 }}>
-                    비밀번호 수정
+                    아이디 수정
                 </h3>
-                <Paper
-                    elevation={3}
-                    style={{
-                        width: "100%",
-                        minWidth: "1000px",
-                        padding: 50,
-                        borderRadius: 30,
-                        marginBottom: 50,
-                    }}
-                >
-                    <FormGroup row>
-                        <Label for="Id" sm={2} className="modify-margin">
-                            변경 비밀번호
-                        </Label>
-                        <Col sm={10}>
-                            <Input disabled type="id" name="id" id="Id" value={props.id} />
-                        </Col>
-                    </FormGroup>
+                <Form className="modify-form">
+                    <Paper
+                        elevation={3}
+                        style={{
+                            width: "100%",
+                            minWidth: "1000px",
+                            padding: 50,
+                            borderRadius: 30,
+                            marginBottom: 50,
+                        }}
+                    >
+                        <FormGroup row>
+                            <Label for="Id" sm={2} className="modify-margin">
+                                새 아이디
+                            </Label>
+                            <Col sm={10}>
+                                <DMSInput
+                                    value={newId}
+                                    name="newId"
+                                    onChange={this.handleChange}
+                                    variant="outlined"
+                                    placeholder="변경할 아이디를 입력하세요."
+                                    width={720}
+                                />
+                            </Col>
+                        </FormGroup>
 
-                    <FormGroup row style={{ marginBottom: 15 }}>
-                        <Label for="Name" sm={2} className="modify-margin">
-                            현재 비밀번호
-                        </Label>
-                        <Col sm={10}>
-                            <Input disabled type="name" name="name" id="Name" value={props.name} />
-                        </Col>
-                    </FormGroup>
-                    <DMSButton children="확인" />
-                </Paper>
-            </Form>
-        </div>
-    );
-};
+                        <FormGroup row style={{ marginBottom: 15 }}>
+                            <Label for="Name" sm={2} className="modify-margin">
+                                비밀번호
+                            </Label>
+                            <Col sm={10}>
+                                <DMSInput
+                                    value={password1}
+                                    name="password1"
+                                    type="password"
+                                    onChange={this.handleChange}
+                                    variant="outlined"
+                                    placeholder="현재 비밀번호를 입력하세요."
+                                    helper="문자, 숫자, 특수문자를 포함하여 8~16자로 입력해주세요."
+                                    width={720}
+                                />
+                            </Col>
+                        </FormGroup>
+                        <DMSButton children="확인" onClick={this.idModify} />
+                    </Paper>
 
-export default MyModify;
+                    <h3 style={{ color: "gray", textShadow: "1px 1px 1px gray", marginBottom: 20 }}>
+                        비밀번호 수정
+                    </h3>
+                    <Paper
+                        elevation={3}
+                        style={{
+                            width: "100%",
+                            minWidth: "1000px",
+                            padding: 50,
+                            borderRadius: 30,
+                            marginBottom: 50,
+                        }}
+                    >
+                        <FormGroup row>
+                            <Label for="Id" sm={2} className="modify-margin">
+                                변경 비밀번호
+                            </Label>
+                            <Col sm={10}>
+                                <DMSInput
+                                    value={newPassword}
+                                    name="newPassword"
+                                    type="password"
+                                    onChange={this.handleChange}
+                                    variant="outlined"
+                                    placeholder="새 비밀번호를 입력하세요."
+                                    helper="문자, 숫자, 특수문자를 포함하여 8~16자로 입력해주세요."
+                                    width={720}
+                                />
+                            </Col>
+                        </FormGroup>
+
+                        <FormGroup row style={{ marginBottom: 15 }}>
+                            <Label for="Name" sm={2} className="modify-margin">
+                                현재 비밀번호
+                            </Label>
+                            <Col sm={10}>
+                                <DMSInput
+                                    value={password2}
+                                    name="password2"
+                                    type="password"
+                                    onChange={this.handleChange}
+                                    variant="outlined"
+                                    placeholder="현재 비밀번호를 입력하세요."
+                                    helper="문자, 숫자, 특수문자를 포함하여 8~16자로 입력해주세요."
+                                    width={720}
+                                />
+                            </Col>
+                        </FormGroup>
+                        <DMSButton children="확인" onClick={this.passwordModify} />
+                    </Paper>
+                </Form>
+            </div>
+        );
+    }
+}

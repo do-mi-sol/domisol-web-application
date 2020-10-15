@@ -85,7 +85,7 @@ export default class Myinfo extends Component {
             >
                 <MyBar
                     profile={profile}
-                    id={id}
+                    name={name}
                     myLevel={myLevel}
                     myWritten={myWritten}
                     like={like}

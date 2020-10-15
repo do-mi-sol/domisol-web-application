@@ -1,8 +1,7 @@
 import React from "react";
-import { Form, FormGroup, Label, Input, FormText, Col } from "reactstrap";
+import { Form, FormGroup, Label, Input, Col } from "reactstrap";
 import { Avatar, Paper } from "@material-ui/core";
 import "../../assets/css/MyProfile.css";
-import DMSButton from "../../components/customs/DMSButton";
 
 const MyProfile = (props) => {
     return (
