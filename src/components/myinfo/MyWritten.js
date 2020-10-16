@@ -9,19 +9,17 @@ import {
     TableRow,
     TableFooter,
     TablePagination,
-    Typography,
     Divider,
     Paper,
 } from "@material-ui/core";
 
 import TablePaginationActions from "./TablePaginationActions";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     container: {
-        // width: 400,
-        width: theme.spacing(60),
-        minwidth: 400,
-        marginRight: "2%",
+        width: "48%",
+        minWidth: 400,
+        // marginRight: "2%",
     },
     table: {
         minWidth: 400,
@@ -59,15 +57,14 @@ export default function MyWritten() {
         setPage(0);
     };
     return (
-        <TableContainer>
+        <TableContainer className={classes.container}>
             <h4 style={{ color: "gray", textShadow: "1px 1px 1px gray", marginBottom: 10 }}>
                 내가 쓴 글
             </h4>
             <Paper
                 elevation={3}
                 style={{
-                    width: "60%",
-                    marginLeft: 3,
+                    width: "100%",
                     padding: 40,
                     borderRadius: 30,
                     marginBottom: 50,
@@ -94,7 +91,7 @@ export default function MyWritten() {
                             </TableRow>
                         ))}
                         {emptyRows > 0 && (
-                            <TableRow style={{ height: 53 * emptyRows }}>
+                            <TableRow style={{ height: 32.4 * emptyRows }}>
                                 <TableCell colSpan={6} />
                             </TableRow>
                         )}
