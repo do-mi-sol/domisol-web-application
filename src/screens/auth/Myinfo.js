@@ -109,9 +109,9 @@ export default class Myinfo extends Component {
                         <Panel>
                             <Container
                                 style={{
-                                    width: "80%",
+                                    width: "90%",
+                                    paddingTop:"5%",
                                     minWidth: 900,
-                                    marginTop: "5%",
                                     display: "flex",
                                     justifyContent: "space-around",
                                 }}

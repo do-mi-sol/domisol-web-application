@@ -9,18 +9,16 @@ import {
     TableRow,
     TableFooter,
     TablePagination,
-    Typography,
     Divider,
     Paper,
 } from "@material-ui/core";
 
 import TablePaginationActions from "./TablePaginationActions";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     container: {
-        // width: 400,
-        width: theme.spacing(60),
-        minwidth: 400,
+        width: "48%",
+        minWidth: 400,
         marginLeft: "2%",
     },
     table: {
@@ -93,7 +91,7 @@ export default function MyReply() {
                             </TableRow>
                         ))}
                         {emptyRows > 0 && (
-                            <TableRow style={{ height: 53 * emptyRows }}>
+                            <TableRow style={{ height: 32.4 * emptyRows }}>
                                 <TableCell colSpan={6} />
                             </TableRow>
                         )}
