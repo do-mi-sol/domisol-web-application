@@ -5,13 +5,13 @@ import DMSButton from '../../components/customs/DMSButton'
 import {CustomInput, FormGroup, Label} from 'reactstrap'
 import RichTextEditor from '../../components/write/TextEditor'
 import TitleInput from '../../components/write/TitleInput'
-import moment from "moment"
+
 
 export default class Write extends Component {
     state = {
         title:'',
-        id:'',
-        dateTime:'',
+   
+
         test: 'https://cdn.clien.net/web/api/file/F01/3802215/92348cd7fe8441e8956.JPG',
         file: '',
         previewURL: '',
@@ -52,7 +52,7 @@ export default class Write extends Component {
     }
 
     render() {
-        const {title,id,dateTime} = this.state
+        const {title} = this.state
        //이미지 프리뷰
         let talk_preview = null
         if (this.state.file !== '') {
@@ -60,11 +60,12 @@ export default class Write extends Component {
         }
         return (
             <div className="write-background">
-                <div className="write-boardtext">잘 하고 싶다 .. 연애</div>
+                
                 <div style={{justifyContent:"center", alignItems:"center"}}>
-                <Paper elevation={3} style={{width:'80%', padding:40, borderRadius:30, marginBottom:50}}>
+                <Paper  elevation={3} style={{width:'80%', padding:40, borderRadius:30, marginBottom:50,justifyContent:"center", alignItems:"center"}}>
                     <form className="container" onSubmit={this.handleSudmit}>
-                        {/*게시판 이름*/}                                               
+                        {/*게시판 이름*/}             
+                        <div className="write-boardtext">잘 하고 싶다 .. 연애</div>                                  
                         <div className="write-container">
                             {/*이미지 프리뷰*/}        
                             <div className="write-picture-container">
@@ -96,27 +97,7 @@ export default class Write extends Component {
                                                         label="TITLE"                                                      
                                                         variant="outlined"/>
                             </div>
-                                    {/*id input*/}
-                                    <div className="write-id-date-container">
-                                    <div className="write-id-input">
-                                    {/*<div className="write-id-container">*/}
-                                    <TitleInput className="write-id-input"
-                                    value={id}
-                                        onChange={this.handleChange}                                 
-                                                        type="id"
-                                                        label="ID"                                                      
-                                                        variant="outlined"/>
-                            </div>
-                            
-                                      
-                                <div className="write-date-container">
-                                    {/*날짜 선택*/}
-                                    <p
-                                      value={dateTime}
-                                      onChange={this.handleChange} 
-                                    >{moment().format("llll")}</p>
-                               </div>
-                                </div>
+
                                 <div className="write-contents-input">
                                 {/*글 input*/}
                                     <RichTextEditor />
