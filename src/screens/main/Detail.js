@@ -7,6 +7,7 @@ import Comment from "../../components/customs/Comment"
 import Counter from "../../components/customs/Counter"
 import moment from "moment"
 
+
 // import { render } from "@testing-library/react"
 
 export default class Detail extends Component {
@@ -28,6 +29,9 @@ export default class Detail extends Component {
       },
     ],
   }
+ 
+ 
+
 
   render() {
     const { comment } = this.state
@@ -37,14 +41,17 @@ export default class Detail extends Component {
           rel="stylesheet"
           href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
         ></link>
+    
+          
         <div className="container center">
-        <Paper elevation={3} style={{width:'80%', padding:40, borderRadius:30, marginBottom:50}}>
+        <Paper  elevation={3} style={{width:'100%', padding:40, borderRadius:30, marginBottom:50}}>
 
             <br></br>
             <br></br>
-            <div className="center">
+            <div container="col-sm-12">
+            
               <div className="row ">
-                <div className="col-sm-5">
+                <div className="col-sm-6">
                   <section className="detail-boardtext">
                     <h4>
                       <small>잘하고싶다...연애</small>
@@ -77,7 +84,7 @@ export default class Detail extends Component {
                     <Counter></Counter>
                   </section>
                 </div>
-                <section className="col-sm-6">
+                <section className="col-sm-6 ">
                   <img
                     src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20110108_7%2Fwooroo88_1294461731368Btxio_JPEG%2F17773_S08_092951.jpg&type=sc960_832"
                     alt="Boardpic"
@@ -88,6 +95,7 @@ export default class Detail extends Component {
               </div>
               <br></br>
               <br></br>
+              
             </div>
           </Paper>
           <br></br> <br></br>
