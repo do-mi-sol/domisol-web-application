@@ -1,10 +1,11 @@
 import React, {Component} from 'react'
 import '../../assets/css/Write.css'
-import {Paper} from '@material-ui/core'
+
 import DMSButton from '../../components/customs/DMSButton'
 import {CustomInput, FormGroup, Label} from 'reactstrap'
 import RichTextEditor from '../../components/write/TextEditor'
 import TitleInput from '../../components/write/TitleInput'
+import {Typography,Paper} from '@material-ui/core'
 
 
 export default class Write extends Component {
@@ -61,12 +62,27 @@ export default class Write extends Component {
         return (
             <div className="write-background">
                 
-                <div style={{justifyContent:"center", alignItems:"center"}}>
+                <div className="write-card-container" style={{justifyContent:"center", alignItems:"center"}}>
                 <Paper  elevation={3} style={{width:'80%', padding:40, borderRadius:30, marginBottom:50,justifyContent:"center", alignItems:"center"}}>
                     <form className="container" onSubmit={this.handleSudmit}>
                         {/*게시판 이름*/}             
-                        <div className="write-boardtext">잘 하고 싶다 .. 연애</div>                                  
+                        <div className="write-boardtext">  
+                             <Typography
+                            variant="h5"
+                            style={{
+                                marginTop: '10px',
+                                marginLeft:'20px',
+                                fontWeight: 'bold',
+                                
+                            }}
+                        >
+                           잘하고싶다.. 연애
+                        </Typography>
+                        
+                             </div> 
+                             <hr className="write-line2" />
                         <div className="write-container">
+                         
                             {/*이미지 프리뷰*/}        
                             <div className="write-picture-container">
                                 <Label for="talk_img">
@@ -84,9 +100,9 @@ export default class Write extends Component {
                             </div>
                             {/*오른쪽 인풋창*/}
                             <div className="write-input-container">
-                            {/* <div className="write-boardtext">잘하고싶다...연애</div>     */}
+
                         
-                               {/* <hr className="write-line2" />*/}
+                                
                                 <FormGroup>
                                     <div className="write-title-input">
                                     {/*제목 input*/}

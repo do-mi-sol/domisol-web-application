@@ -10,18 +10,21 @@
 }
 
 /*컨테이너*/
-.container {
-    margin-top: 5%;
-    justify-content: center;
+
+.write-card-container {
+    display: flex;
     align-items: center;
+    justify-content: center;
 }
 .write-paper {
     padding-top: 20%;
-    justify-content: center;
+    display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .write-container {
+    padding-top: 1%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -114,7 +117,7 @@
     border-style: none;
 
     /* 위치(마진) 조절 */
-    margin-top: 10px;
+    margin-top: 30px;
     margin-left: 1;
 
     /* padding-right: 50px;
@@ -144,10 +147,10 @@
 
 /*오른쪽 글쓰기*/
 .write-boardtext {
-    font-weight: bold;
-    font-size: xx-large;
-    justify-content: center;
+    margin-top: 3%;
+    display: flex;
     align-items: center;
+    justify-content: center;
 }
 .write-title-input {
     padding-left: 1%;
