@@ -27,14 +27,14 @@ export default class MyModify extends Component {
     idModify = async () => {
         const token = await localStorage.getItem("token");
         const bearer = `Bearer ${token}`;
-        const { newId, password } = this.state;
+        const { newId, password1 } = this.state;
 
         await axios
             .put(
                 URL.idmodify,
                 {
-                    newId,
-                    password,
+                    new_user_id: newId,
+                    password: password1,
                 },
                 {
                     headers: {
@@ -43,20 +43,31 @@ export default class MyModify extends Component {
                 }
             )
             .then((res) => res.data)
-            .then((body) => console.log(body));
+            .then((body) => {
+                console.log(body);
+
+                if (body.success) {
+                    localStorage.removeItem("token");
+                    alert("로그인 환경이 변경되었습니다. 재로그인 해주세요.");
+                    window.location.replace("/");
+                } else {
+                    alert(body.message);
+                    window.location.reload();
+                }
+            });
     };
 
     passwordModify = async () => {
         const token = await localStorage.getItem("token");
         const bearer = `Bearer ${token}`;
-        const { newPassword, password } = this.state;
+        const { newPassword, password2 } = this.state;
 
         await axios
             .put(
                 URL.passwordmodify,
                 {
-                    newPassword,
-                    password,
+                    new_password: newPassword,
+                    password: password2,
                 },
                 {
                     headers: {
@@ -65,7 +76,18 @@ export default class MyModify extends Component {
                 }
             )
             .then((res) => res.data)
-            .then((body) => console.log(body));
+            .then((body) => {
+                console.log(body);
+
+                if (body.success) {
+                    localStorage.removeItem("token");
+                    alert("로그인 환경이 변경되었습니다. 재로그인 해주세요.");
+                    window.location.replace("/");
+                } else {
+                    alert(body.message);
+                    window.location.reload();
+                }
+            });
     };
 
     render() {

@@ -30,11 +30,14 @@ export default class Login extends Component {
             })
             .then((res) => res.data)
             .then((body) => {
-                const token = body.data.token;
                 console.log(body);
                 if (body.success) {
+                    const token = body.data.token;
                     localStorage.setItem("token", token);
                     window.location.replace("/");
+                } else {
+                    alert(body.message);
+                    window.location.reload();
                 }
             });
     };
