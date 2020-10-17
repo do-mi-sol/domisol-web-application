@@ -10,7 +10,7 @@
 }
 
 .tabs-border {
-    border: 2px solid #f1f1f1;
+    border: 2px solid #807959;
 }
 
 .tab-list {
@@ -38,12 +38,18 @@
     line-height: 24px;
     padding: 8px 16px;
     color: black;
-    background-color: #e6e3e3;
-    border: 1px solid #e6e3e3;
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
     box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.1);
     margin-right: 24px;
 
-    transition: color 0.16s ease-in-out, background-color 0.16s ease-in-out,
+    /* 추가 */
+    width: 150px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    transition: color 0.16s ease-in-out,
+        background-color 0.16s ease-in-out,
         border-color 0.16s ease-in-out;
 }
 
@@ -57,8 +63,10 @@
 }
 
 .tab.active {
-    background-color: #492796;
-    border-color: #492796;
+    /* background-color: #492796;
+    border-color: #492796; */
+    background-color: #807959;
+    border-color: #807959;
     color: white;
     cursor: default;
 }
@@ -73,4 +81,12 @@
 
 .panel {
     position: absolute;
+}
+
+.panel-container {
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+    padding-top: 7%;
+    padding-bottom: 20vh;
 }

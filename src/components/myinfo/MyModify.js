@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Form, FormGroup, Label, Input, FormText, Col } from "reactstrap";
+import { Form, FormGroup, Label, Col } from "reactstrap";
 import { Paper } from "@material-ui/core";
 import axios from "axios";
 
@@ -106,6 +106,7 @@ export default class MyModify extends Component {
                             padding: 50,
                             borderRadius: 30,
                             marginBottom: 50,
+                            
                         }}
                     >
                         <FormGroup row>
@@ -124,7 +125,7 @@ export default class MyModify extends Component {
                             </Col>
                         </FormGroup>
 
-                        <FormGroup row style={{ marginBottom: 15 }}>
+                        <FormGroup row style={{ marginBottom: 15}}>
                             <Label for="Name" sm={2} className="modify-margin">
                                 비밀번호
                             </Label>
@@ -141,7 +142,10 @@ export default class MyModify extends Component {
                                 />
                             </Col>
                         </FormGroup>
-                        <DMSButton children="확인" onClick={this.idModify} />
+                        <div className="modify-buttoncontainer">
+                            <DMSButton children="확인" width="150px" onClick={this.idModify} />
+                        </div>
+
                     </Paper>
 
                     <h3 style={{ color: "gray", textShadow: "1px 1px 1px gray", marginBottom: 20 }}>
@@ -192,7 +196,10 @@ export default class MyModify extends Component {
                                 />
                             </Col>
                         </FormGroup>
-                        <DMSButton children="확인" onClick={this.passwordModify} />
+                        <div className="modify-buttoncontainer">
+                            <DMSButton children="확인" width="150px" onClick={this.passwordModify} />
+                        </div>
+                        
                     </Paper>
                 </Form>
             </div>

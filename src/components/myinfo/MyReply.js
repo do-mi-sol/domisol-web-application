@@ -18,7 +18,7 @@ import TablePaginationActions from "./TablePaginationActions";
 const useStyles = makeStyles(() => ({
     container: {
         width: "48%",
-        minWidth: 400,
+        minWidth: 600,
         marginLeft: "2%",
     },
     table: {

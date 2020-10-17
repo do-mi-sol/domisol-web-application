@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { Container, Divider } from "@material-ui/core";
+import { Container } from "@material-ui/core";
 import axios from "axios";
-import { Tabs, Tab, Panel } from "@bumaga/tabs";
+import { Tabs, Panel, useTabState } from "@bumaga/tabs";
 
 import MyBar from "../../components/myinfo/MyBar";
 import MyWritten from "../../components/myinfo/MyWritten";
@@ -73,6 +73,18 @@ export default class Myinfo extends Component {
             age,
         } = this.state;
 
+        const cn = (...args) => args.filter(Boolean).join(' ')
+
+const Tab = ({ children }) => {
+  const { isActive, onClick } = useTabState()
+
+  return (
+    <button className={cn('tab', isActive && 'active')} onClick={onClick}>
+      {children}
+    </button>
+  )
+}
+
         return (
             <Container
                 maxWidth="xl"
@@ -80,7 +92,6 @@ export default class Myinfo extends Component {
                 style={{
                     minHeight: "90vh",
                     margin: 0,
-                    paddingBottom: "20vh",
                 }}
             >
                 <MyBar
@@ -94,39 +105,35 @@ export default class Myinfo extends Component {
                 <Tabs>
                     <div>
                         <div className="tab-list">
-                            <Tab>
-                                <button className="tab">나의 글</button>
-                            </Tab>
-                            <Tab>
-                                <button className="tab">나의 정보</button>
-                            </Tab>
-                            <Tab>
-                                <button className="tab">나의 정보 수정</button>
-                            </Tab>
+                            <Tab>나의 글</Tab>
+                            <Tab>나의 정보</Tab>
+                            <Tab>나의 글</Tab>
                         </div>
                         <div className="tabs-border"></div>
 
                         <Panel>
-                            <Container
+                            <div className="panel-container">
+                                <Container
                                 style={{
                                     width: "90%",
-                                    paddingTop:"5%",
                                     minWidth: 900,
                                     display: "flex",
+                                    flexWrap:"wrap",
                                     justifyContent: "space-around",
                                 }}
                             >
                                 <MyWritten />
                                 <MyReply />
                             </Container>
+                            </div>
                         </Panel>
 
                         <Panel>
+                        <div className="panel-container">
                             <Container
                                 style={{
                                     width: "80%",
                                     minWidth: 900,
-                                    marginTop: "5%",
                                     display: "flex",
                                     justifyContent: "center",
                                     alignItems: "center",
@@ -142,14 +149,15 @@ export default class Myinfo extends Component {
                                     age={age}
                                 />
                             </Container>
+                            </div>
                         </Panel>
 
                         <Panel>
+                        <div className="panel-container">
                             <Container
                                 style={{
                                     width: "80%",
                                     minWidth: 900,
-                                    marginTop: "5%",
                                     display: "flex",
                                     justifyContent: "center",
                                     alignItems: "center",
@@ -157,6 +165,7 @@ export default class Myinfo extends Component {
                             >
                                 <MyModify />
                             </Container>
+                            </div>
                         </Panel>
                     </div>
                 </Tabs>

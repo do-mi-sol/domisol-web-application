@@ -18,7 +18,7 @@ import TablePaginationActions from "./TablePaginationActions";
 const useStyles = makeStyles(() => ({
     container: {
         width: "48%",
-        minWidth: 400,
+        minWidth: 600,
         // marginRight: "2%",
     },
     table: {
@@ -58,18 +58,19 @@ export default function MyWritten() {
     };
     return (
         <TableContainer className={classes.container}>
-            <h4 style={{ color: "gray", textShadow: "1px 1px 1px gray", marginBottom: 10 }}>
+            <h4 style={{ color: "gray",textShadow: "1px 1px 1px gray", marginBottom: 10,paddingLeft:10}}>
                 내가 쓴 글
             </h4>
             <Paper
-                elevation={3}
+                elevation={1}
                 style={{
                     width: "100%",
                     padding: 40,
-                    borderRadius: 30,
+                    borderRadius: 20,
                     marginBottom: 50,
                 }}
             >
+                
                 <Divider style={{ backgroundColor: "#ffd400" }} />
                 <Table className={classes.table} size="small" aria-label="a dense table">
                     <TableBody>
