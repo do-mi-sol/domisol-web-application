@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import { Container } from "@material-ui/core";
-import { Navbar, Nav, Form } from "react-bootstrap";
+import { AppBar, Toolbar, Button } from "@material-ui/core";
 
-import DMSButton from "../customs/DMSButton";
+import "../../assets/css/Header.css";
 
 export default class HeaderLink extends Component {
     logout = () => {
@@ -10,25 +9,28 @@ export default class HeaderLink extends Component {
         alert("로그아웃 되었습니다.");
         window.location.replace("/");
     };
+
     render() {
         const token = localStorage.getItem("token");
 
         return (
-            <Navbar variant="light" style={{ backgroundColor: "white", padding: 30 }}>
-                <Nav>
-                    <Nav.Link href="/">HOME</Nav.Link>
-                    <Nav.Link href="/board">BOARD</Nav.Link>
-                </Nav>
-                <Form>
-                    <Container>
-                        {token == null && <DMSButton children="로그인" href="/login" />}
-                        {token != null && <DMSButton children="로그아웃" onClick={this.logout} />}
-                    </Container>
-                    <Container>
-                        {token != null && <DMSButton children="내 계정" href="/myinfo" />}
-                    </Container>
-                </Form>
-            </Navbar>
+            <AppBar position="sticky" style={{ backgroundColor: "Gainsboro", height: 60 }}>
+                <Toolbar>
+                    <h4>DoMiSol</h4>
+                    <Button href="/" style={{ marginLeft: 10 }}>
+                        HOME
+                    </Button>
+                    <Button href="/board">BOARD</Button>
+                    <Button href="/">WRITE</Button>
+                    <Button href="/">DETAIL</Button>
+
+                    {token != null && <Button color="white" children="Account" href="/myinfo" />}
+                    {token == null && <Button color="white" children="Login" href="/login" />}
+                    {token != null && (
+                        <Button color="white" children="Logout" onClick={this.logout} />
+                    )}
+                </Toolbar>
+            </AppBar>
         );
     }
 }

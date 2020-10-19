@@ -6,13 +6,11 @@ import HeaderLink from "./HeaderLink";
 import "../../assets/css/Header.css";
 
 export default class Header extends Component {
-  render() {
-    return (
-      <div>
-        <Sticky>
-          <HeaderLink />
-        </Sticky>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <Sticky>
+                <HeaderLink />
+            </Sticky>
+        );
+    }
 }

@@ -1,5 +1,5 @@
-import React from 'react'
-import {Button} from '@material-ui/core'
+import React from "react";
+import { Button } from "@material-ui/core";
 
 const DMSButton = ({
     children,
@@ -7,11 +7,13 @@ const DMSButton = ({
     size,
     href,
     width,
-    color = '#ffd400',
+    color = "#ffd400",
     margin,
     onClick,
     radiusBottom,
     radiusTop,
+    marginR,
+    marginL,
 }) => {
     return (
         <div>
@@ -30,10 +32,12 @@ const DMSButton = ({
                     borderBottomRightRadius: radiusBottom,
                     borderTopLeftRadius: radiusTop,
                     borderTopRightRadius: radiusTop,
+                    marginRight: marginR,
+                    marginLeft: marginL,
                 }}
             />
         </div>
-    )
-}
+    );
+};
 
-export default DMSButton
+export default DMSButton;

@@ -1,0 +1,13 @@
+.header-container {
+    display: inline-block;
+    float: right;
+}
+
+.header-text {
+    width: 150px;
+    display: block;
+}
+
+.header-right {
+    float: right;
+}
