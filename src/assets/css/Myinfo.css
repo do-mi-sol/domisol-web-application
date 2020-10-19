@@ -10,7 +10,7 @@
 }
 
 .tabs-border {
-    border: 2px solid #807959;
+    border: 2px solid #858585;
 }
 
 .tab-list {
@@ -48,8 +48,7 @@
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 
-    transition: color 0.16s ease-in-out,
-        background-color 0.16s ease-in-out,
+    transition: color 0.16s ease-in-out, background-color 0.16s ease-in-out,
         border-color 0.16s ease-in-out;
 }
 
@@ -65,7 +64,7 @@
 .tab.active {
     /* background-color: #492796;
     border-color: #492796; */
-    background-color: #807959;
+    background-color: #858585;
     border-color: #807959;
     color: white;
     cursor: default;
