@@ -43,14 +43,7 @@ export default class Myinfo extends Component {
         };
 
         return (
-            <Container
-                maxWidth="xl"
-                disableGutters
-                style={{
-                    minHeight: "90vh",
-                    margin: 0,
-                }}
-            >
+            <Container>
                 <MyBar />
 
                 <Tabs>

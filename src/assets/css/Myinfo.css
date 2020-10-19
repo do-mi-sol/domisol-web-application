@@ -25,7 +25,6 @@
     top: 66px;
     height: 4px;
     z-index: 0;
-
     background-color: #f2f2f2;
     transform-origin: 0%;
 }
@@ -84,8 +83,10 @@
 
 .panel-container {
     width: 100%;
-    height: 100%;
+
     background-color: #f2f2f2;
     padding-top: 7%;
     padding-bottom: 20vh;
+    border-radius: 15px;
+    margin-bottom: 80px;
 }
