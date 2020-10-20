@@ -13,11 +13,6 @@ import "../../assets/css/Myinfo.css";
 export default class Myinfo extends Component {
     state = {
         buttonColor: "None",
-        profile: "/broken-image.jpg",
-        myLevel: 0,
-        myWritten: 0,
-        like: 0,
-        myReply: 0,
     };
 
     handleChange = (e) => {
@@ -27,8 +22,6 @@ export default class Myinfo extends Component {
     };
 
     render() {
-        const { profile, myLevel, myWritten, like, myReply, name } = this.state;
-
         const cn = (...args) => args.filter(Boolean).join(" ");
 
         const Tab = ({ children }) => {
