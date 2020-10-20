@@ -22,7 +22,7 @@ export default class HeaderLink extends Component {
                     </Button>
                     <Button href="/board">BOARD</Button>
                     <Button href="/">WRITE</Button>
-                    <Button href="/">DETAIL</Button>
+                    <Button href="/detail">DETAIL</Button>
 
                     {token != null && <Button color="white" children="Account" href="/myinfo" />}
                     {token == null && <Button color="white" children="Login" href="/login" />}

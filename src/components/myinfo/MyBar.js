@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Grid, Divider, Avatar, Typography } from "@material-ui/core";
+import { Grid, Avatar, Typography } from "@material-ui/core";
 import axios from "axios";
 
 import URL from "../../NET";
