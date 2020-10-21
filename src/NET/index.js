@@ -1,4 +1,5 @@
-let host = "http://localhost:3001";
+// let host = "http://localhost:9001";
+let host = "https://domisolserver.herokuapp.com";
 
 let URL = {
     login: `${host}/api/user/login`,
