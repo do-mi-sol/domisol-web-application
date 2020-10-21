@@ -13,7 +13,6 @@ import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Pagination from "./Pagination";
-import paginate from "./Paginate";
 
 import URL from "../../NET";
 
@@ -27,7 +26,7 @@ export default class MainBoard extends Component {
     };
 
     requestInfo = async () => {
-        const { currentPage, limit, boards } = this.state;
+        const { currentPage, limit } = this.state;
         await axios
             .post(URL.board, {
                 currentPage,
@@ -35,33 +34,46 @@ export default class MainBoard extends Component {
             })
             .then((res) => res.data)
             .then((body) => {
-                console.log(body);
                 this.setState({
                     boards: body.board.boards,
+                    numOfData: body.board.numOfData,
                 });
             });
     };
 
     componentDidMount() {
         this.requestInfo();
-
         this.setState({ numOfData: this.state.boards.length });
     }
 
+    async componentDidUpdate(prevProps, prevState) {
+        if (prevState.currentPage !== this.state.currentPage) {
+            await axios
+                .post(URL.board, {
+                    currentPage: this.state.currentPage,
+                    limit: this.state.limit,
+                })
+                .then((res) => res.data)
+                .then((body) => {
+                    this.setState({
+                        boards: body.board.boards,
+                    });
+                });
+        }
+    }
+
     handlePageChange = (page) => {
-        this.setState({ currentPage: page }); // 페이지 수 클릭 시 현재 페이지 변경
+        this.setState({ currentPage: page });
     };
 
     render() {
         const { boards, currentPage, limit, numOfData } = this.state;
-        console.log(boards);
 
         const classes = makeStyles({
             table: {
                 minWidth: 650,
             },
         });
-        const sliceBoards = paginate(boards, currentPage, limit);
 
         return (
             <div>
@@ -80,9 +92,9 @@ export default class MainBoard extends Component {
                             </TableRow>
                         </TableHead>
                         <TableBody>
-                            {sliceBoards.map((row) => (
-                                <TableRow key={row.number}>
-                                    <TableCell align="left">{row.number}</TableCell>
+                            {boards.map((row) => (
+                                <TableRow key={row.count}>
+                                    <TableCell align="left">{row.count}</TableCell>
 
                                     <TableCell
                                         component="th"
