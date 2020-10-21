@@ -1,0 +1,10 @@
+.detail-rowWrapper {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+}
+.form-group {
+    width: 90%;
+    margin-right: 5px;
+}

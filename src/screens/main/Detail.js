@@ -1,17 +1,32 @@
 import React, { Component } from "react";
 import { Form } from "react-bootstrap";
-import { Paper } from "@material-ui/core";
+import { Paper, Container } from "@material-ui/core";
 import axios from "axios";
 
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
+import '../../assets/css/Detail.css'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import Comment from "../../components/detail/Comment";
 import Counter from "../../components/detail/Counter";
 
 import URL from "../../NET";
+import DMSButton from "../../components/customs/DMSButton";
 
 export default class Detail extends Component {
     state = {
         comments: [],
+        data:{
+            number: '101',
+            id: '강민정',
+            gender: 'female',
+            title: '글제목은 무엇으로 지으면 좋을까',
+            time: '05:10',
+            box:'게시글 내용입니다리리리자로 끝나는 말은 개나리 가오리 그리고... 대머리 용서는 곧 사랑이다.고결하고 아름다운 사랑의 형태이다.사랑이 없는 사람은 쉽게 용서하지 못한다.용서는 평화와 행복을 그 보답으로 준다.그대, 용서함으로써 행복 하라!용감한 자만이 용서할 줄 알고비겁한 자는 용서하지 않는다.용서는 남에게는 자주 베풀지만자신에게는 베풀지 마라.누군가가 당신에게 피해를 입혔다면인내심을 가지고 그들을 대하라.',
+            fileName:'파일 이름입니다리',
+            heart: 5,
+            views: 1000,
+        }
+        
     };
 
     requestInfo = async () => {
@@ -30,58 +45,64 @@ export default class Detail extends Component {
     }
 
     render() {
-        const { comments } = this.state;
+        const { comments,data } = this.state;
         console.log(comments);
         return (
             <div>
-                {/* <link
-                    rel="stylesheet"
-                    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-                ></link> */}
-
-                <div className="container center">
+                <Container style={{marginTop: 30,
+                        marginBottom: 20,
+                        paddingTop: "10vh",
+                        paddingBottom: "20vh",
+                        minHeight: "90vh",
+                        minWidth:500,
+                        }}>
                     <Paper
                         elevation={3}
                         style={{ width: "100%", padding: 40, borderRadius: 30, marginBottom: 50 }}
                     >
-                        <br></br>
-                        <br></br>
                         <div container="col-sm-12">
                             <div className="row ">
                                 <div className="col-sm-6">
                                     <section className="detail-boardtext">
-                                        <h4>
-                                            <small>잘하고싶다...연애</small>
-                                        </h4>
-                                        <hr border-color="yellow" border-style="solid" />
-                                        <h5>
-                                            <span className="glyphicon glyphicon-time"></span> Post
-                                            by Jane Dane, Sep 27, 2015.
-                                        </h5>
-                                        <h2>썸인가요?????</h2>
-                                        <br></br>
-                                        <br></br>
-                                        <br></br>
-                                        <br></br>
-
+                                        <h6>
+                                            도미솔 {data.number}번째 글
+                                        </h6>
+                                        <h2>{data.title}</h2>
+                                        <hr/>
+                                        <div className='detail-view' style={{minHeight:380}}>
+                                            <div className='detail-rowWrapper' style={{justifyContent:'space-between'}}>
+                                                <div className='detail-rowWrapper'>
+                                                <h5>{data.id}</h5>
+                                        {data.gender === 'male' ? (
+                                            <FontAwesomeIcon
+                                                icon={'male'}
+                                                style={{
+                                                    color: 'skyblue',
+                                                }}
+                                            />
+                                        ) : (
+                                            <FontAwesomeIcon
+                                                icon={'female'}
+                                                style={{
+                                                    color: 'pink',
+                                                    position:'relative',
+                                                    top:5, left:3
+                                                }}
+                                            />
+                                        )}
+                                        </div><p>{data.time} </p>
+                                            </div>
+                                        
+                                    
                                         <p>
-                                            Food is my passion. Lorem ipsum dolor sit amet,
-                                            consectetur adipiscing elit, sed do eiusmod tempor
-                                            incididunt ut labore et dolore magna aliqua. Ut enim ad
-                                            minim veniam, quis nostrud exercitation ullamco laboris
-                                            nisi ut aliquip ex ea commodo consequat. Excepteur sint
-                                            occaecat cupidatat non proident, sunt in culpa qui
-                                            officia deserunt mollit anim id est laborum consectetur
-                                            adipiscing elit, sed do eiusmod tempor incididunt ut
-                                            labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                            quis nostrud exercitation ullamco laboris nisi ut
-                                            aliquip ex ea commodo consequat.
+                                            {data.box}
                                         </p>
-                                        <br></br>
-
-                                        <hr border-color="yellow" border-style="solid" />
-                                        <br></br>
-                                        <Counter></Counter>
+                                        </div>
+                                        <hr/>
+                                        <div className='detail-rowWrapper'style={{justifyContent:'space-between'}}>
+                                            <p>조회 : {data.views}</p>
+                                        <Counter/></div>
+                                        
                                     </section>
                                 </div>
                                 <section className="col-sm-6 ">
@@ -93,23 +114,20 @@ export default class Detail extends Component {
                                     />
                                 </section>
                             </div>
-                            <br></br>
-                            <br></br>
                         </div>
                     </Paper>
-                    <br></br> <br></br>
+
                     <h4>Leave a comment:</h4>
                     <Form role="form">
-                        <div className="form-group">
+                        <div className='detail-rowWrapper'>
+                            <div className="form-group">
                             <textarea className="form-control" rows="3" required></textarea>
                         </div>
-                        <button type="submit" className="btn btn-warning btn-lg">
-                            등록
-                        </button>
+                        <DMSButton height='80%'>등록</DMSButton>
+                        {/* <button type="submit" className="btn btn-warning btn-lg">등록</button> */}
+                        </div>
+                        
                     </Form>
-                    <br></br>
-                    <br></br>
-                    <br></br>
                     <div>
                         {comments.map((value) => (
                             <Comment
@@ -120,7 +138,7 @@ export default class Detail extends Component {
                         ))}
                     </div>
                     <br></br>
-                </div>
+                </Container>
             </div>
         );
     }

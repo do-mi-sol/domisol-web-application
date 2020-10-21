@@ -12,7 +12,6 @@ const coupleimage = [require("../../assets/images/couplefeet.jpg"),require("../.
 
 export default class Home extends Component {
 
-
   render() {
     return (
       <div className="home-container">

@@ -7,6 +7,7 @@ const DMSButton = ({
     size,
     href,
     width,
+    height,
     color = "#ffd400",
     margin,
     onClick,
@@ -25,6 +26,7 @@ const DMSButton = ({
                 onClick={onClick}
                 style={{
                     width: width,
+                    height:height,
                     backgroundColor: color,
                     marginTop: margin,
                     // border radius 설정 추가
