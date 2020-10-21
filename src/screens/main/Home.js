@@ -65,7 +65,7 @@ export default class Home extends Component {
 
         <div className='home-aboutPageContainer'>
         <h2 className="w3-center font-weight-bold">ABOUT THE DOMISOL</h2>
-        <Divider variant="middle" style={{backgroundColor:'black', height:3,width:100,marginTop:5,marginBottom:50}}/>
+        <Divider variant="middle" style={{backgroundColor:'black', height:2,width:100,marginTop:10,marginBottom:50}}/>
           <Grid container spacing={3}  justify="flex-end" alignItems="center" alignContent="flex-end">
           <Grid item xs={12} sm={6}>
             <div className='home-aboutText1'>
@@ -88,8 +88,8 @@ export default class Home extends Component {
           /> 
         </Grid>
           </Grid>
-          <Grid container spacing={3}>
-            <Grid item xs={12} sm={6}>
+          <Grid container spacing={3} style={{marginTop:30,marginBottom:30}}>
+            <Grid item xs={12} sm={5}>
             <img
             className="home-aboutDoMiSolImage"
             // src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20110108_7%2Fwooroo88_1294461731368Btxio_JPEG%2F17773_S08_092951.jpg&type=sc960_832"
@@ -99,7 +99,7 @@ export default class Home extends Component {
             // height="100%"
           />
         </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={7}>
           <div className='home-aboutText2'>
               <h2 className="font-weight-bold">도미솔과 함께라면</h2>
               <br/>
@@ -109,6 +109,28 @@ export default class Home extends Component {
               당신도 성공할 수 있습니다.
             </p>
             </div>
+        </Grid>
+          </Grid>
+          <Grid container spacing={3}  justify="flex-end" alignItems="center" alignContent="flex-end">
+          <Grid item xs={12} sm={6}>
+            <div className='home-aboutText1'>
+              <h2 className="font-weight-bold">도미솔은</h2>
+              <br/>
+          <p>
+              도움에 미친 솔로들,<br/>
+              그리고 연인들을 위해 탄생했습니다.
+            </p>
+            </div>
+          
+        </Grid>
+        <Grid item xs={12} sm={6}>
+            <img
+            className="home-aboutDoMiSolImage"
+            // src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxOTEyMDlfMTg3%2FMDAxNTc1ODk0NjMxNjIx.lZh5YxHUvp3gY6RzsTMM-UyUbpMBK6xzb7as_Nv_iYwg.5yFzYIosQAhp2S_Uz36IMj60p_paZwQHdsC2ZHH0t8Ag.JPEG.tobemaven%2F%25BA%25F1%25C6%25F7%25BC%25B1%25B6%25F3%25C0%25CC%25C1%25EE.JPG&type=sc960_832"
+            src={coupleimage[0]}
+            alt="loveyou"
+            width="100%"
+          /> 
         </Grid>
           </Grid>
         </div>

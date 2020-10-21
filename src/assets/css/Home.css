@@ -1,15 +1,9 @@
-.home-aboutPageContainer,
-.home-slideContainer {
-    /* min-height: 800px; */
-    max-height: 900px;
-
-    margin-bottom: 10px;
-}
 .home-slideContainer {
     /* margin-top: 5px; */
+    max-height: 900px;
+    margin-bottom: 10px;
     width: 100%;
     min-width: 500px;
-    /* background-color: black; */
 }
 
 /* 가운데 정렬 */
@@ -46,15 +40,14 @@
 
 .home-aboutPageContainer {
     min-height: 800px;
-    margin-top: 10%;
+    margin-top: 70px;
     margin-bottom: 10%;
 
-    height: 150%;
+    height: 300%;
     background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: space-around; */
 }
 .home-ourvaluesContainer {
     height: 90vh;

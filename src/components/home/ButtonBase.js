@@ -7,17 +7,20 @@ const images = [
     url: require('../../assets/images/pic1.jpg'),
     title: 'HOT 게시물',
     width: '40%',
+    href:'/board',
   },
   {
     url: require('../../assets/images/pic2.jpg'),
-    title: '성공 후기',
+    title: '글 작성',
     width: '30%',
+    href:'/write',
   },
   {
     // url: require('../../assets/images/pic3.jpg'),
     url:'https://images.unsplash.com/photo-1516589091380-5d8e87df6999?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80',
-    title: '가입하러가기',
+    title: '로그인',
     width: '30%',
+    href:'/login',
   },
 ];
 
@@ -105,6 +108,7 @@ export default function ButtonBases() {
           key={image.title}
           className={classes.image}
           focusVisibleClassName={classes.focusVisible}
+          href={image.href}
           style={{
             width: image.width,
           }}

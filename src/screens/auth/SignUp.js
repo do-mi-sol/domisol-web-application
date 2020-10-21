@@ -14,7 +14,6 @@ import axios from "axios";
 
 import Term from "../../components/signup/Term";
 import SelectAge from "../../components/signup/SelectAge";
-import InputWithBtn from "../../components/signup/InputWithBtn";
 import GenderRadio from "../../components/signup/GenderRadio";
 import DMSInput from "../../components/customs/DMSInput";
 import DMSButton from "../../components/customs/DMSButton";
@@ -95,12 +94,13 @@ export default class SignUp extends Component {
 
                     {/* ID */}
                     <div>
-                        <InputWithBtn
+                        <DMSInput
                             value={id}
                             name="id"
                             type="id"
                             label="ID"
                             onChange={this.handleChange}
+                            variant="outlined"
                         />
                     </div>
 

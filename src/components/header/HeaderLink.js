@@ -24,10 +24,10 @@ export default class HeaderLink extends Component {
                     <Button href="/">WRITE</Button>
                     <Button href="/detail">DETAIL</Button>
 
-                    {token != null && <Button children="Account" href="/myinfo" style={{backgroundColor:"white"}} />}
+                    {token != null && <Button children="Account" href="/myinfo" style={{marginRight:7,backgroundColor:"#ebe9e6"}} />}
                     {token == null && <Button children="Login" href="/login" style={{backgroundColor:"whitesmoke"}}  />}
                     {token != null && (
-                        <Button children="Logout" onClick={this.logout} style={{backgroundColor:"white"}} />
+                        <Button children="Logout" onClick={this.logout} style={{color:"white",backgroundColor:"#a19588"}} />
                     )}
                 </Toolbar>
             </AppBar>
