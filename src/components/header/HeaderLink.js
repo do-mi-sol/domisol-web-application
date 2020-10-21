@@ -14,7 +14,7 @@ export default class HeaderLink extends Component {
         const token = localStorage.getItem("token");
 
         return (
-            <AppBar position="sticky" style={{ backgroundColor: "#c2bab2", height: 60 }}>
+            <AppBar position="sticky" style={{ backgroundColor: "#c2bab2", height: 60, }}>
                 <Toolbar>
                     <h4>DoMiSol</h4>
                     <Button href="/" style={{ marginLeft: 10 }}>

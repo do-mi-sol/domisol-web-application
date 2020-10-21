@@ -17,19 +17,8 @@ export default class Home extends Component {
     return (
       <div className="home-container">
         <Container maxWidth='xl' style={{padding:0, zIndex:1}}>
-        {/* <meta charset="utf-8" /> */}
+
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link
-          rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-        />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        ></link>
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"></link>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <div className='home-slideContainer'>
       <Carousel style={{zIndex:0}}>
           <Carousel.Item className='home-carouselItem'>
@@ -108,7 +97,7 @@ export default class Home extends Component {
             src={coupleimage[1]}
             alt="lovewe"
             width="100%"
-            height="100%"
+            // height="100%"
           />
         </Grid>
           <Grid item xs={12} sm={6}>
@@ -129,13 +118,12 @@ export default class Home extends Component {
 
         <div className="home-aboutthecompany ">
           <Container maxWidth="md">
-            {/* <div className="w3-container" padding="128px 16px" id="about"> */}
-            <h2 className="w3-center font-weight-bold">ABOUT THE COMPANY</h2>
-            <div style={{display:'flex',alignItems:"center",justifyContent:'center'}}>
-              <Divider style={{backgroundColor:'black', height:3,width:100,marginTop:5,marginBottom:50}}/>
+            <div style={{display:'flex',flexDirection:'column',alignItems:"center",justifyContent:'space-between'}}>
+              <h2 className="w3-center font-weight-bold">ABOUT THE COMPANY</h2>
+              <Divider variant="middle" style={{backgroundColor:'black', height:2,width:100,marginTop:10,marginBottom:50}}/>
             </div>
             
-            <br></br>
+            {/* <br></br>
             <p className="w3-center w3-large">Key features of our company</p>
             <br></br>
             <br></br>
@@ -172,8 +160,7 @@ export default class Home extends Component {
                   incididunt ut labore et dolore.
                 </p>
               </div>
-            </div>
-          {/* </div> */}
+            </div> */}
           
           {/* Developer Card */}
           <div className="home-profile">

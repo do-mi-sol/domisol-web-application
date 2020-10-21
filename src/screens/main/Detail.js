@@ -34,10 +34,10 @@ export default class Detail extends Component {
         console.log(comments);
         return (
             <div>
-                <link
+                {/* <link
                     rel="stylesheet"
                     href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-                ></link>
+                ></link> */}
 
                 <div className="container center">
                     <Paper

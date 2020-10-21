@@ -23,7 +23,7 @@ const DeveloperCard = ({src, name,role,major,
               <Avatar src={src} alt={name} style={{height:100,width:100,top:-20,border:'soild gray'}}/>
                   <h2>{name}</h2>
               <p className="title">{role}</p>
-            <p>인천대학교 {major}</p>
+            <p style={{margin:0}}>인천대학교 {major}</p>
             <div className='card-button-wrapper'>
               <Button children={comment} onClick={()=>window.open(contactLink)} style={{backgroundColor:buttoncolor}}/>
               <Button children={instagram} onClick={()=>window.open(instagramLink)} style={{backgroundColor:buttoncolor}}/>
