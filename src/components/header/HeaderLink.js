@@ -14,7 +14,7 @@ export default class HeaderLink extends Component {
         const token = localStorage.getItem("token");
 
         return (
-            <AppBar position="sticky" style={{ backgroundColor: "Gainsboro", height: 60 }}>
+            <AppBar position="sticky" style={{ backgroundColor: "#c2bab2", height: 60 }}>
                 <Toolbar>
                     <h4>DoMiSol</h4>
                     <Button href="/" style={{ marginLeft: 10 }}>
@@ -24,10 +24,10 @@ export default class HeaderLink extends Component {
                     <Button href="/">WRITE</Button>
                     <Button href="/detail">DETAIL</Button>
 
-                    {token != null && <Button color="white" children="Account" href="/myinfo" />}
-                    {token == null && <Button color="white" children="Login" href="/login" />}
+                    {token != null && <Button children="Account" href="/myinfo" style={{backgroundColor:"white"}} />}
+                    {token == null && <Button children="Login" href="/login" style={{backgroundColor:"whitesmoke"}}  />}
                     {token != null && (
-                        <Button color="white" children="Logout" onClick={this.logout} />
+                        <Button children="Logout" onClick={this.logout} style={{backgroundColor:"white"}} />
                     )}
                 </Toolbar>
             </AppBar>

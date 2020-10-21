@@ -11,12 +11,44 @@
     /* background-color: black; */
 }
 
+/* 가운데 정렬 */
+.home-carouselItemContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* carouse style */
+.home-carouselItemContainer {
+    width: 100%;
+    min-width: 1024px;
+    height: 680px;
+    /* background-color: #fbf7f2; */
+}
+.home-carouselItemWrapper {
+    width: 1024px;
+    /* background-color: black; */
+}
+.home-carouselText {
+    margin-top: 100px;
+    /* margin-left: 700px; */
+}
+.home-carouselImage {
+    /* position: absolute; */
+    /* top: 100px;
+    left: 100px; */
+    height: 400px;
+    width: 650px;
+    background: url(../images/couple_dinner.png);
+    /* background: url(http://scienceoflove.co.kr/wp-content/uploads/2016/09/sol136_illu_01.png); */
+}
+
 .home-aboutPageContainer {
     min-height: 800px;
     margin-top: 10%;
     margin-bottom: 10%;
 
-    height: 150vh;
+    height: 150%;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -101,8 +133,9 @@
     justify-content: space-around;
 }
 .home-card {
-    background-color: white;
+    background-color: #fafafa;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    height: 250px;
     min-width: 250px;
     padding-bottom: 20px;
     margin: 25px;
@@ -116,7 +149,6 @@
     justify-content: center;
 }
 .card-button-wrapper {
-    margin-top: 5px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -169,6 +201,7 @@ a:hover {
 
 .home-aboutthecompany {
     padding-top: 100px;
-    padding-bottom: 100px;
-    background-color: #f2f2f5;
+    padding-bottom: 30px;
+    /* background-color: #f2f2f5; */
+    background-color: #eeeeee;
 }

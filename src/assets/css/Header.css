@@ -1,6 +1,9 @@
 .header-container {
     display: inline-block;
-    float: right;
+    /* float: right; */
+}
+.sticky {
+    z-index: 100;
 }
 
 .header-text {

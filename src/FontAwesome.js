@@ -44,5 +44,5 @@ library.add(
     faFemale,
     faPen,
     faSearch,
-    faBlog
+    faBlog,
 )

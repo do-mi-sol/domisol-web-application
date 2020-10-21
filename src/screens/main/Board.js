@@ -121,7 +121,7 @@ export default class Board extends React.Component {
                     </div>
                         </Paper>  
                 
-                        <Paper elevation={3} style={{width:'80%', minWidth:'1300px', padding:40,
+                        <Paper elevation={3} style={{width:'80%', minWidth:'1300px', padding:40,paddingBottom:20,
                              borderRadius:30, marginBottom:50}}>
                 <div className="board-divide-container">
                     <div className="board-left-container">
@@ -144,8 +144,8 @@ export default class Board extends React.Component {
                     </div>
                 </div>
                 </Paper>
-                <Paper elevation={3} style={{width:'80%', minWidth:'1300px', padding:40, 
-                 borderRadius:30, marginBottom:50}}>
+                <Paper elevation={3} style={{width:'80%', minWidth:'1300px', padding:40, paddingBottom:20,
+                 borderRadius:30}}>
                 <div className="board-divide-container">
                     <div className="board-left-container">
                       
@@ -161,67 +161,9 @@ export default class Board extends React.Component {
                         </Typography>
                     </div>{' '}
                     <div className="board-right-container">
-                        {/* <div className="board-button-container"></div> */}
                         <Notice/>
                     </div>
                 </div></Paper>
-                
-
-                {/* 일단 밑에 . . .
-                <div>
-                    <div className="board-right-container">
-                        <div>오늘의 글 </div>
-                        <hr className="board-yellow-line"></hr>
-                        <table borders="1">
-                            <tbody>
-                                <td>
-                                    {todayboards.map((row) => (
-                                        <tr>
-                                            <TodayBoard
-                                                title={row.title}
-                                                community={
-                                                    row.community
-                                                }
-                                            />
-                                            <br />
-                                        </tr>
-                                    ))}
-                                </td>
-                            </tbody>
-                        </table>
-                        <br />
-                        <div>오늘의 톡</div>
-                        <hr className="board-yellow-line"></hr>
-                        <img
-                            className="board-today-talk"
-                            alt=""
-                            src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F9940773359839DFA0D"
-                        />
-                        <br />
-                        <br />
-                        <div>오늘의 댓글</div>
-                        <hr className="board-yellow-line"></hr>
-
-                        <table borders="1">
-                            <tbody>
-                                <td>
-                                    {replyboards.map((row) => {
-                                        return (
-                                            <tr>
-                                                <TodayReplyBoard
-                                                    reply={row.reply}
-                                                    community={
-                                                        row.community
-                                                    }
-                                                />
-                                            </tr>
-                                        )
-                                    })}
-                                </td>
-                            </tbody>
-                        </table>
-                    </div>
-                </div> */}
             </div>
         )
     }
