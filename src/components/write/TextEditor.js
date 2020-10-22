@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import "react-quill/dist/quill.bubble.css";
@@ -31,10 +31,6 @@ const state = {
     ],
 };
 
-const rteChange = (content, delta, source, editor) => {
-    console.log(editor.getText());
-};
-
 const TextEditor = ({ value, onChange }) => {
     return (
         <div className="react-quill-container">
@@ -44,7 +40,8 @@ const TextEditor = ({ value, onChange }) => {
                 modules={state.module}
                 formats={state.formats}
                 value={value}
-                onChange={rteChange}
+                onChange={onChange}
+                placeholder="내용을 입력해주세요."
             />
         </div>
     );
