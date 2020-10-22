@@ -3,6 +3,7 @@ import { AppBar, Toolbar, Button } from "@material-ui/core";
 
 import "../../assets/css/Header.css";
 
+
 export default class HeaderLink extends Component {
     logout = () => {
         localStorage.removeItem("token");
@@ -16,7 +17,9 @@ export default class HeaderLink extends Component {
         return (
             <AppBar position="sticky" style={{ backgroundColor: "#c2bab2", height: 60, }}>
                 <Toolbar>
-                    <h4>DoMiSol</h4>
+                    {/* <h4>DoMiSol</h4> */}
+                    <img src={require('../../assets/images/Logo4.png')} alt="logo" width='30' />
+                    
                     <Button href="/" style={{ marginLeft: 10 }}>
                         HOME
                     </Button>

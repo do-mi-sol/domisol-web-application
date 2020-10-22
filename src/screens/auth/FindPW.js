@@ -30,7 +30,7 @@ export default class FindPW extends Component {
             >
                 <img
                     className="signUp-logoIcon"
-                    src={require('../../assets/images/Logo.jpg')}
+                    src={require('../../assets/images/Logo3.png')}
                     alt="logo"
                 />
                 <h3>비밀번호 찾기</h3>

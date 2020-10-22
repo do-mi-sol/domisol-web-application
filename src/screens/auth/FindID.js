@@ -28,7 +28,7 @@ export default class FindID extends Component {
             >
                 <img
                     className="signUp-logoIcon"
-                    src={require('../../assets/images/Logo.jpg')}
+                    src={require('../../assets/images/Logo3.png')}
                     alt="logo"
                 />
                 <h3>아이디 찾기</h3>

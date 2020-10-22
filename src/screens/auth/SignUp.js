@@ -84,7 +84,7 @@ export default class SignUp extends Component {
                 >
                     <img
                         className="signUp-logoIcon"
-                        src={require("../../assets/images/Logo.jpg")}
+                        src={require("../../assets/images/Logo3.png")}
                         alt="logo"
                     />
                     <h3>회원가입</h3>

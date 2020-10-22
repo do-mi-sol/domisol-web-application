@@ -188,10 +188,10 @@ hr.style13 {
 }
 .style15:after {
     content: url(../images/Logo2.png);
-    transform: scale(0.04);
+    transform: scale(0.008);
     display: inline-block;
     position: relative;
-    top: -22.5px;
+    top: -19.5px;
     padding: 0 10px;
     width: 5px;
     height: 10px;
