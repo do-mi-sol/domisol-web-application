@@ -222,7 +222,7 @@ export default class BestBoard extends Component {
         return (
             <div>
                 <TableContainer
-                    style={{marginRight: 30, minWidth: 800}}
+                    style={{marginRight: 30, minWidth: 480}}
                 >
                     <Table
                         className={classes.table}
@@ -231,7 +231,7 @@ export default class BestBoard extends Component {
                         <TableHead>
                             <TableRow>
                                 <TableCell align="left">
-                                    글 번호
+                                    
                                 </TableCell>
 
                                 <TableCell align="center">
@@ -257,7 +257,7 @@ export default class BestBoard extends Component {
                                         scope="row"
                                         style={{
                                             minWidth: 70,
-                                            width: '60%',
+                                            width: '50%',
                                         }}
                                     >
                                         {row.title}

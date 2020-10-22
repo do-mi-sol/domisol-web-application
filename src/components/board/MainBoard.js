@@ -11,7 +11,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Pagination from "./Pagination";
 
@@ -78,15 +78,14 @@ export default class MainBoard extends Component {
 
         return (
             <div>
-                <TableContainer style={{ marginRight: 30, minWidth: 830 }}>
+                <TableContainer style={{ marginRight: 30, minWidth: 770 }}>
                     <Table className={classes.table} aria-label="simple table">
                         <TableHead>
                             <TableRow>
                                 <TableCell align="left">글 번호</TableCell>
                                 <TableCell align="center">제목</TableCell>
                                 <TableCell align="right">글쓴이</TableCell>
-                                <TableCell align="right">성별</TableCell>
-                                <TableCell align="right">시간</TableCell>
+                                <TableCell align="center">등록일</TableCell>
                                 <TableCell align="right">조회</TableCell>
                                 <TableCell align="right">추천</TableCell>
                             </TableRow>
@@ -101,7 +100,7 @@ export default class MainBoard extends Component {
                                         scope="row"
                                         style={{
                                             minWidth: 80,
-                                            width: "50%",
+                                            width: "45%",
                                         }}
                                     >
                                         <Link
@@ -115,24 +114,7 @@ export default class MainBoard extends Component {
                                     </TableCell>
                                     <TableCell align="right">{row.user_id}</TableCell>
                                     <TableCell align="right">
-                                        {row.gender === "male" ? (
-                                            <FontAwesomeIcon
-                                                icon={"male"}
-                                                style={{
-                                                    color: "skyblue",
-                                                }}
-                                            />
-                                        ) : (
-                                            <FontAwesomeIcon
-                                                icon={"female"}
-                                                style={{
-                                                    color: "pink",
-                                                }}
-                                            />
-                                        )}
-                                    </TableCell>
-                                    <TableCell align="right">
-                                        {new Date(row.board_date).toLocaleString()}
+                                        {new Date(row.board_date).toLocaleString().slice(0,14)}
                                     </TableCell>
                                     <TableCell align="right">{row.board_views}</TableCell>
                                     <TableCell align="right">{row.board_views}</TableCell>

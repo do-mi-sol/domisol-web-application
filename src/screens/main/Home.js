@@ -153,7 +153,7 @@ export default class Home extends Component {
           </h3>
           <div className="home-card-container">
             <DeveloperCard name="김희연" role='frontend' major='컴퓨터공학부' email='heeeee0818@gmail.com' git='HeeYeonKim98'/>
-            <DeveloperCard name="설한정" role='frontend' major='컴퓨터공학부' git='HanJeongSeol' instagram='hanjeonnnng/' blog='https://seol-limit.tistory.com/'/>
+            <DeveloperCard name="설한정" role='frontend' major='컴퓨터공학부' email="hanjeong94@naver.com" git='HanJeongSeol' instagram='hanjeonnnng/' blog='https://seol-limit.tistory.com/'/>
             <DeveloperCard name="강민정" role='frontend' major='수학과' email='minj2058@gmail.com' git='Minjeong-K' instagram='m._.jeongs2/' blog='https://blog.naver.com/rkd5183'/>
           </div>
             <div className="home-card-container">  

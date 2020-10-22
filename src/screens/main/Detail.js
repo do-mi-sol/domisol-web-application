@@ -58,11 +58,11 @@ export default class Detail extends Component {
                 >
                     <Paper
                         elevation={3}
-                        style={{ width: "100%", padding: 40, borderRadius: 30, marginBottom: 50 }}
+                        style={{ width: "100%", padding: 40, borderRadius: 30, marginBottom: 50,minWidth:1200 }}
                     >
-                        <div container="col-sm-12">
+                        <div container="col-sm-12" style={{minWidth:1180}}>
                             <div className="row ">
-                                <div className="col-sm-6">
+                                <div className="col-sm-6" style={{minWidth:590}}>
                                     <section className="detail-boardtext">
                                         <h6>도미솔 {count}번째 글</h6>
                                         <h2>{board_title}</h2>
@@ -79,6 +79,8 @@ export default class Detail extends Component {
                                                             icon={"male"}
                                                             style={{
                                                                 color: "skyblue",
+                                                                position:'relative',
+                                                                top:5, left:5,
                                                             }}
                                                         />
                                                     ) : (
@@ -86,14 +88,13 @@ export default class Detail extends Component {
                                                             icon={"female"}
                                                             style={{
                                                                 color: "pink",
-                                                                position: "relative",
-                                                                top: 5,
-                                                                left: 3,
+                                                                position:'relative',
+                                                                top:5, left:5,
                                                             }}
                                                         />
                                                     )}
                                                 </div>
-                                                <p>{new Date(board_date).toLocaleString()} </p>
+                                                <p style={{width:'60%'}}>{new Date(board_date).toLocaleString()} </p>
                                             </div>
 
                                             <p>{board_box}</p>
@@ -108,7 +109,7 @@ export default class Detail extends Component {
                                         </div>
                                     </section>
                                 </div>
-                                <section className="col-sm-6 ">
+                                <section className="col-sm-6" style={{minWidth:500}}>
                                     <img
                                         src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20110108_7%2Fwooroo88_1294461731368Btxio_JPEG%2F17773_S08_092951.jpg&type=sc960_832"
                                         alt="Boardpic"
@@ -119,14 +120,14 @@ export default class Detail extends Component {
                             </div>
                         </div>
                     </Paper>
-
+                <div className="detail-commentContainer">
                     <h4>Leave a comment:</h4>
                     <Form role="form">
                         <div className="detail-rowWrapper">
-                            <div className="form-group">
+                            <div className="detail-form-group">
                                 <textarea className="form-control" rows="3" required></textarea>
                             </div>
-                            <DMSButton height="80%">등록</DMSButton>
+                            <DMSButton height="100%" width="80px">등록</DMSButton>
                             {/* <button type="submit" className="btn btn-warning btn-lg">등록</button> */}
                         </div>
                     </Form>
@@ -139,7 +140,7 @@ export default class Detail extends Component {
                             ></Comment>
                         ))}
                     </div>
-                    <br></br>
+                </div>
                 </Container>
             </div>
         );

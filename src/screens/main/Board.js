@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Paper } from "@material-ui/core";
+import { Typography, Paper} from "@material-ui/core";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -36,14 +36,14 @@ export default class Board extends React.Component {
                 <Paper
                     elevation={3}
                     style={{
-                        width: "80%",
+                        // width: "80%",
                         minWidth: "1300px",
                         padding: 40,
                         borderRadius: 30,
                         marginBottom: 50,
                     }}
                 >
-                    <div className="board-divide-container">
+                    <div className="board-divide-container" style={{width:1200}}>
                         <div className="board-left-container">
                             <hr className="style15" />
                             <Typography
@@ -75,21 +75,19 @@ export default class Board extends React.Component {
                         </div>
                     </div>
                 </Paper>
-
+                <div className='board-divide-container' style={{width:1270,minWidth:1250}}>
                 <Paper
                     elevation={3}
                     style={{
-                        width: "80%",
-                        minWidth: "1300px",
+                        width: "600px",
                         padding: 40,
                         paddingBottom: 20,
-                        borderRadius: 30,
+                        borderRadius: 20,
                         marginBottom: 50,
                     }}
                 >
-                    <div className="board-divide-container">
-                        <div className="board-left-container">
-                            <hr className="style15" />
+                    <div className="board-half-container">
+                            <hr className="style15" style={{width:350}}/>
                             <Typography
                                 variant="h5"
                                 style={{
@@ -100,25 +98,21 @@ export default class Board extends React.Component {
                                 베스트 게시판
                             </Typography>
                         </div>
-                        <div className="board-right-container">
                             <BestBoard />
-                        </div>
-                    </div>
+
                 </Paper>
 
-                <Paper
+                 <Paper
                     elevation={3}
                     style={{
-                        width: "80%",
-                        minWidth: "1300px",
+                        width: "600px",
                         padding: 40,
                         paddingBottom: 20,
-                        borderRadius: 30,
+                        borderRadius: 20,
                     }}
                 >
-                    <div className="board-divide-container">
-                        <div className="board-left-container">
-                            <hr className="style15" />
+                    <div className="board-half-container">
+                            <hr className="style15" style={{width:350}} />
                             <Typography
                                 variant="h5"
                                 style={{
@@ -129,11 +123,11 @@ export default class Board extends React.Component {
                                 공지사항
                             </Typography>
                         </div>
-                        <div className="board-right-container">
                             <Notice />
-                        </div>
-                    </div>
                 </Paper>
+                </div>
+                
+               
             </div>
         );
     }
