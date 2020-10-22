@@ -8,7 +8,8 @@ const DMSButton = ({
     href,
     width,
     height,
-    color = "#ffd400",
+    color = "#c78d8d",
+    textColor,
     margin,
     onClick,
     radiusBottom,
@@ -25,6 +26,7 @@ const DMSButton = ({
                 href={href}
                 onClick={onClick}
                 style={{
+                    color:textColor,
                     width: width,
                     height:height,
                     backgroundColor: color,

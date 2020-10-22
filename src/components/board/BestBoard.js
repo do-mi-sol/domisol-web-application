@@ -241,9 +241,6 @@ export default class BestBoard extends Component {
                                     글쓴이
                                 </TableCell>
                                 <TableCell align="right">
-                                    조회
-                                </TableCell>
-                                <TableCell align="right">
                                     추천
                                 </TableCell>
                             </TableRow>
@@ -267,9 +264,6 @@ export default class BestBoard extends Component {
                                     </TableCell>
                                     <TableCell align="right">
                                         {row.id}
-                                    </TableCell>
-                                    <TableCell align="right">
-                                        {row.views}
                                     </TableCell>
                                     <TableCell align="right">
                                         {row.heart}
