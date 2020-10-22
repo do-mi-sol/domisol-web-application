@@ -6,3 +6,6 @@
     flex-direction: column;
     text-align: center;
 }
+.login-icon {
+    width: 300px;
+}
