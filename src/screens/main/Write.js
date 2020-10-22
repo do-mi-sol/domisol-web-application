@@ -4,7 +4,7 @@ import { Typography, Paper } from "@material-ui/core";
 import axios from "axios";
 
 import DMSButton from "../../components/customs/DMSButton";
-import RichTextEditor from "../../components/write/TextEditor";
+import TextEditor from "../../components/write/TextEditor";
 import TitleInput from "../../components/write/TitleInput";
 
 import URL from "../../NET";
@@ -23,6 +23,11 @@ export default class Write extends Component {
         this.setState({
             [e.target.name]: e.target.value,
         });
+    };
+
+    onChangeText = (key, value) => {
+        this.setState({ [key]: value });
+        // 생소한 문법이지만 key가 'email' 일 때 [key]: value 부분은 email: value 로 변경됨
     };
 
     //사진저장후 프리뷰함수
@@ -72,8 +77,9 @@ export default class Write extends Component {
     };
 
     render() {
-        const { title } = this.state;
+        const { title, box } = this.state;
         let talk_preview = null;
+
         if (this.state.file !== "") {
             talk_preview = <img className="talk_preview" src={this.state.previewURL} alt="" />;
         }
@@ -142,7 +148,14 @@ export default class Write extends Component {
                                         </div>
 
                                         <div className="write-contents-input">
-                                            <RichTextEditor />
+                                            <TextEditor
+                                                value={this.props.box}
+                                                name="box"
+                                                onChange={(val) => {
+                                                    this.onChangeText("box", val);
+                                                    console.log(val);
+                                                }}
+                                            />
                                         </div>
                                     </FormGroup>
                                 </div>
