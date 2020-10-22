@@ -100,9 +100,9 @@ export default class Login extends Component {
                 </Container>
 
                 <div>
-                    <DMSButton children="회원가입" margin={20} href="/signup" color="null" />
-                    <DMSButton children="아이디 찾기" color="null" href="/findid" />
-                    <DMSButton children="비밀번호 찾기" color="null" href="/findpw" />
+                    <DMSButton children="회원가입" margin={20} href="/signup" color="null" textColor='black'/>
+                    <DMSButton children="아이디 찾기" color="null" href="/findid" textColor='black' />
+                    <DMSButton children="비밀번호 찾기" color="null" href="/findpw" textColor='black' />
                 </div>
             </div>
         );

@@ -80,7 +80,6 @@ export default class FindPW extends Component {
                             variant="contained"
                             size="large"
                             width={400}
-                            color="#ffd400"
                             margin={20}
                         />
                     </div>

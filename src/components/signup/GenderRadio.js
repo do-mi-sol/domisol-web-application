@@ -32,7 +32,7 @@ const GenderRadio = ({value, onChange}) => {
                         <Radio
                             size="small"
                             style={{
-                                color: '#ffd400',
+                                color: '#c19393',
                             }}
                         />
                     }
@@ -46,7 +46,7 @@ const GenderRadio = ({value, onChange}) => {
                         <Radio
                             size="small"
                             style={{
-                                color: '#ffd400',
+                                color: '#c19393',
                             }}
                         />
                     }

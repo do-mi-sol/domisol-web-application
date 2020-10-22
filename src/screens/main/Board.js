@@ -60,12 +60,12 @@ export default class Board extends React.Component {
                         <div className="board-right-container">
                             <div className="board-button-container">
                                 <Search onChange={this.handleChange} value={search} />
-                                <DMSButton color="#ffea80" href="/write" size="large">
+                                <DMSButton color="#c19393" href="/write" size="large">
                                     글쓰기
                                     <FontAwesomeIcon
                                         icon={"pen"}
                                         style={{
-                                            color: "gray",
+                                            color: "whitesmoke",
                                             marginLeft: "7px",
                                         }}
                                     />
