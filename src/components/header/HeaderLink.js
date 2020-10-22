@@ -17,9 +17,9 @@ export default class HeaderLink extends Component {
         return (
             <AppBar position="sticky" style={{ backgroundColor: "#c2bab2", height: 60, }}>
                 <Toolbar>
-                    {/* <h4>DoMiSol</h4> */}
-                    <img src={require('../../assets/images/Logo4.png')} alt="logo" width='30' />
                     
+                    <img src={require('../../assets/images/Logo4.png')} alt="logo" width='30' style={{marginLeft:5,marginRight:5}}/>
+                    <h4>DoMiSol</h4>
                     <Button href="/" style={{ marginLeft: 10 }}>
                         HOME
                     </Button>

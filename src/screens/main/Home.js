@@ -22,20 +22,18 @@ export default class Home extends Component {
       <Carousel style={{zIndex:0}}>
           <Carousel.Item className='home-carouselItem'>
             {/* 슬라이드 item 1 */}
-            <div className='home-carouselItemContainer' style={{backgroundColor:'#ebe9e6'}}>
+            <div className='home-carouselItemContainer' style={{backgroundColor:'#e7e6e2'}}>
               <div className='home-carouselItemWrapper'>
-                <Grid container>
-                  <Grid item xs={12} sm={8}>
-                    <div className='home-carouselImage'
-                    style={{background:'url(http://scienceoflove.co.kr/wp-content/uploads/2016/09/sol136_illu_01.png)'}}></div>
+                <Grid container style={{maxHeight:1000}}>
+                  <Grid item xs={12} sm={5}>
+                    <img src={require('../../assets/images/message_help.gif')} alt='message' style={{transform: 'scale(0.6)'}}/>
                   </Grid>
-                  <Grid item xs={12} sm={4}>
+                  <Grid item xs={12} sm={7}>
                     <div className='home-carouselText' >
-                  <h2 className="w3 font-weight-bold">좋아하는 사람에게 오는 톡?</h2>
-                  <h4 style={{paddingLeft:50}}>vs</h4>
-                  <h2 className="w3 font-weight-bold" style={{paddingBottom:10}}>아닌 사람에게 오는 톡?</h2>
-                  <DMSButton>답장 조언해주러 가기</DMSButton>
-                </div>
+                    <h4 style={{paddingTop:300}}>지금 보고있는</h4>
+                    <h1 className="w3 font-weight-bold" style={{paddingBottom:10}}>이 카톡이 답답하다면?</h1>
+                    <DMSButton children="답장 조언 해주러가기" margin='7px' href='/write'/>
+                  </div>
                   </Grid>
                 </Grid>
               </div>
@@ -43,16 +41,20 @@ export default class Home extends Component {
           </Carousel.Item>
           <Carousel.Item className='home-carouselItem'>
             {/* 슬라이드 item 2 */}
-            <div className='home-carouselItemContainer' style={{backgroundColor:'#fbf7f2'}}>
+            <div className='home-carouselItemContainer' style={{backgroundColor:'#F6F6F0'}}>
               <div className='home-carouselItemWrapper'>
-                <Grid container>
-                  <Grid item xs={12} sm={6}>
-                    <div className='home-carouselImage' style={{width:"400px"}}></div>
+                <Grid container spacing={3}>
+                  <Grid item xs={12} sm={3}>
+                  <img src={require('../../assets/images/message_like.gif')} alt='message' style={{transform: 'scale(0.9)'}}/>
+                  </Grid>
+                  <Grid item xs={12} sm={3}>
+                  <img src={require('../../assets/images/message_unlike.gif')} alt='message' style={{transform: 'scale(0.9)'}}/>
                   </Grid>
                   <Grid item xs={12} sm={6}>
                     <div className='home-carouselText' >
-                  <h1 className="w3 font-weight-bold" style={{paddingBottom:10}}>성공적인 연애를 원한다면?</h1>
-                  <DMSButton>글 작성하러가기</DMSButton>
+                  <h6 style={{paddingTop:80}}>좋아하는 사람에게 오는 톡 vs 아닌 사람에게 오는 톡</h6>
+                  <h2 className="w3 font-weight-bold" style={{paddingBottom:10}}>내가 연락하는 사람이 어느 쪽인지 궁금하다면?</h2>
+                  <DMSButton>고민 글 작성하러가기</DMSButton>
                     </div>
                   </Grid>
                 </Grid>

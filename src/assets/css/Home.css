@@ -28,14 +28,19 @@
     margin-top: 100px;
     /* margin-left: 700px; */
 }
-.home-carouselImage {
+.home-carouselImage1 {
+    height: 400px;
+    width: 650px;
+    /* background: url(../images/message1.gif); */
+    transform: scale(0.8);
+}
+.home-carouselImage2 {
     /* position: absolute; */
     /* top: 100px;
     left: 100px; */
     height: 400px;
     width: 650px;
     background: url(../images/couple_dinner.png);
-    /* background: url(http://scienceoflove.co.kr/wp-content/uploads/2016/09/sol136_illu_01.png); */
 }
 
 .home-aboutPageContainer {
