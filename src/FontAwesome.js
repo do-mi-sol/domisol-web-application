@@ -4,6 +4,7 @@ import {
     faFacebookF,
     faInstagram,
     faTwitter,
+    faGithub,
 } from '@fortawesome/free-brands-svg-icons'
 import {
     faSmile,
@@ -21,6 +22,7 @@ import {
     faPen,
     faSearch,
     faBlog,
+    faHeartbeat
 } from '@fortawesome/free-solid-svg-icons'
 import {faCommentDots} from '@fortawesome/free-regular-svg-icons'
 
@@ -45,4 +47,6 @@ library.add(
     faPen,
     faSearch,
     faBlog,
+    faGithub,
+    faHeartbeat,
 )

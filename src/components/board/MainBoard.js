@@ -8,6 +8,7 @@ import {
     TableBody,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -82,7 +83,6 @@ export default class MainBoard extends Component {
                         <TableHead>
                             <TableRow>
                                 <TableCell align="left">글 번호</TableCell>
-
                                 <TableCell align="center">제목</TableCell>
                                 <TableCell align="right">글쓴이</TableCell>
                                 <TableCell align="right">성별</TableCell>
@@ -104,7 +104,14 @@ export default class MainBoard extends Component {
                                             width: "50%",
                                         }}
                                     >
-                                        {row.board_title}
+                                        <Link
+                                            to={{
+                                                pathname: "/detail",
+                                                state: { row },
+                                            }}
+                                        >
+                                            {row.board_title}
+                                        </Link>
                                     </TableCell>
                                     <TableCell align="right">{row.user_id}</TableCell>
                                     <TableCell align="right">

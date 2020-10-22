@@ -1,5 +1,5 @@
 .home-slideContainer {
-    /* margin-top: 5px; */
+    margin-top: 7px;
     max-height: 900px;
     margin-bottom: 10px;
     width: 100%;
@@ -39,21 +39,17 @@
 }
 
 .home-aboutPageContainer {
-    min-height: 800px;
+    min-height: 1000px;
     margin-top: 70px;
     margin-bottom: 10%;
 
-    height: 300%;
+    height: 350%;
     background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.home-ourvaluesContainer {
-    height: 90vh;
-    width: 100%;
-    background-color: black;
-}
+
 .home-aboutDoMiSolImage {
     max-height: 400px;
 }
@@ -121,7 +117,7 @@
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 50px;
+    margin-top: 30px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -129,8 +125,9 @@
 .home-card {
     background-color: #fafafa;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    height: 250px;
-    min-width: 250px;
+    border-radius: 10px;
+    height: 180px;
+    min-width: 190px;
     padding-bottom: 20px;
     margin: 25px;
     text-align: center;
@@ -155,12 +152,12 @@
 }
 
 .home-profile button {
-    border: none;
+    /* border-radius: 0; */
     outline: 0;
     display: inline-block;
-    padding: 8px;
+    padding: 4px;
     color: white;
-    background-color: #000;
+    background-color: #949494;
     text-align: center;
     cursor: pointer;
     width: 100%;
@@ -195,7 +192,7 @@ a:hover {
 
 .home-aboutthecompany {
     padding-top: 100px;
-    padding-bottom: 30px;
+    padding-bottom: 60px;
     /* background-color: #f2f2f5; */
     background-color: #eeeeee;
 }

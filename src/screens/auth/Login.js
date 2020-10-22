@@ -57,7 +57,7 @@ export default class Login extends Component {
                 <div>
                     <img
                         className="login-icon"
-                        src={require("../../assets/images/Logo.jpg")}
+                        src={require("../../assets/images/Logo3.jpg")}
                         alt="logo"
                     />
                 </div>

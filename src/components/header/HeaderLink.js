@@ -21,8 +21,8 @@ export default class HeaderLink extends Component {
                         HOME
                     </Button>
                     <Button href="/board">BOARD</Button>
-                    <Button href="/">WRITE</Button>
-                    <Button href="/detail">DETAIL</Button>
+                    <Button href="/write">WRITE</Button>
+                    {/* <Button href="/detail">DETAIL</Button> */}
 
                     {token != null && <Button children="Account" href="/myinfo" style={{marginRight:7,backgroundColor:"#ebe9e6"}} />}
                     {token == null && <Button children="Login" href="/login" style={{backgroundColor:"whitesmoke"}}  />}
