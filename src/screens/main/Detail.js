@@ -146,7 +146,7 @@ export default class Detail extends Component {
                                 {/* <button type="submit" className="btn btn-warning btn-lg">등록</button> */}
                             </div>
                         </Form>
-                        <div>
+                        <div style={{marginTop:30}}>
                             {comments.map((value) => (
                                 <Comment
                                     key={value.comment_number}

@@ -1,23 +1,22 @@
 import React from "react";
 import Counter from "./Counter";
 // import moment from "moment";
+import '../../assets/css/Detail.css'
 
 const Comment = ({ name, date, text }) => {
     return (
-        <div className="row">
+        <div className="comment-row" >
             <div className="col-sm-10">
-                <h4>
+                <h5>
                     {name}
                     &nbsp; &nbsp;
-                    <small>{date}</small>
-                </h4>
+                    <small style={{fontSize:10}}>{date}</small>
+                </h5>
 
                 <p>{text}</p>
                 <Counter></Counter>
-                <br></br>
-                <br></br>
-                <br></br>
             </div>
+            <hr style={{width:'98%'}}/>
         </div>
     );
 };
