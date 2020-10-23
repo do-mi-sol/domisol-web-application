@@ -54,7 +54,7 @@ export default class Home extends Component {
                     <div className='home-carouselText' >
                   <h6 style={{paddingTop:80}}>좋아하는 사람에게 오는 톡 vs 아닌 사람에게 오는 톡</h6>
                   <h2 className="w3 font-weight-bold" style={{paddingBottom:10}}>내가 연락하는 사람이 어느 쪽인지 궁금하다면?</h2>
-                  <DMSButton>고민 글 작성하러가기</DMSButton>
+                  <DMSButton children="고민 글 작성하러가기" margin='7px' href='/write'/>
                     </div>
                   </Grid>
                 </Grid>
