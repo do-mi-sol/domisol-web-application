@@ -32,7 +32,7 @@ export default class Home extends Component {
                     <div className='home-carouselText' >
                     <h4 style={{paddingTop:300}}>지금 보고있는</h4>
                     <h1 className="w3 font-weight-bold" style={{paddingBottom:10}}>이 카톡이 답답하다면?</h1>
-                    <DMSButton children="답장 조언 해주러가기" margin='7px' href='/write'/>
+                    <DMSButton children="답장 조언 해주러가기" margin='7px' href='/board'/>
                   </div>
                   </Grid>
                 </Grid>
@@ -73,7 +73,7 @@ export default class Home extends Component {
                     <div className='home-carouselText' >
                     <h4 style={{paddingTop:300}}>썸남에게 온 카톡,</h4>
                     <h1 className="w3 font-weight-bold" style={{paddingBottom:10}}>이어가게 도와주고 싶다면?</h1>
-                    <DMSButton children="답장 도와주러가기" margin='7px' href='/write'/>
+                    <DMSButton children="답장 도와주러가기" margin='7px' href='/board'/>
                   </div>
                   </Grid>
                 </Grid>
@@ -180,7 +180,7 @@ export default class Home extends Component {
           </div>
             <div className="home-card-container">  
               <DeveloperCard name="고은희" role='frontend' major='정보통신공학과' email='eheheh327@naver.com ' git='eunhee-ko'/>
-              {/* <DeveloperCard name="이혜림" role='frontend' major='국어국문학과' git='hye-rim-lee'/> */}
+              <DeveloperCard name="이혜림" role='frontend' major='문헌정보학과' email='luvme121@likelion.org' git='hye-rim-lee'/>
               <DeveloperCard name="최지혜" role='frontend' major='도시행정학과' email='jangnyer@naver.com' git='jangnyer'/>
           </div>
         </div>
