@@ -15,6 +15,15 @@ import DMSButton from "../../components/customs/DMSButton";
 export default class Detail extends Component {
     state = {
         comments: [],
+        comment_date: null,
+        comment_box: "",
+    };
+
+    handleChange = (e) => {
+        this.setState({
+            [e.target.name]: e.target.value,
+        });
+        console.log(this.state.comment_box);
     };
 
     requestInfo = async () => {
@@ -32,12 +41,48 @@ export default class Detail extends Component {
             });
     };
 
+    comment = async () => {
+        const { board_number } = this.props.location.state.row;
+        const { comment_box, comment_date } = this.state;
+        const token = await localStorage.getItem("token");
+        const bearer = `Bearer ${token}`;
+
+        if (token == null) {
+            alert("로그인이 필요한 서비스입니다. 로그인 후 이용해주세요.");
+            window.location.assign("/login");
+        } else {
+            await axios
+                .post(
+                    URL.commentwrite,
+                    {
+                        board_number,
+                        comment_box,
+                        comment_date: new Date().toLocaleString(),
+                    },
+                    {
+                        headers: {
+                            Authorization: bearer,
+                        },
+                    }
+                )
+                .then((res) => res.data)
+                .then((body) => {
+                    if (body.success) {
+                        window.location.reload();
+                    } else {
+                        alert(body.message);
+                        window.location.reload();
+                    }
+                });
+        }
+    };
+
     componentDidMount() {
         this.requestInfo();
     }
 
     render() {
-        const { comments } = this.state;
+        const { comments, comment_box } = this.state;
         const {
             count,
             board_title,
@@ -125,11 +170,7 @@ export default class Detail extends Component {
                                     </section>
                                 </div>
                                 <section className="col-sm-6" style={{ minWidth: 500 }}>
-                                    <img
-                                        src={board_filename}
-                                        alt="Boardpic"
-                                        // width="100%"
-                                    />
+                                    <img src={board_filename} alt="Boardpic" />
                                 </section>
                             </div>
                         </div>
@@ -139,15 +180,21 @@ export default class Detail extends Component {
                         <Form role="form">
                             <div className="detail-rowWrapper">
                                 <div className="detail-form-group">
-                                    <textarea className="form-control" rows="3" required></textarea>
+                                    <textarea
+                                        className="form-control"
+                                        rows="3"
+                                        required
+                                        name="comment_box"
+                                        value={comment_box}
+                                        onChange={this.handleChange}
+                                    ></textarea>
                                 </div>
-                                <DMSButton height="100%" width="80px">
+                                <DMSButton height="100%" width="80px" onClick={this.comment}>
                                     등록
                                 </DMSButton>
-                                {/* <button type="submit" className="btn btn-warning btn-lg">등록</button> */}
                             </div>
                         </Form>
-                        <div style={{marginTop:30}}>
+                        <div style={{ marginTop: 30 }}>
                             {comments.map((value) => (
                                 <Comment
                                     key={value.comment_number}
