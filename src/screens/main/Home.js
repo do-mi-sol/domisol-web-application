@@ -61,6 +61,25 @@ export default class Home extends Component {
               </div>
             </div>
           </Carousel.Item>
+          <Carousel.Item className='home-carouselItem'>
+            {/* 슬라이드 item 3 */}
+            <div className='home-carouselItemContainer' style={{backgroundColor:'#F7EFE4'}}>
+              <div className='home-carouselItemWrapper'>
+                <Grid container style={{maxHeight:1000}}>
+                  <Grid item xs={12} sm={5}>
+                    <img src={require('../../assets/images/message_mohe.gif')} alt='message' style={{transform: 'scale(0.6)'}}/>
+                  </Grid>
+                  <Grid item xs={12} sm={7}>
+                    <div className='home-carouselText' >
+                    <h4 style={{paddingTop:300}}>썸남에게 온 카톡,</h4>
+                    <h1 className="w3 font-weight-bold" style={{paddingBottom:10}}>이어가게 도와주고 싶다면?</h1>
+                    <DMSButton children="답장 도와주러가기" margin='7px' href='/write'/>
+                  </div>
+                  </Grid>
+                </Grid>
+              </div>
+            </div>
+          </Carousel.Item>
         </Carousel>
         </div>
 
@@ -107,24 +126,25 @@ export default class Home extends Component {
           <div className='home-aboutText2'>
               <h2 className="font-weight-bold">도미솔과 함께라면</h2>
               <br/>
-          <p>
-            도미솔 연애 고수들의 도움으로
-            <br/>
-              당신도 성공할 수 있습니다.
-            </p>
-            </div>
+              <p>
+                도미솔 연애 고수들의 도움으로
+                <br/>
+                당신도 성공할 수 있습니다.
+              </p>
+          </div>
         </Grid>
           </Grid>
           {/* aboutPage item 3 */}
           <Grid container spacing={3}  justify="flex-end" alignItems="center" alignContent="flex-end">
           <Grid item xs={12} sm={6}>
             <div className='home-aboutText1'>
-              <h2 className="font-weight-bold">도미솔은</h2>
+              <h2 className="font-weight-bold">도미솔에서</h2>
               <br/>
-          <p>
-              도움에 미친 솔로들,<br/>
-              그리고 연인들을 위해 탄생했습니다.
-            </p>
+              <p>
+                당신의 성공적인 연애를
+                <br/>
+                기원합니다.
+              </p>
             </div>
           
         </Grid>
@@ -160,7 +180,7 @@ export default class Home extends Component {
           </div>
             <div className="home-card-container">  
               <DeveloperCard name="고은희" role='frontend' major='정보통신공학과' email='eheheh327@naver.com ' git='eunhee-ko'/>
-              {/* <DeveloperCard name="이혜림" role='frontend' major='수학과' git='hye-rim-lee'/> */}
+              {/* <DeveloperCard name="이혜림" role='frontend' major='국어국문학과' git='hye-rim-lee'/> */}
               <DeveloperCard name="최지혜" role='frontend' major='도시행정학과' email='jangnyer@naver.com' git='jangnyer'/>
           </div>
         </div>

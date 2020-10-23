@@ -109,12 +109,11 @@ export default class Detail extends Component {
                                         </div>
                                     </section>
                                 </div>
-                                <section className="col-sm-6" style={{minWidth:500}}>
+                                <section className="col-sm-6" style={{minWidth:400}}>
                                     <img
                                         src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20110108_7%2Fwooroo88_1294461731368Btxio_JPEG%2F17773_S08_092951.jpg&type=sc960_832"
                                         alt="Boardpic"
-                                        width="100%"
-                                        height="550px"
+                                        // width="100%"
                                     />
                                 </section>
                             </div>

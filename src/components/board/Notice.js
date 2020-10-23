@@ -4,7 +4,7 @@ import {
     TableCell,
     TableContainer,
     Table,
-    TableHead,
+    // TableHead,
     TableBody,
 } from '@material-ui/core'
 
@@ -90,7 +90,7 @@ export default class Notice extends Component {
                         className={classes.table}
                         aria-label="simple table"
                     >
-                        <TableHead>
+                        {/* <TableHead>
                             <TableRow>
                                 <TableCell align="left">
                                     
@@ -106,11 +106,11 @@ export default class Notice extends Component {
                                     조회
                                 </TableCell>
                             </TableRow>
-                        </TableHead>
+                        </TableHead> */}
                         <TableBody>
                             {sliceBoards.map((row) => (
                                 <TableRow key={row.number}>
-                                    <TableCell align="left">
+                                    <TableCell align="left" style={{fontSize:'10px',color:'#5c5c5c'}}>
                                         {row.number}
                                     </TableCell>
 
@@ -119,16 +119,13 @@ export default class Notice extends Component {
                                         scope="row"
                                         style={{
                                             minWidth: 70,
-                                            width: '50%',
+                                            width: '75%',
                                         }}
                                     >
                                         {row.title}
                                     </TableCell>
-                                    <TableCell align="right">
+                                    <TableCell align="right" style={{fontSize:'5px',color:'gray'}}>
                                         {row.id}
-                                    </TableCell>
-                                    <TableCell align="right">
-                                        {row.views}
                                     </TableCell>
                                 </TableRow>
                             ))}

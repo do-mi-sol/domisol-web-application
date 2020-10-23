@@ -4,7 +4,7 @@ import {
     TableCell,
     TableContainer,
     Table,
-    TableHead,
+    // TableHead,
     TableBody,
 } from '@material-ui/core'
 
@@ -116,93 +116,6 @@ export default class BestBoard extends Component {
                 heart: 5,
                 views: 1000,
             },
-            {
-                number: '109',
-                id: '설한정',
-                gender: 'male',
-                title: '부천 그만',
-                time: '05:10',
-                box:'글 내용입니다아',
-                fileName:'파일 이름입니다',
-                heart: 5,
-                views: 1000,
-            },
-            {
-                number: '110',
-                id: '설한정',
-                gender: 'male',
-                title: '부천 그만',
-                time: '05:10',
-                box:'글 내용입니다아',
-                fileName:'파일 이름입니다',
-                heart: 5,
-                views: 1000,
-            },
-            {
-                number: '111',
-                id: '설한정',
-                gender: 'male',
-                title: '부천 그만',
-                time: '05:10',
-                box:'글 내용입니다아',
-                fileName:'파일 이름입니다',
-                heart: 5,
-                views: 1000,
-            },
-            {
-                number: '112',
-                id: '설한정',
-                gender: 'male',
-                title: '부천 그만',
-                time: '05:10',
-                box:'글 내용입니다아',
-                fileName:'파일 이름입니다',
-                heart: 5,
-                views: 1000,
-            },{
-                number: '113',
-                id: '설한정',
-                gender: 'male',
-                title: '부천 그만',
-                time: '05:10',
-                box:'글 내용입니다아',
-                fileName:'파일 이름입니다',
-                heart: 5,
-                views: 1000,
-            },
-            {
-                number: '114',
-                id: '최지혜',
-                gender: 'female',
-                title: '지혜 못본지 백만년',
-                time: '05:10',
-                box:'지혜아 언제와아아',
-                fileName:'파일 이름입니다',
-                heart: 5,
-                views: 1000,
-            },
-            {
-                number: '115',
-                id: '최지혜',
-                gender: 'female',
-                title: '지혜 못본지 백만년',
-                time: '05:10',
-                box:'지혜아 언제와아아',
-                fileName:'파일 이름입니다',
-                heart: 5,
-                views: 1000,
-            },
-            {
-                number: '116',
-                id: '최지혜',
-                gender: 'female',
-                title: '지혜 못본지 백만년',
-                time: '05:10',
-                box:'지혜아 언제와아아',
-                fileName:'파일 이름입니다',
-                heart: 5,
-                views: 1000,
-            },
         ],
     }
 
@@ -228,7 +141,7 @@ export default class BestBoard extends Component {
                         className={classes.table}
                         aria-label="simple table"
                     >
-                        <TableHead>
+                        {/* <TableHead>
                             <TableRow>
                                 <TableCell align="left">
                                     
@@ -244,11 +157,11 @@ export default class BestBoard extends Component {
                                     추천
                                 </TableCell>
                             </TableRow>
-                        </TableHead>
+                        </TableHead> */}
                         <TableBody>
                             {sliceBoards.map((row) => (
                                 <TableRow key={row.number}>
-                                    <TableCell align="left">
+                                    <TableCell align="left" style={{fontSize:'10px',color:'#5c5c5c'}}>
                                         {row.number}
                                     </TableCell>
 
@@ -257,16 +170,16 @@ export default class BestBoard extends Component {
                                         scope="row"
                                         style={{
                                             minWidth: 70,
-                                            width: '50%',
+                                            width: '75%',
                                         }}
                                     >
                                         {row.title}
                                     </TableCell>
-                                    <TableCell align="right">
+                                    {/* <TableCell align="right">
                                         {row.id}
-                                    </TableCell>
-                                    <TableCell align="right">
-                                        {row.heart}
+                                    </TableCell> */}
+                                    <TableCell align="right" style={{fontSize:'5px',color:'#d8afaf'}}>
+                                        추천 {row.heart}
                                     </TableCell>
                                 </TableRow>
                             ))}

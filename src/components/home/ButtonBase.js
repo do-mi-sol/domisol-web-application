@@ -10,7 +10,7 @@ const images = [
     href:'/board',
   },
   {
-    url: require('../../assets/images/pic2.jpg'),
+    url: 'https://cdn.pixabay.com/photo/2015/07/02/10/40/writing-828911_1280.jpg',
     title: '글 작성',
     width: '30%',
     href:'/write',

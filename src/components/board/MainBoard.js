@@ -82,7 +82,7 @@ export default class MainBoard extends Component {
                     <Table className={classes.table} aria-label="simple table">
                         <TableHead>
                             <TableRow>
-                                <TableCell align="left">글 번호</TableCell>
+                                <TableCell align="left" style={{color:'gray'}}>No.</TableCell>
                                 <TableCell align="center">제목</TableCell>
                                 <TableCell align="right">글쓴이</TableCell>
                                 <TableCell align="center">등록일</TableCell>
@@ -93,7 +93,9 @@ export default class MainBoard extends Component {
                         <TableBody>
                             {boards.map((row) => (
                                 <TableRow key={row.count}>
-                                    <TableCell align="left">{row.count}</TableCell>
+                                    <TableCell align="left" style={{fontSize:'7px',color:'gray'}}>
+                                        {row.count}
+                                    </TableCell>
 
                                     <TableCell
                                         component="th"
