@@ -46,6 +46,7 @@ export default class Detail extends Component {
             board_date,
             board_box,
             board_views,
+            board_filename,
         } = this.props.location.state.row;
 
         return (
@@ -125,7 +126,7 @@ export default class Detail extends Component {
                                 </div>
                                 <section className="col-sm-6" style={{ minWidth: 500 }}>
                                     <img
-                                        src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20110108_7%2Fwooroo88_1294461731368Btxio_JPEG%2F17773_S08_092951.jpg&type=sc960_832"
+                                        src={board_filename}
                                         alt="Boardpic"
                                         // width="100%"
                                     />

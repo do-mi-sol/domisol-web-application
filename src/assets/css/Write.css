@@ -10,6 +10,9 @@
 }
 
 /*컨테이너*/
+.write-box {
+    width: 650px;
+}
 
 .write-card-container {
     display: flex;
