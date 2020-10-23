@@ -18,8 +18,12 @@ export default class Detail extends Component {
     };
 
     requestInfo = async () => {
+        const { board_number } = this.props.location.state.row;
+
         await axios
-            .post(URL.comment)
+            .post(URL.comment, {
+                board_number,
+            })
             .then((res) => res.data)
             .then((body) => {
                 this.setState({
@@ -29,7 +33,7 @@ export default class Detail extends Component {
     };
 
     componentDidMount() {
-        // this.requestInfo();
+        this.requestInfo();
     }
 
     render() {
@@ -58,11 +62,17 @@ export default class Detail extends Component {
                 >
                     <Paper
                         elevation={3}
-                        style={{ width: "100%", padding: 40, borderRadius: 30, marginBottom: 50,minWidth:1200 }}
+                        style={{
+                            width: "100%",
+                            padding: 40,
+                            borderRadius: 30,
+                            marginBottom: 50,
+                            minWidth: 1200,
+                        }}
                     >
-                        <div container="col-sm-12" style={{minWidth:1180}}>
+                        <div container="col-sm-12" style={{ minWidth: 1180 }}>
                             <div className="row ">
-                                <div className="col-sm-6" style={{minWidth:590}}>
+                                <div className="col-sm-6" style={{ minWidth: 590 }}>
                                     <section className="detail-boardtext">
                                         <h6>도미솔 {count}번째 글</h6>
                                         <h2>{board_title}</h2>
@@ -79,8 +89,9 @@ export default class Detail extends Component {
                                                             icon={"male"}
                                                             style={{
                                                                 color: "skyblue",
-                                                                position:'relative',
-                                                                top:5, left:5,
+                                                                position: "relative",
+                                                                top: 5,
+                                                                left: 5,
                                                             }}
                                                         />
                                                     ) : (
@@ -88,13 +99,16 @@ export default class Detail extends Component {
                                                             icon={"female"}
                                                             style={{
                                                                 color: "pink",
-                                                                position:'relative',
-                                                                top:5, left:5,
+                                                                position: "relative",
+                                                                top: 5,
+                                                                left: 5,
                                                             }}
                                                         />
                                                     )}
                                                 </div>
-                                                <p style={{width:'60%'}}>{new Date(board_date).toLocaleString()} </p>
+                                                <p style={{ width: "60%" }}>
+                                                    {new Date(board_date).toLocaleString()}
+                                                </p>
                                             </div>
 
                                             <p>{board_box}</p>
@@ -109,7 +123,7 @@ export default class Detail extends Component {
                                         </div>
                                     </section>
                                 </div>
-                                <section className="col-sm-6" style={{minWidth:400}}>
+                                <section className="col-sm-6" style={{ minWidth: 500 }}>
                                     <img
                                         src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20110108_7%2Fwooroo88_1294461731368Btxio_JPEG%2F17773_S08_092951.jpg&type=sc960_832"
                                         alt="Boardpic"
@@ -119,27 +133,30 @@ export default class Detail extends Component {
                             </div>
                         </div>
                     </Paper>
-                <div className="detail-commentContainer">
-                    <h4>Leave a comment:</h4>
-                    <Form role="form">
-                        <div className="detail-rowWrapper">
-                            <div className="detail-form-group">
-                                <textarea className="form-control" rows="3" required></textarea>
+                    <div className="detail-commentContainer">
+                        <h4>Leave a comment:</h4>
+                        <Form role="form">
+                            <div className="detail-rowWrapper">
+                                <div className="detail-form-group">
+                                    <textarea className="form-control" rows="3" required></textarea>
+                                </div>
+                                <DMSButton height="100%" width="80px">
+                                    등록
+                                </DMSButton>
+                                {/* <button type="submit" className="btn btn-warning btn-lg">등록</button> */}
                             </div>
-                            <DMSButton height="100%" width="80px">등록</DMSButton>
-                            {/* <button type="submit" className="btn btn-warning btn-lg">등록</button> */}
+                        </Form>
+                        <div>
+                            {comments.map((value) => (
+                                <Comment
+                                    key={value.comment_number}
+                                    name={value.user_id}
+                                    date={new Date(value.comment_date).toLocaleString()}
+                                    text={value.comment_box}
+                                ></Comment>
+                            ))}
                         </div>
-                    </Form>
-                    <div>
-                        {comments.map((value) => (
-                            <Comment
-                                name={value.user_id}
-                                date={value.comment_date}
-                                text={value.comment_box}
-                            ></Comment>
-                        ))}
                     </div>
-                </div>
                 </Container>
             </div>
         );

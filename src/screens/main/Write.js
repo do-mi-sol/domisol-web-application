@@ -3,6 +3,7 @@ import { CustomInput, FormGroup, Label } from "reactstrap";
 import { Typography, Paper } from "@material-ui/core";
 import axios from "axios";
 
+import DMSInput from "../../components/customs/DMSInput";
 import DMSButton from "../../components/customs/DMSButton";
 import TextEditor from "../../components/write/TextEditor";
 import TitleInput from "../../components/write/TitleInput";
@@ -15,19 +16,16 @@ export default class Write extends Component {
     state = {
         title: "",
         test: "https://cdn.clien.net/web/api/file/F01/3802215/92348cd7fe8441e8956.JPG",
-        file: "",
+        file: "dfs.jpg",
         previewURL: "",
+        box: "",
     };
 
     handleChange = (e) => {
         this.setState({
             [e.target.name]: e.target.value,
         });
-    };
-
-    onChangeText = (key, value) => {
-        this.setState({ [key]: value });
-        // 생소한 문법이지만 key가 'email' 일 때 [key]: value 부분은 email: value 로 변경됨
+        console.log(this.state.file);
     };
 
     //사진저장후 프리뷰함수
@@ -37,7 +35,6 @@ export default class Write extends Component {
         let file = event.target.files[0];
         reader.onloadend = () => {
             this.setState({
-                test: "",
                 file: file,
                 previewURL: reader.result,
             });
@@ -53,14 +50,14 @@ export default class Write extends Component {
     write = async () => {
         const token = await localStorage.getItem("token");
         const bearer = `Bearer ${token}`;
-        const { title } = this.state;
+        const { title, box, file } = this.state;
         await axios
             .post(
                 URL.boardwrite,
                 {
                     board_title: title,
-                    // board_box: box,
-                    // board_filename: file
+                    board_box: box,
+                    board_filename: file.name,
                 },
                 {
                     headers: {
@@ -77,18 +74,12 @@ export default class Write extends Component {
     };
 
     render() {
-        const { title, box } = this.state;
-        let talk_preview = null;
+        const { title, box, file } = this.state;
+        let talk_preview = "";
 
-        if (this.state.file !== "") {
-            talk_preview = <img className="talk_preview" src={this.state.previewURL} alt="" />;
-        }
         return (
             <div className="write-background">
-                <div
-                    className="write-card-container"
-                    style={{ justifyContent: "center", alignItems: "center" }}
-                >
+                <div className="write-card-container">
                     <Paper
                         elevation={3}
                         style={{
@@ -100,7 +91,7 @@ export default class Write extends Component {
                             alignItems: "center",
                         }}
                     >
-                        <form className="container" onSubmit={this.handleSudmit}>
+                        <div className="container">
                             <div className="write-boardtext">
                                 <Typography
                                     variant="h5"
@@ -113,23 +104,24 @@ export default class Write extends Component {
                                     잘하고싶다.. 연애
                                 </Typography>
                             </div>
-                            <hr className="write-line2" />
+
                             <div className="write-container">
                                 <div className="write-picture-container">
                                     <Label for="talk_img">
                                         <img
+                                            fixed
                                             className="write-talk-img"
-                                            src={this.state.test}
+                                            src={require("../../assets/images/message_help.gif")}
+                                            style={{ height: 650 }}
                                             alt=""
                                         />
                                     </Label>
                                     <CustomInput
                                         type="file"
-                                        id="talk_img"
                                         accept="image/jpg,image/png,image/jpeg"
-                                        name="talk_img"
+                                        name="file"
                                         className="write-talk-input"
-                                        onChange={this.handleFileOnChange}
+                                        onChange={this.handleChange}
                                     />
                                     {talk_preview}
                                 </div>
@@ -137,30 +129,30 @@ export default class Write extends Component {
                                 <div className="write-input-container">
                                     <FormGroup>
                                         <div className="write-title-input">
-                                            <TitleInput
-                                                className="write-title-input"
+                                            <DMSInput
+                                                variant="outlined"
+                                                name="title"
                                                 value={title}
                                                 onChange={this.handleChange}
-                                                type="title"
-                                                label="TITLE"
-                                                variant="outlined"
+                                                placeholder="제목을 입력해주세요."
                                             />
                                         </div>
 
                                         <div className="write-contents-input">
                                             <TextEditor
-                                                value={this.props.box}
+                                                value={box}
                                                 name="box"
-                                                onChange={(val) => {
-                                                    this.onChangeText("box", val);
-                                                    console.log(val);
+                                                onChange={(content, delta, source, editor) => {
+                                                    this.setState({
+                                                        box: content,
+                                                    });
                                                 }}
                                             />
                                         </div>
                                     </FormGroup>
                                 </div>
                             </div>
-                        </form>
+                        </div>
 
                         <div className="write-button-container">
                             <div className="write-button">
@@ -178,7 +170,11 @@ export default class Write extends Component {
                                 </DMSButton>
                             </div>
                             <div className="write-button">
-                                <DMSButton className="write-write-button" variant="contained">
+                                <DMSButton
+                                    className="write-write-button"
+                                    variant="contained"
+                                    // onClick={window.location.assign("/board")}
+                                >
                                     목록
                                 </DMSButton>
                             </div>
