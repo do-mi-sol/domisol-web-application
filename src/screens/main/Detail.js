@@ -17,6 +17,7 @@ export default class Detail extends Component {
         comments: [],
         comment_date: null,
         comment_box: "",
+        board_heart: 0,
     };
 
     handleChange = (e) => {
@@ -43,7 +44,7 @@ export default class Detail extends Component {
 
     comment = async () => {
         const { board_number } = this.props.location.state.row;
-        const { comment_box, comment_date } = this.state;
+        const { comment_box } = this.state;
         const token = await localStorage.getItem("token");
         const bearer = `Bearer ${token}`;
 
@@ -57,7 +58,6 @@ export default class Detail extends Component {
                     {
                         board_number,
                         comment_box,
-                        comment_date: new Date().toLocaleString(),
                     },
                     {
                         headers: {
@@ -77,12 +77,39 @@ export default class Detail extends Component {
         }
     };
 
+    boardHeart = async () => {
+        const token = await localStorage.getItem("token");
+        const bearer = `Bearer ${token}`;
+        const { board_number } = this.props.location.state.row;
+
+        await axios
+            .post(
+                URL.boardheart,
+                { board_number },
+                {
+                    headers: {
+                        Authorization: bearer,
+                    },
+                }
+            )
+            .then((res) => res.data)
+            .then((body) => {
+                console.log(body);
+                if (body.success) {
+                    alert("하트를 받았어요!");
+                    window.location.reload();
+                } else {
+                    alert(body.message);
+                }
+            });
+    };
+
     componentDidMount() {
         this.requestInfo();
     }
 
     render() {
-        const { comments, comment_box } = this.state;
+        const { comments, comment_box, board_heart } = this.state;
         const {
             count,
             board_title,
@@ -165,7 +192,14 @@ export default class Detail extends Component {
                                             style={{ justifyContent: "space-between" }}
                                         >
                                             <p>조회 : {board_views}</p>
-                                            <Counter />
+                                            <button
+                                                onClick={this.boardHeart}
+                                                type="button"
+                                                className="btn btn-danger btn-sm"
+                                            >
+                                                <span className="glyphicon glyphicon-heart"></span>
+                                                Heart {board_heart}
+                                            </button>
                                         </div>
                                     </section>
                                 </div>
