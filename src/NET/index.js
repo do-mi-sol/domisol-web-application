@@ -15,6 +15,7 @@ let URL = {
     boardwrite: `${host}/api/board/write`,
     boardview: `${host}/api/board/view`,
     boardheart: `${host}/api/board/heart`,
+    boardbest: `${host}/api/board/best`,
 
     comment: `${host}/api/comment`,
     commentwrite: `${host}/api/comment/write`,

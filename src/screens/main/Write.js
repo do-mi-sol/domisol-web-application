@@ -1,7 +1,6 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 import { CustomInput, FormGroup, Label } from "reactstrap";
 import { Typography, Paper, Divider, TextField } from "@material-ui/core";
-// import { Link } from "react-router-dom";
 import axios from "axios";
 
 import DMSInput from "../../components/customs/DMSInput";
@@ -16,6 +15,7 @@ function Write() {
     const [imgFile, setImgFile] = useState(null);
     const [tempImg, setDataURI] = useState(require("../../assets/images/message_help.gif"));
     const [filename, setFileName] = useState("");
+    console.log(imgBase64 + imgFile);
 
     const [box, setBox] = useState("");
     const [title, setTitle] = useState("");
@@ -136,7 +136,7 @@ function Write() {
                                             variant="outlined"
                                             name="title"
                                             value={title}
-                                            width='100%'
+                                            width="100%"
                                             onChange={(e) => setTitle(e.target.value)}
                                             placeholder="제목을 입력해주세요."
                                         />
@@ -153,7 +153,7 @@ function Write() {
                                                     rows={30}
                                                     variant="outlined"
                                                     onChange={(e) => setBox(e.target.value)}
-                                                    style={{overflow: 'auto', width:'100%'}}
+                                                    style={{ overflow: "auto", width: "100%" }}
                                                 />
                                             </div>
                                         </form>

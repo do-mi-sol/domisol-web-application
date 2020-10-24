@@ -11,8 +11,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import Pagination from "./Pagination";
 
 import URL from "../../NET";
@@ -47,10 +45,7 @@ export default class MainBoard extends Component {
             .post(URL.boardview, {
                 board_number: number,
             })
-            .then((res) => res.data)
-            .then((body) => {
-                console.log(body);
-            });
+            .then((res) => res.data);
     };
 
     componentDidMount() {
