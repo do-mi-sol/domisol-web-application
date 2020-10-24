@@ -42,6 +42,17 @@ export default class MainBoard extends Component {
             });
     };
 
+    boardView = async (number) => {
+        await axios
+            .post(URL.boardview, {
+                board_number: number,
+            })
+            .then((res) => res.data)
+            .then((body) => {
+                console.log(body);
+            });
+    };
+
     componentDidMount() {
         this.requestInfo();
         this.setState({ numOfData: this.state.boards.length });
@@ -82,18 +93,22 @@ export default class MainBoard extends Component {
                     <Table className={classes.table} aria-label="simple table">
                         <TableHead>
                             <TableRow>
-                                <TableCell align="left" style={{color:'gray'}}>No.</TableCell>
+                                <TableCell align="left" style={{ color: "gray" }}>
+                                    No.
+                                </TableCell>
                                 <TableCell align="center">제목</TableCell>
                                 <TableCell align="right">글쓴이</TableCell>
                                 <TableCell align="center">등록일</TableCell>
                                 <TableCell align="right">조회</TableCell>
-                                <TableCell align="right">추천</TableCell>
                             </TableRow>
                         </TableHead>
                         <TableBody>
                             {boards.map((row) => (
                                 <TableRow key={row.count}>
-                                    <TableCell align="left" style={{fontSize:'7px',color:'gray'}}>
+                                    <TableCell
+                                        align="left"
+                                        style={{ fontSize: "7px", color: "gray" }}
+                                    >
                                         {row.count}
                                     </TableCell>
 
@@ -110,15 +125,15 @@ export default class MainBoard extends Component {
                                                 pathname: "/detail",
                                                 state: { row },
                                             }}
+                                            onClick={() => this.boardView(row.board_number)}
                                         >
                                             {row.board_title}
                                         </Link>
                                     </TableCell>
                                     <TableCell align="right">{row.user_id}</TableCell>
                                     <TableCell align="right">
-                                        {new Date(row.board_date).toLocaleString().slice(0,14)}
+                                        {new Date(row.board_date).toLocaleString().slice(0, 14)}
                                     </TableCell>
-                                    <TableCell align="right">{row.board_views}</TableCell>
                                     <TableCell align="right">{row.board_views}</TableCell>
                                 </TableRow>
                             ))}
