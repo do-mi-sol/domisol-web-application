@@ -23,7 +23,6 @@ export default class Detail extends Component {
         this.setState({
             [e.target.name]: e.target.value,
         });
-        console.log(this.state.comment_box);
     };
 
     requestInfo = async () => {
@@ -35,7 +34,6 @@ export default class Detail extends Component {
             })
             .then((res) => res.data)
             .then((body) => {
-                console.log(body);
                 this.setState({
                     comments: body.data.comment,
                     board_heart: body.data.board_heart,
@@ -124,6 +122,7 @@ export default class Detail extends Component {
             board_views,
             board_filename,
         } = this.props.location.state.row;
+        console.log(board_filename);
 
         return (
             <div>

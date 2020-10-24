@@ -14,8 +14,8 @@ function Write() {
     const [imgBase64, setImgBase64] = useState("");
     const [imgFile, setImgFile] = useState(null);
     const [tempImg, setDataURI] = useState(require("../../assets/images/message_help.gif"));
-    const [filename, setFileName] = useState("");
-    console.log(imgBase64 + imgFile);
+    const [board_filename, setFileName] = useState("");
+    console.log(board_filename);
 
     const [box, setBox] = useState("");
     const [title, setTitle] = useState("");
@@ -48,7 +48,18 @@ function Write() {
         }
     };
 
-    const write = async () => {
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const formData = new FormData();
+        formData.append("board_box", event.target.box.value);
+        formData.append("board_title", event.target.title.value);
+        formData.append("board_filename", event.target.board_filename.files[0]);
+        console.log(formData);
+
+        write(formData);
+    };
+
+    const write = async (formData) => {
         const token = await localStorage.getItem("token");
         const bearer = `Bearer ${token}`;
         if (token == null) {
@@ -56,19 +67,11 @@ function Write() {
             window.location.assign("/login");
         } else {
             await axios
-                .post(
-                    URL.boardwrite,
-                    {
-                        board_title: title,
-                        board_box: box,
-                        board_filename: filename,
+                .post(URL.boardwrite, formData, {
+                    headers: {
+                        Authorization: bearer,
                     },
-                    {
-                        headers: {
-                            Authorization: bearer,
-                        },
-                    }
-                )
+                })
                 .then((res) => res.data)
                 .then((body) => {
                     if (body.success) {
@@ -119,14 +122,33 @@ function Write() {
                                 <Label for="talk_img">
                                     <img className="write-talk-img" src={tempImg} alt="" />
                                 </Label>
-                                <CustomInput
-                                    type="file"
-                                    id="file-input"
-                                    accept="image/jpg,image/png,image/jpeg"
-                                    name="file"
-                                    className="write-talk-input"
-                                    onChange={handleChangeFile}
-                                />
+                                <form encType="multipart/form-data" onSubmit={handleSubmit}>
+                                    <p>
+                                        <input
+                                            type="text"
+                                            name="title"
+                                            onChange={(e) => setTitle(e.target.value)}
+                                            value={title}
+                                        ></input>
+                                    </p>
+                                    <p>
+                                        <input
+                                            type="text"
+                                            name="box"
+                                            onChange={(e) => setBox(e.target.value)}
+                                            value={box}
+                                        ></input>
+                                    </p>
+                                    <input
+                                        type="file"
+                                        id="file-input"
+                                        accept="image/jpg,image/png,image/jpeg"
+                                        name="board_filename"
+                                        className="write-talk-input"
+                                        onChange={handleChangeFile}
+                                    />
+                                    <button type="submit">Upload</button>
+                                </form>
                             </div>
 
                             <div className="write-input-container">
@@ -165,13 +187,9 @@ function Write() {
 
                     <div className="write-button-container">
                         <div className="write-button">
-                            <DMSButton
-                                className="write-write-button"
-                                variant="contained"
-                                onClick={write}
-                            >
+                            <form encType="multipart/form-data" onSubmit={write}>
                                 글쓰기
-                            </DMSButton>
+                            </form>
                         </div>
                         <div className="write-button">
                             <DMSButton className="write-write-button" variant="contained">

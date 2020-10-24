@@ -19,6 +19,7 @@ export default class Login extends Component {
         this.setState({
             [e.target.name]: e.target.value,
         });
+        console.log(e.target.value);
     };
 
     //
@@ -100,9 +101,25 @@ export default class Login extends Component {
                 </Container>
 
                 <div>
-                    <DMSButton children="회원가입" margin={20} href="/signup" color="null" textColor='black'/>
-                    <DMSButton children="아이디 찾기" color="null" href="/findid" textColor='black' />
-                    <DMSButton children="비밀번호 찾기" color="null" href="/findpw" textColor='black' />
+                    <DMSButton
+                        children="회원가입"
+                        margin={20}
+                        href="/signup"
+                        color="null"
+                        textColor="black"
+                    />
+                    <DMSButton
+                        children="아이디 찾기"
+                        color="null"
+                        href="/findid"
+                        textColor="black"
+                    />
+                    <DMSButton
+                        children="비밀번호 찾기"
+                        color="null"
+                        href="/findpw"
+                        textColor="black"
+                    />
                 </div>
             </div>
         );
