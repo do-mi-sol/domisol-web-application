@@ -174,14 +174,14 @@ export default class Home extends Component {
             do-mi-sol developer
           </h3>
           <div className="home-card-container">
-            <DeveloperCard name="김희연" role='frontend' major='컴퓨터공학부' email='heeeee0818@gmail.com' git='HeeYeonKim98'/>
-            <DeveloperCard name="설한정" role='frontend' major='컴퓨터공학부' email="hanjeong94@naver.com" git='HanJeongSeol' instagram='hanjeonnnng/' blog='https://seol-limit.tistory.com/'/>
+            <DeveloperCard name="김희연" role='frontend & backend' major='컴퓨터공학부' email='heeeee0818@gmail.com' git='HeeYeonKim98'/>
+            <DeveloperCard name="설한정" role='backend' major='컴퓨터공학부' email="hanjeong94@naver.com" git='HanJeongSeol' instagram='hanjeonnnng/' blog='https://seol-limit.tistory.com/'/>
             <DeveloperCard name="강민정" role='frontend' major='수학과' email='minj2058@gmail.com' git='Minjeong-K' instagram='m._.jeongs2/' blog='https://blog.naver.com/rkd5183'/>
           </div>
             <div className="home-card-container">  
               <DeveloperCard name="고은희" role='frontend' major='정보통신공학과' email='eheheh327@naver.com ' git='eunhee-ko'/>
               <DeveloperCard name="이혜림" role='frontend' major='문헌정보학과' email='luvme121@likelion.org' git='hye-rim-lee'/>
-              <DeveloperCard name="최지혜" role='frontend' major='도시행정학과' email='jangnyer@naver.com' git='jangnyer'/>
+              <DeveloperCard name="최지혜" role='design & frontend' major='도시행정학과' email='jangnyer@naver.com' git='jangnyer'/>
           </div>
         </div>
           </Container>

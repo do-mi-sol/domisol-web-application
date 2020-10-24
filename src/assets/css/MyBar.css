@@ -1,6 +1,7 @@
 .mybar-container {
     border: 1px solid rgb(201, 201, 201);
-    width: 700px;
+    width: 80%;
+    min-width: 700px;
     height: 200px;
     border-radius: 15px;
     box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.1);

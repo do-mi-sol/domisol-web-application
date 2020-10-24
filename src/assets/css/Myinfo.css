@@ -47,7 +47,8 @@
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 
-    transition: color 0.16s ease-in-out, background-color 0.16s ease-in-out,
+    transition: color 0.16s ease-in-out,
+        background-color 0.16s ease-in-out,
         border-color 0.16s ease-in-out;
 }
 
@@ -83,6 +84,7 @@
 
 .panel-container {
     width: 100%;
+    min-width: 850px;
 
     background-color: #f2f2f2;
     padding-top: 7%;

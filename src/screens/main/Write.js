@@ -136,6 +136,7 @@ function Write() {
                                             variant="outlined"
                                             name="title"
                                             value={title}
+                                            width='100%'
                                             onChange={(e) => setTitle(e.target.value)}
                                             placeholder="제목을 입력해주세요."
                                         />
@@ -152,6 +153,7 @@ function Write() {
                                                     rows={30}
                                                     variant="outlined"
                                                     onChange={(e) => setBox(e.target.value)}
+                                                    style={{overflow: 'auto', width:'100%'}}
                                                 />
                                             </div>
                                         </form>
