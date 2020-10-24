@@ -70,7 +70,7 @@ export default function MyReply() {
                     marginBottom: 50,
                 }}
             >
-                <Divider style={{ backgroundColor: "#ffd400" }} />
+                <Divider style={{ backgroundColor: "#c19393" }} />
                 <Table className={classes.table} size="small" aria-label="a dense table">
                     <TableBody>
                         {(rowsPerPage > 0

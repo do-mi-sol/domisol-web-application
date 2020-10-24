@@ -46,6 +46,21 @@ export default class Myinfo extends Component {
                             <Tab>나의 정보</Tab>
                             <Tab>나의 정보 수정</Tab>
                         </div>
+                        <Panel>
+                            <div className="panel-container">
+                                <Container
+                                    style={{
+                                        width: "80%",
+                                        minWidth: 900,
+                                        display: "flex",
+                                        justifyContent: "center",
+                                        alignItems: "center",
+                                    }}
+                                >
+                                    <MyProfile />
+                                </Container>
+                            </div>
+                        </Panel>
 
                         <Panel>
                             <div className="panel-container">
@@ -60,22 +75,6 @@ export default class Myinfo extends Component {
                                 >
                                     <MyWritten />
                                     <MyReply />
-                                </Container>
-                            </div>
-                        </Panel>
-
-                        <Panel>
-                            <div className="panel-container">
-                                <Container
-                                    style={{
-                                        width: "80%",
-                                        minWidth: 900,
-                                        display: "flex",
-                                        justifyContent: "center",
-                                        alignItems: "center",
-                                    }}
-                                >
-                                    <MyProfile />
                                 </Container>
                             </div>
                         </Panel>

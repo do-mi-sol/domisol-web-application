@@ -47,8 +47,7 @@
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 
-    transition: color 0.16s ease-in-out,
-        background-color 0.16s ease-in-out,
+    transition: color 0.16s ease-in-out, background-color 0.16s ease-in-out,
         border-color 0.16s ease-in-out;
 }
 
@@ -64,8 +63,8 @@
 .tab.active {
     /* background-color: #492796;
     border-color: #492796; */
-    background-color: #858585;
-    border-color: #807959;
+    background-color: #c2bab2;
+    border-color: #f2f2f2;
     color: white;
     cursor: default;
 }
@@ -86,7 +85,7 @@
     width: 100%;
     min-width: 850px;
 
-    background-color: #f2f2f2;
+    background-color: #eeecec;
     padding-top: 7%;
     padding-bottom: 20vh;
     border-radius: 15px;

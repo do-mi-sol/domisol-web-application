@@ -58,7 +58,14 @@ export default function MyWritten() {
     };
     return (
         <TableContainer className={classes.container}>
-            <h4 style={{ color: "gray",textShadow: "1px 1px 1px gray", marginBottom: 10,paddingLeft:10}}>
+            <h4
+                style={{
+                    color: "gray",
+                    textShadow: "1px 1px 1px gray",
+                    marginBottom: 10,
+                    paddingLeft: 10,
+                }}
+            >
                 내가 쓴 글
             </h4>
             <Paper
@@ -70,8 +77,7 @@ export default function MyWritten() {
                     marginBottom: 50,
                 }}
             >
-                
-                <Divider style={{ backgroundColor: "#ffd400" }} />
+                <Divider style={{ backgroundColor: "#c19393" }} />
                 <Table className={classes.table} size="small" aria-label="a dense table">
                     <TableBody>
                         {(rowsPerPage > 0

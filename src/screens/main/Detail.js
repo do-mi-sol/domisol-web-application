@@ -3,7 +3,6 @@ import { Form } from "react-bootstrap";
 import { Paper, Container } from "@material-ui/core";
 import axios from "axios";
 
-// import "bootstrap/dist/css/bootstrap.min.css";
 import "../../assets/css/Detail.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Comment from "../../components/detail/Comment";
@@ -17,6 +16,7 @@ export default class Detail extends Component {
         comment_date: null,
         comment_box: "",
         board_heart: 0,
+        board_filename_init: "",
     };
 
     handleChange = (e) => {
@@ -207,7 +207,12 @@ export default class Detail extends Component {
                                     </section>
                                 </div>
                                 <section className="col-sm-6" style={{ minWidth: 500 }}>
-                                    <img src={board_filename} alt="Boardpic" />
+                                    <img
+                                        src={board_filename}
+                                        alt="Boardpic"
+                                        width={300}
+                                        style={{ marginLeft: 130 }}
+                                    />
                                 </section>
                             </div>
                         </div>
