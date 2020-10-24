@@ -7,7 +7,6 @@ import axios from "axios";
 import "../../assets/css/Detail.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Comment from "../../components/detail/Comment";
-import Counter from "../../components/detail/Counter";
 
 import URL from "../../NET";
 import DMSButton from "../../components/customs/DMSButton";
@@ -36,8 +35,10 @@ export default class Detail extends Component {
             })
             .then((res) => res.data)
             .then((body) => {
+                console.log(body);
                 this.setState({
                     comments: body.data.comment,
+                    board_heart: body.data.board_heart,
                 });
             });
     };
@@ -96,6 +97,9 @@ export default class Detail extends Component {
             .then((body) => {
                 console.log(body);
                 if (body.success) {
+                    this.setState({
+                        board_heart: body.data.board_heart,
+                    });
                     alert("하트를 받았어요!");
                     window.location.reload();
                 } else {
