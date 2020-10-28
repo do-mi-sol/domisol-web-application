@@ -120,7 +120,12 @@ function Write() {
                         <div className="write-container">
                             <div className="write-picture-container">
                                 <Label for="talk_img">
-                                    <img className="write-talk-img" src={tempImg} alt="" />
+                                    <img
+                                        className="write-talk-img"
+                                        src={tempImg}
+                                        alt=""
+                                        style={{ width: 300 }}
+                                    />
                                 </Label>
                                 <div>
                                     <form encType="multipart/form-data" onSubmit={handleSubmit}>
@@ -150,31 +155,27 @@ function Write() {
                                             className="write-talk-input"
                                             onChange={handleChangeFile}
                                         />
-                                        <button type="submit">Upload</button>
+
+                                        <div className="write-button-container">
+                                            <div className="write-button">
+                                                <button type="submit">글 쓰기</button>
+                                            </div>
+                                            <div className="write-button">
+                                                <DMSButton
+                                                    className="write-write-button"
+                                                    variant="contained"
+                                                    onClick={() => {
+                                                        window.location.assign("/board");
+                                                    }}
+                                                >
+                                                    목록
+                                                </DMSButton>
+                                            </div>
+                                        </div>
                                     </form>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div className="write-button-container">
-                        <div className="write-button">
-                            <form encType="multipart/form-data" onSubmit={write}>
-                                글쓰기
-                            </form>
-                        </div>
-                        <div className="write-button">
-                            <DMSButton
-                                className="write-write-button"
-                                variant="contained"
-                                onClick={() => {
-                                    window.location.assign("/board");
-                                }}
-                            >
-                                목록
-                            </DMSButton>
-                        </div>
-                        <br></br>
                     </div>
                 </Paper>
             </div>
