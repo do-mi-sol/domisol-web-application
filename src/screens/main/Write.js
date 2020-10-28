@@ -124,7 +124,7 @@ function Write() {
                                         className="write-talk-img"
                                         src={tempImg}
                                         alt=""
-                                        style={{ width: 660, marginLeft: 100, height: 1200 }}
+                                        style={{ width: 660, marginLeft: 100 }}
                                     />
                                 </Label>
                                 <div style={{ marginLeft: 250 }}>
@@ -162,7 +162,7 @@ function Write() {
                                                     type="submit"
                                                     style={{
                                                         borderRadius: 3,
-                                                        height: 30,
+                                                        height: 40,
                                                         backgroundColor: "#c19393",
                                                         color: "white",
                                                     }}
