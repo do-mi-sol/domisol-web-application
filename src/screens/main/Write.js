@@ -122,65 +122,37 @@ function Write() {
                                 <Label for="talk_img">
                                     <img className="write-talk-img" src={tempImg} alt="" />
                                 </Label>
-                                <form encType="multipart/form-data" onSubmit={handleSubmit}>
-                                    <p>
+                                <div>
+                                    <form encType="multipart/form-data" onSubmit={handleSubmit}>
                                         <input
+                                            style={{ width: 500, height: 35, marginBottom: 30 }}
                                             type="text"
                                             name="title"
                                             onChange={(e) => setTitle(e.target.value)}
+                                            placeholder="제목을 입력해주세요"
                                             value={title}
                                         ></input>
-                                    </p>
-                                    <p>
+
                                         <input
+                                            style={{ width: 500, height: 500 }}
                                             type="text"
                                             name="box"
+                                            placeholder="내용을 입력해주세요"
                                             onChange={(e) => setBox(e.target.value)}
                                             value={box}
                                         ></input>
-                                    </p>
-                                    <input
-                                        type="file"
-                                        id="file-input"
-                                        accept="image/jpg,image/png,image/jpeg"
-                                        name="board_filename"
-                                        className="write-talk-input"
-                                        onChange={handleChangeFile}
-                                    />
-                                    <button type="submit">Upload</button>
-                                </form>
-                            </div>
 
-                            <div className="write-input-container">
-                                <FormGroup>
-                                    <div className="write-title-input">
-                                        <DMSInput
-                                            variant="outlined"
-                                            name="title"
-                                            value={title}
-                                            width="100%"
-                                            onChange={(e) => setTitle(e.target.value)}
-                                            placeholder="제목을 입력해주세요."
+                                        <input
+                                            type="file"
+                                            id="file-input"
+                                            accept="image/jpg,image/png,image/jpeg"
+                                            name="board_filename"
+                                            className="write-talk-input"
+                                            onChange={handleChangeFile}
                                         />
-                                    </div>
-
-                                    <div className="write-contents-input">
-                                        <form noValidate autoComplete="off">
-                                            <div>
-                                                <TextField
-                                                    className="write-box"
-                                                    placeholder="내용을 입력해주세요."
-                                                    value={box}
-                                                    multiline
-                                                    rows={30}
-                                                    variant="outlined"
-                                                    onChange={(e) => setBox(e.target.value)}
-                                                    style={{ overflow: "auto", width: "100%" }}
-                                                />
-                                            </div>
-                                        </form>
-                                    </div>
-                                </FormGroup>
+                                        <button type="submit">Upload</button>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
