@@ -3,10 +3,11 @@ import { TableRow, TableCell, TableContainer, Table, TableBody } from "@material
 
 import { makeStyles } from "@material-ui/core/styles";
 import paginate from "./Paginate";
+
 export default class Notice extends Component {
     state = {
         currentPage: 1,
-        limit: 5, // 한페이지에 보이는 data의 limit
+        limit: 5,
         numOfData: 0,
         pageArr: [],
         boards: [

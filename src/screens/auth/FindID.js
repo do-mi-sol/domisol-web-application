@@ -1,40 +1,40 @@
-import React, {Component} from 'react'
-import {Container, Divider} from '@material-ui/core'
-import DMSInput from '../../components/customs/DMSInput'
-import DMSButton from '../../components/customs/DMSButton'
+import React, { Component } from "react";
+import { Container, Divider } from "@material-ui/core";
+import DMSInput from "../../components/customs/DMSInput";
+import DMSButton from "../../components/customs/DMSButton";
+
 export default class FindID extends Component {
     state = {
-        name: '',
-        email: '',
-    }
+        name: "",
+        email: "",
+    };
     handleChange = (e) => {
         this.setState({
             [e.target.name]: e.target.value,
-        })
-        console.log(e.target.value)
-    }
+        });
+        console.log(e.target.value);
+    };
 
     render() {
-        const {name, email} = this.state
+        const { name, email } = this.state;
         return (
             <Container
                 maxWidth="xs"
                 style={{
                     marginTop: 50,
                     marginBottom: 20,
-                    paddingTop: '10vh',
-                    minHeight: '90vh',
+                    paddingTop: "10vh",
+                    minHeight: "90vh",
                 }}
             >
                 <img
                     className="signUp-logoIcon"
-                    src={require('../../assets/images/Logo3.png')}
+                    src={require("../../assets/images/Logo3.png")}
                     alt="logo"
                 />
                 <h3>아이디 찾기</h3>
                 <Divider />
                 <br />
-                {/* NAME */}
                 <div>
                     <DMSInput
                         value={name}
@@ -43,11 +43,9 @@ export default class FindID extends Component {
                         label="NAME"
                         onChange={this.handleChange}
                         variant="outlined"
-                        // helper="등록되어있는 이름을 입력해주세요."
                     />
                 </div>
 
-                {/* EMAIL */}
                 <div>
                     <DMSInput
                         value={email}
@@ -72,6 +70,6 @@ export default class FindID extends Component {
                     </div>
                 </div>
             </Container>
-        )
+        );
     }
 }

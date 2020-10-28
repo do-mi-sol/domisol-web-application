@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { CustomInput, FormGroup, Label } from "reactstrap";
-import { Typography, Paper, Divider, TextField } from "@material-ui/core";
+import { Label } from "reactstrap";
+import { Typography, Paper, Divider } from "@material-ui/core";
 import axios from "axios";
 
-import DMSInput from "../../components/customs/DMSInput";
 import DMSButton from "../../components/customs/DMSButton";
 
 import URL from "../../NET";

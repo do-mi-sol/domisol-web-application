@@ -1,42 +1,42 @@
-import React, {Component} from 'react'
-import {Container, Divider} from '@material-ui/core'
-import DMSInput from '../../components/customs/DMSInput'
-import DMSButton from '../../components/customs/DMSButton'
+import React, { Component } from "react";
+import { Container, Divider } from "@material-ui/core";
+import DMSInput from "../../components/customs/DMSInput";
+import DMSButton from "../../components/customs/DMSButton";
 
 export default class FindPW extends Component {
     state = {
-        name: '',
-        email: '',
-        id: '',
-    }
+        name: "",
+        email: "",
+        id: "",
+    };
     handleChange = (e) => {
         this.setState({
             [e.target.name]: e.target.value,
-        })
-        console.log(e.target.value)
-    }
+        });
+        console.log(e.target.value);
+    };
 
     render() {
-        const {name, email, id} = this.state
+        const { name, email, id } = this.state;
         return (
             <Container
                 maxWidth="xs"
                 style={{
                     marginTop: 50,
                     marginBottom: 20,
-                    paddingTop: '10vh',
-                    minHeight: '90vh',
+                    paddingTop: "10vh",
+                    minHeight: "90vh",
                 }}
             >
                 <img
                     className="signUp-logoIcon"
-                    src={require('../../assets/images/Logo3.png')}
+                    src={require("../../assets/images/Logo3.png")}
                     alt="logo"
                 />
                 <h3>비밀번호 찾기</h3>
                 <Divider />
                 <br />
-                {/* NAME */}
+
                 <div>
                     <DMSInput
                         value={name}
@@ -48,7 +48,6 @@ export default class FindPW extends Component {
                     />
                 </div>
 
-                {/* EMAIL */}
                 <div>
                     <DMSInput
                         value={email}
@@ -60,7 +59,6 @@ export default class FindPW extends Component {
                     />
                 </div>
 
-                {/* ID */}
                 <div>
                     <DMSInput
                         value={id}
@@ -85,6 +83,6 @@ export default class FindPW extends Component {
                     </div>
                 </div>
             </Container>
-        )
+        );
     }
 }

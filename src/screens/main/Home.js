@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../../assets/css/Home.css";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Grid, Container, Divider } from "@material-ui/core";
 import DeveloperCard from "../../components/home/DeveloperCard";
 import ButtonBase from "../../components/home/ButtonBase";
@@ -23,7 +22,6 @@ export default class Home extends Component {
                     <div className="home-slideContainer">
                         <Carousel style={{ zIndex: 0 }}>
                             <Carousel.Item className="home-carouselItem">
-                                {/* 슬라이드 item 1 */}
                                 <div
                                     className="home-carouselItemContainer"
                                     style={{ backgroundColor: "#e7e6e2" }}
@@ -59,8 +57,8 @@ export default class Home extends Component {
                                     </div>
                                 </div>
                             </Carousel.Item>
+
                             <Carousel.Item className="home-carouselItem">
-                                {/* 슬라이드 item 2 */}
                                 <div
                                     className="home-carouselItemContainer"
                                     style={{ backgroundColor: "#F6F6F0" }}
@@ -104,8 +102,8 @@ export default class Home extends Component {
                                     </div>
                                 </div>
                             </Carousel.Item>
+
                             <Carousel.Item className="home-carouselItem">
-                                {/* 슬라이드 item 3 */}
                                 <div
                                     className="home-carouselItemContainer"
                                     style={{ backgroundColor: "#F7EFE4" }}
@@ -156,7 +154,7 @@ export default class Home extends Component {
                                 marginBottom: 100,
                             }}
                         />
-                        {/* aboutPage item 1 */}
+
                         <Grid
                             container
                             spacing={3}
@@ -178,23 +176,20 @@ export default class Home extends Component {
                             <Grid item xs={12} sm={6}>
                                 <img
                                     className="home-aboutDoMiSolImage"
-                                    // src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxOTEyMDlfMTg3%2FMDAxNTc1ODk0NjMxNjIx.lZh5YxHUvp3gY6RzsTMM-UyUbpMBK6xzb7as_Nv_iYwg.5yFzYIosQAhp2S_Uz36IMj60p_paZwQHdsC2ZHH0t8Ag.JPEG.tobemaven%2F%25BA%25F1%25C6%25F7%25BC%25B1%25B6%25F3%25C0%25CC%25C1%25EE.JPG&type=sc960_832"
                                     src={coupleimage[0]}
                                     alt="loveyou"
                                     width="100%"
                                 />
                             </Grid>
                         </Grid>
-                        {/* aboutPage item 2 */}
+
                         <Grid container spacing={3} style={{ marginTop: 80, marginBottom: 80 }}>
                             <Grid item xs={12} sm={6}>
                                 <img
                                     className="home-aboutDoMiSolImage"
-                                    // src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20110108_7%2Fwooroo88_1294461731368Btxio_JPEG%2F17773_S08_092951.jpg&type=sc960_832"
                                     src={coupleimage[1]}
                                     alt="lovewe"
                                     width="100%"
-                                    // height="100%"
                                 />
                             </Grid>
                             <Grid item xs={12} sm={6}>
@@ -209,7 +204,7 @@ export default class Home extends Component {
                                 </div>
                             </Grid>
                         </Grid>
-                        {/* aboutPage item 3 */}
+
                         <Grid
                             container
                             spacing={3}
@@ -264,7 +259,6 @@ export default class Home extends Component {
                                 />
                             </div>
 
-                            {/* Developer Card */}
                             <div className="home-profile">
                                 <h3 className="font-weight-bold" style={{ marginBottom: 30 }}>
                                     do-mi-sol developer

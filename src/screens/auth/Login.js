@@ -22,7 +22,6 @@ export default class Login extends Component {
         console.log(e.target.value);
     };
 
-    //
     signIn = async () => {
         const { id, password } = this.state;
         await axios

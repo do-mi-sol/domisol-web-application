@@ -9,7 +9,7 @@ const DMSButton = ({
     width,
     height,
     color = "#c19393",
-    textColor='white',
+    textColor = "white",
     margin,
     onClick,
     radiusBottom,
@@ -26,12 +26,11 @@ const DMSButton = ({
                 href={href}
                 onClick={onClick}
                 style={{
-                    color:textColor,
+                    color: textColor,
                     width: width,
-                    height:height,
+                    height: height,
                     backgroundColor: color,
                     marginTop: margin,
-                    // border radius 설정 추가
                     borderBottomLeftRadius: radiusBottom,
                     borderBottomRightRadius: radiusBottom,
                     borderTopLeftRadius: radiusTop,

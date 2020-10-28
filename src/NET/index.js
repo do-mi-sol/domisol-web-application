@@ -1,4 +1,3 @@
-// let host = "http://localhost:9001";
 let host = "https://domisolserver.herokuapp.com";
 
 let URL = {
