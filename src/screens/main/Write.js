@@ -124,7 +124,7 @@ function Write() {
                                         className="write-talk-img"
                                         src={tempImg}
                                         alt=""
-                                        style={{ width: 300 }}
+                                        style={{ width: 390 }}
                                     />
                                 </Label>
                                 <div>
@@ -139,7 +139,7 @@ function Write() {
                                         ></input>
 
                                         <input
-                                            style={{ width: 500, height: 500 }}
+                                            style={{ width: 500, height: 570 }}
                                             type="text"
                                             name="box"
                                             placeholder="내용을 입력해주세요"
