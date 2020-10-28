@@ -124,10 +124,10 @@ function Write() {
                                         className="write-talk-img"
                                         src={tempImg}
                                         alt=""
-                                        style={{ width: 390 }}
+                                        style={{ width: 650, marginLeft: 100 }}
                                     />
                                 </Label>
-                                <div>
+                                <div style={{ marginLeft: 250 }}>
                                     <form encType="multipart/form-data" onSubmit={handleSubmit}>
                                         <input
                                             style={{ width: 500, height: 35, marginBottom: 30 }}
