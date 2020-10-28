@@ -124,7 +124,7 @@ function Write() {
                                         className="write-talk-img"
                                         src={tempImg}
                                         alt=""
-                                        style={{ width: 650, marginLeft: 100 }}
+                                        style={{ width: 660, marginLeft: 100, height: 1200 }}
                                     />
                                 </Label>
                                 <div style={{ marginLeft: 250 }}>
@@ -158,7 +158,17 @@ function Write() {
 
                                         <div className="write-button-container">
                                             <div className="write-button">
-                                                <button type="submit">글 쓰기</button>
+                                                <button
+                                                    type="submit"
+                                                    style={{
+                                                        borderRadius: 3,
+                                                        height: 30,
+                                                        backgroundColor: "#c19393",
+                                                        color: "white",
+                                                    }}
+                                                >
+                                                    글 쓰기
+                                                </button>
                                             </div>
                                             <div className="write-button">
                                                 <DMSButton
