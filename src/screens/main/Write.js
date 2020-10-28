@@ -111,7 +111,7 @@ function Write() {
                                     fontWeight: "bold",
                                 }}
                             >
-                                잘하고싶다.. 연애
+                                잘하고싶다.. 연애!
                             </Typography>
                         </div>
 
