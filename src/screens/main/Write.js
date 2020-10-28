@@ -13,7 +13,7 @@ import "../../assets/css/Write.css";
 function Write() {
     const [imgBase64, setImgBase64] = useState("");
     const [imgFile, setImgFile] = useState(null);
-    const [tempImg, setDataURI] = useState(require("../../assets/images/message_help.gif"));
+    const [tempImg, setDataURI] = useState(require("../../assets/images/upload.png"));
     const [board_filename, setFileName] = useState("");
     console.log(board_filename);
 
@@ -192,15 +192,12 @@ function Write() {
                             </form>
                         </div>
                         <div className="write-button">
-                            <DMSButton className="write-write-button" variant="contained">
-                                다시 쓰기
-                            </DMSButton>
-                        </div>
-                        <div className="write-button">
                             <DMSButton
                                 className="write-write-button"
                                 variant="contained"
-                                // onClick={<Link to="/board" />}
+                                onClick={() => {
+                                    window.location.assign("/board");
+                                }}
                             >
                                 목록
                             </DMSButton>
